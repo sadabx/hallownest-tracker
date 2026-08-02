@@ -9,6 +9,7 @@ const MAP_URL = `${import.meta.env.BASE_URL}assets/maps/hallownest-clean.webp`;
 const MAP_SOURCE = "https://hollowknight.wiki/w/File:Clean_map_updated.png";
 
 let mapResizeObserver = null;
+let mapFilterScroll = 0;
 
 function hashText(value) {
   let hash = 2166136261;
@@ -37,12 +38,24 @@ function mapPoint(item, index) {
 function mapFiltered(entries) {
   return entries.filter(item => {
     if (!item.region || REGIONS[item.region].atlas === false) return false;
-    if (state.mapCategory !== "all" && item.group !== state.mapCategory) return false;
+    if (state.mapHiddenSections.has(item.sectionKey)) return false;
     if (state.missingOnly && item.status === "complete") return false;
     const query = state.mapQuery.trim().toLowerCase();
     const region = REGIONS[item.region]?.label || "";
     return !query || `${item.name} ${item.section} ${item.description} ${item.sceneName || ""} ${region}`.toLowerCase().includes(query);
   });
+}
+
+function sectionFilterMarkup(entries) {
+  return Object.entries(GROUPS).map(([groupKey, group]) => {
+    const sections = group.sections.map(sectionKey => {
+      const items = entries.filter(item => item.sectionKey === sectionKey && item.region && REGIONS[item.region].atlas !== false);
+      if (!items.length) return "";
+      const checked = !state.mapHiddenSections.has(sectionKey);
+      return `<label class="map-section-filter"><input type="checkbox" data-map-section="${sectionKey}" ${checked ? "checked" : ""}><span>${escapeHTML(items[0].section)}</span><small>${items.length}</small></label>`;
+    }).filter(Boolean).join("");
+    return sections ? `<section class="map-filter-group" data-map-filter-group="${groupKey}"><h3>${escapeHTML(group.label)}</h3><div>${sections}</div></section>` : "";
+  }).join("");
 }
 
 function regionMarkup() {
@@ -71,30 +84,37 @@ function renderMap(entries, onSelectEntry) {
   mapResizeObserver?.disconnect();
   const filtered = mapFiltered(entries);
   const sceneCount = new Set(filtered.map(item => item.sceneName).filter(Boolean)).size;
-  const options = [`<option value="all">All categories</option>`].concat(Object.entries(GROUPS).map(([key, group]) => `<option value="${key}" ${state.mapCategory === key ? "selected" : ""}>${escapeHTML(group.label)}</option>`)).join("");
+  const sectionFilters = sectionFilterMarkup(entries);
 
   document.querySelector("#map-view").innerHTML = `
     <div class="view-heading compact"><div><span class="overline">Save-aware atlas</span><h1>Interactive Map</h1><p>Explore the real Hallownest map with save-linked checks grouped by scene and area.</p></div><button class="primary-action" data-upload>${HK.saveAnalyzed ? "Load another save" : "Load save"}</button></div>
-    <div class="map-layout"><aside class="map-controls-panel">
-      <label>Find a location<input id="map-search" value="${escapeHTML(state.mapQuery)}" placeholder="Name, scene, or area..."></label>
-      <label>Category<select id="map-category">${options}</select></label>
-      <label class="map-label-toggle"><input id="map-labels" type="checkbox" ${state.mapLabels ? "checked" : ""}>Show area guides</label>
-      <div class="map-result-count"><strong>${filtered.length}</strong><span>markers across ${sceneCount} known scenes</span></div>
-      <div class="map-legend"><span><i class="legend-complete"></i>Complete</span><span><i class="legend-missing"></i>Missing</span><span><i class="legend-partial"></i>Partial</span><span><i class="legend-unknown"></i>Unknown</span></div>
-      <button class="secondary-action wide" id="map-show-all">Reset map filters</button>
-      <p class="map-placement-note">Pins use save-database scene IDs and calibrated area placement. They are approximate, not room-perfect. White Palace and Godhome use separate maps and are intentionally excluded.</p>
-    </aside>
-    <div class="map-canvas-wrap">
+    <div class="map-layout"><div class="map-canvas-wrap">
+      <div class="map-filter-anchor">
+        <button id="map-filter-toggle" class="map-filter-toggle" type="button" aria-expanded="${state.mapFiltersOpen}"><span>☷</span> Map filters <small>${state.mapHiddenSections.size ? `${state.mapHiddenSections.size} hidden` : "All shown"}</small></button>
+        <aside id="map-filter-menu" class="map-filter-menu" ${state.mapFiltersOpen ? "" : "hidden"}>
+          <header><h2>Map Filters</h2><button id="map-filter-close" type="button">Hide filters</button></header>
+          <label class="map-search-label"><span>Search locations</span><input id="map-search" value="${escapeHTML(state.mapQuery)}" placeholder="Name, scene, or area..."></label>
+          <div class="map-filter-actions"><button id="map-sections-show-all" type="button">Show all</button><button id="map-sections-hide-all" type="button">Hide all</button></div>
+          <div class="map-filter-sections">${sectionFilters}</div>
+          <div class="map-filter-utilities"><label class="map-label-toggle"><input id="map-labels" type="checkbox" ${state.mapLabels ? "checked" : ""}>Show area guides</label><button class="secondary-action" id="map-reset-filters" type="button">Reset all filters</button></div>
+          <div class="map-legend"><span><i class="legend-complete"></i>Complete</span><span><i class="legend-missing"></i>Missing</span><span><i class="legend-partial"></i>Partial</span><span><i class="legend-unknown"></i>Unknown</span></div>
+          <p class="map-placement-note">Pins use save-database scene IDs and calibrated area placement. They are approximate, not room-perfect. White Palace and Godhome use separate maps.</p>
+        </aside>
+      </div>
       <div class="map-tools"><button id="map-zoom-out" aria-label="Zoom out">−</button><button id="map-reset" aria-label="Fit map">Fit</button><button id="map-zoom-in" aria-label="Zoom in">+</button></div>
-      <div id="map-viewport" aria-label="Interactive Hallownest map"><div id="map-stage"><img class="hallownest-map-art" src="${MAP_URL}" width="${MAP_WIDTH}" height="${MAP_HEIGHT}" alt="Clean map of Hallownest" draggable="false"><div class="map-regions">${regionMarkup()}</div><div class="map-pins">${pinMarkup(filtered)}</div></div></div>
+      <div id="map-viewport" aria-label="Interactive Hallownest map"><div id="map-stage"><img class="hallownest-map-art" src="${MAP_URL}" width="${MAP_WIDTH}" height="${MAP_HEIGHT}" alt="Clean map of Hallownest" draggable="false"><div class="map-regions">${regionMarkup()}</div><div class="map-pins">${pinMarkup(filtered)}</div></div><div class="map-result-count"><strong>${filtered.length}</strong><span>markers across ${sceneCount} known scenes</span></div></div>
       <div class="map-attribution">Map artwork © Team Cherry · <a href="${MAP_SOURCE}" target="_blank" rel="noreferrer">Hollow Knight Wiki source</a> · Drag to pan, scroll to zoom</div>
       ${selectedDetail(entries)}
     </div></div>`;
+  const filterMenu = document.querySelector("#map-filter-menu");
+  if (filterMenu && state.mapFiltersOpen) filterMenu.scrollTop = mapFilterScroll;
   bindMapInteractions(onSelectEntry);
   requestAnimationFrame(applyMapTransform);
 }
 
 function rerender(onSelectEntry) {
+  const filterMenu = document.querySelector("#map-filter-menu");
+  if (filterMenu && !filterMenu.hidden) mapFilterScroll = filterMenu.scrollTop;
   renderMap(flattenEntries(), onSelectEntry);
 }
 
@@ -154,25 +174,52 @@ function resetMapView() {
 }
 
 function bindMapInteractions(onSelectEntry) {
+  const setFiltersOpen = open => {
+    state.mapFiltersOpen = open;
+    const menu = document.querySelector("#map-filter-menu");
+    const toggle = document.querySelector("#map-filter-toggle");
+    if (menu) menu.hidden = !open;
+    toggle?.setAttribute("aria-expanded", String(open));
+  };
+  document.querySelector("#map-filter-toggle")?.addEventListener("click", () => setFiltersOpen(!state.mapFiltersOpen));
+  document.querySelector("#map-filter-close")?.addEventListener("click", () => setFiltersOpen(false));
   document.querySelector("#map-search")?.addEventListener("input", event => {
     state.mapQuery = event.target.value;
+    state.mapFiltersOpen = true;
     rerender(onSelectEntry);
     const search = document.querySelector("#map-search");
     search?.focus();
     search?.setSelectionRange(search.value.length, search.value.length);
   });
-  document.querySelector("#map-category")?.addEventListener("change", event => {
-    state.mapCategory = event.target.value;
+  document.querySelectorAll("[data-map-section]").forEach(input => {
+    input.addEventListener("change", () => {
+      if (input.checked) state.mapHiddenSections.delete(input.dataset.mapSection);
+      else state.mapHiddenSections.add(input.dataset.mapSection);
+      state.mapFiltersOpen = true;
+      rerender(onSelectEntry);
+    });
+  });
+  document.querySelector("#map-sections-show-all")?.addEventListener("click", () => {
+    state.mapHiddenSections.clear();
+    state.mapFiltersOpen = true;
+    rerender(onSelectEntry);
+  });
+  document.querySelector("#map-sections-hide-all")?.addEventListener("click", () => {
+    document.querySelectorAll("[data-map-section]").forEach(input => state.mapHiddenSections.add(input.dataset.mapSection));
+    state.mapFiltersOpen = true;
     rerender(onSelectEntry);
   });
   document.querySelector("#map-labels")?.addEventListener("change", event => {
     state.mapLabels = event.target.checked;
     rerender(onSelectEntry);
   });
-  document.querySelector("#map-show-all")?.addEventListener("click", () => {
+  document.querySelector("#map-reset-filters")?.addEventListener("click", () => {
     state.mapQuery = "";
     state.mapCategory = "all";
+    state.mapHiddenSections.clear();
     state.missingOnly = false;
+    state.mapLabels = false;
+    state.mapFiltersOpen = true;
     const missing = document.querySelector("#global-missing-only");
     if (missing) missing.checked = false;
     rerender(onSelectEntry);

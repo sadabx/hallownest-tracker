@@ -14,7 +14,9 @@ const state = {
   scale: 1,
   panX: 0,
   panY: 0,
-  mapLabels: false
+  mapLabels: false,
+  mapFiltersOpen: false,
+  mapHiddenSections: new Set()
 };
 
 function loadPreferences() {

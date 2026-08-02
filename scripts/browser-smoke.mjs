@@ -149,9 +149,23 @@ const mapViewer = await evaluate(`(() => {
   }));
   const zoomed = Boolean(before && stage?.style.transform && before !== stage.style.transform);
   document.querySelector("#map-reset")?.click();
+  const pinsBeforeFilter = document.querySelectorAll("#map-view .map-pin").length;
+  document.querySelector("#map-filter-toggle")?.click();
+  const sectionFilters = document.querySelectorAll("[data-map-section]").length;
+  const firstSection = document.querySelector("[data-map-section]");
+  firstSection?.click();
+  const pinsAfterFilter = document.querySelectorAll("#map-view .map-pin").length;
+  document.querySelector("#map-sections-show-all")?.click();
+  const pinsAfterRestore = document.querySelectorAll("#map-view .map-pin").length;
+  document.querySelector("#map-filter-close")?.click();
+  const filterMenuClosed = document.querySelector("#map-filter-menu")?.hidden === true;
   return {
     loaded: Boolean(image?.complete && image.naturalWidth === 2560 && image.naturalHeight === 1651),
-    zoomed
+    zoomed,
+    sectionFilters,
+    sectionFiltered: pinsAfterFilter < pinsBeforeFilter,
+    filtersRestored: pinsAfterRestore === pinsBeforeFilter,
+    filterMenuClosed
   };
 })()`);
 
@@ -197,6 +211,10 @@ if (
   || values.mapPins < 100
   || values.mapViewer.loaded !== true
   || values.mapViewer.zoomed !== true
+  || values.mapViewer.sectionFilters < 10
+  || values.mapViewer.sectionFiltered !== true
+  || values.mapViewer.filtersRestored !== true
+  || values.mapViewer.filterMenuClosed !== true
   || values.rawSaveVisible !== true
 ) {
   throw new Error(`Unexpected analyzer result: ${JSON.stringify(values)}`);

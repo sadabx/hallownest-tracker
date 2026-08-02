@@ -4,19 +4,105 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#071117" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="application-name" content="Hallownest Tracker" />
+    <meta name="author" content="Sadab" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
     <link href="./assets/fontawesome/css/all.min.css" rel="stylesheet" />
     <link href="/src/favicon.png" rel="icon" />
-    <title>Hallownest Tracker</title>
+    <link
+      href="./assets/hallownest-tracker-logo.png"
+      rel="apple-touch-icon"
+    />
+    <link href="./site.webmanifest" rel="manifest" />
+    <link
+      href="https://sadabx.github.io/hallownest-tracker/"
+      rel="canonical"
+    />
+    <title>Hollow Knight Completion Tracker | Hallownest Tracker</title>
     <meta
       name="description"
-      content="Decode a Hollow Knight save locally, track every check, explore Hallownest on an interactive map, and inspect raw save data."
+      content="Track Hollow Knight 112% completion, decode saves locally, find missing bosses, charms and collectibles, and explore an interactive Hallownest map."
+    />
+    <meta
+      name="keywords"
+      content="Hollow Knight tracker, Hollow Knight completion tracker, Hollow Knight save analyzer, Hallownest map, Hollow Knight 112 percent checklist"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Hallownest Tracker" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Hallownest Tracker" />
+    <meta
+      property="og:url"
+      content="https://sadabx.github.io/hallownest-tracker/"
+    />
+    <meta
+      property="og:title"
+      content="Hollow Knight Completion Tracker | Hallownest Tracker"
+    />
     <meta
       property="og:description"
-      content="A private Hollow Knight save tracker with full progress, map, filters, and raw data."
+      content="Track Hollow Knight 112% completion, decode saves privately in your browser, and explore a save-aware interactive map of Hallownest."
     />
+    <meta
+      property="og:image"
+      content="https://sadabx.github.io/hallownest-tracker/assets/hallownest-tracker-logo.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta
+      property="og:image:alt"
+      content="The Knight emblem for Hallownest Tracker"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Hollow Knight Completion Tracker | Hallownest Tracker"
+    />
+    <meta
+      name="twitter:description"
+      content="Track 112% completion, analyze Hollow Knight saves locally, and explore Hallownest on an interactive map."
+    />
+    <meta
+      name="twitter:image"
+      content="https://sadabx.github.io/hallownest-tracker/assets/hallownest-tracker-logo.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="The Knight emblem for Hallownest Tracker"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Hallownest Tracker",
+        "alternateName": "Hollow Knight Completion Tracker",
+        "url": "https://sadabx.github.io/hallownest-tracker/",
+        "description": "A privacy-first Hollow Knight completion tracker, local save analyzer, checklist, and interactive Hallownest map.",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Any",
+        "isAccessibleForFree": true,
+        "browserRequirements": "Requires JavaScript and a modern web browser.",
+        "featureList": [
+          "Hollow Knight 112% completion tracking",
+          "Local save file analysis",
+          "Searchable progress checklist",
+          "Interactive Hallownest map",
+          "Missing item and spoiler filters"
+        ],
+        "image": "https://sadabx.github.io/hallownest-tracker/assets/hallownest-tracker-logo.png",
+        "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+        "codeRepository": "https://github.com/sadabx/hallownest-tracker",
+        "author": {
+          "@type": "Person",
+          "name": "Sadab",
+          "url": "https://github.com/sadabx"
+        }
+      }
+    </script>
   </head>
   <body>
     <aside class="app-sidebar" id="app-sidebar">
@@ -158,7 +244,17 @@
       </header>
 
       <main id="workspace" class="workspace">
-        <section id="progress-view" class="workspace-view"></section>
+        <section id="progress-view" class="workspace-view">
+          <div class="view-heading compact">
+            <div>
+              <h1>Hollow Knight Completion Tracker</h1>
+              <p>
+                Decode your Hollow Knight save locally, track 112% completion,
+                find missing checks, and explore the Hallownest map.
+              </p>
+            </div>
+          </div>
+        </section>
         <section id="map-view" class="workspace-view"></section>
         <section id="raw-view" class="workspace-view"></section>
       </main>

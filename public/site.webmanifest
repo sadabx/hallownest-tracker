@@ -1,0 +1,18 @@
+{
+  "name": "Hallownest Tracker",
+  "short_name": "HK Tracker",
+  "description": "A privacy-first Hollow Knight completion tracker, local save analyzer, and interactive Hallownest map.",
+  "start_url": "/hallownest-tracker/",
+  "scope": "/hallownest-tracker/",
+  "display": "standalone",
+  "background_color": "#071117",
+  "theme_color": "#071117",
+  "icons": [
+    {
+      "src": "./assets/hallownest-tracker-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
