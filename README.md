@@ -1,6 +1,6 @@
 # Hallownest Tracker
 
-An independent, privacy-first Hollow Knight save tracker with a completion dashboard, searchable checklist, interactive Hallownest atlas, and raw-save viewer.
+An independent, privacy-first Hollow Knight companion built in the style of Silksong Tracker: searchable completion tracking, a save-aware Hallownest atlas, and a raw-save viewer in one static app.
 
 **Live site:** [sadabx.github.io/hallownest-tracker](https://sadabx.github.io/hallownest-tracker/)
 
@@ -21,27 +21,40 @@ npm install
 npm run start
 ```
 
-Build the production site into `docs/`:
+Build the production site into the ignored `dist/` directory:
 
 ```bash
-npm test
+npm run build
+npm run preview
 ```
 
 ## Project structure
 
 ```text
+index.html     Editable Vite application shell
+public/        Static files copied as-is
 src/
-  app/       Tracker workspaces and UI state
-  core/      Save decoder, completion engine, and game database
-  css/       Application styling
-  index.html Static application shell
-docs/        Generated GitHub Pages site
+  app/         Shared tracker model, state, and rendering orchestration
+  assets/      Original Hallownest atlas artwork
+  components/  Upload, modal, navigation, and page controls
+  core/        Save decoder, completion engine, and game database
+  css/         Application styling
+  data/        Progress groups and map-region catalog
+  tabs/        Progress, interactive map, and raw-save workspaces
+  types/       Shared tracker contracts
+  main.js      Browser entry point
+docs/          Architecture and project documentation only
+dist/          Generated GitHub Pages artifact; never committed
 ```
+
+GitHub Actions builds `main` with Vite and deploys `dist/` to GitHub Pages. The application source never lives in `docs/`.
 
 ## License and attribution
 
 Hallownest Tracker is licensed under [GPL-3.0](LICENSE).
 
-The save decoder, completion rules, and initial game database are adapted from Michael "ReznoR"'s GPL-3.0 [Hollow Knight Save Completion Analyzer](https://github.com/ReznoRMichael/hollow-knight-completion-check). The application shell, tracker workspaces, filters, atlas, and ongoing data model are maintained independently under the same license.
+The save decoder, completion rules, and initial game database are adapted from Michael "ReznoR"'s GPL-3.0 [Hollow Knight Save Completion Analyzer](https://github.com/ReznoRMichael/hollow-knight-completion-check). The application shell, tracker workspaces, filters, original vector atlas, and ongoing data model are maintained independently under the same license. Its overall workflow is inspired by [Silksong Tracker](https://github.com/th3r3dfox/silksong-tracker), without copying its game assets.
 
 This is an unofficial, non-commercial fan project. Hollow Knight belongs to Team Cherry.
+
+Hollow Knight inventory icons are © Team Cherry, sourced from the [Hollow Knight Wiki item category](https://hollowknight.fandom.com/wiki/Category:Items_(Hollow_Knight)), and excluded from the GPL-3.0 license grant. See [docs/assets.md](docs/assets.md).

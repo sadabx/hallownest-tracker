@@ -7,7 +7,7 @@
 // ---------------- Constants ----------------- //
 
 // AES JS for file decryption
-const aesjs = require("./vendor/aes.js");
+import aesjs from "./vendor/aes.js";
 // For reading the text area after save decoding
 import { analyzeSave } from "./completion-engine.js";
 

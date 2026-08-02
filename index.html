@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071117">
+  <link href="/src/favicon.png" rel="icon">
+  <title>Hallownest Tracker — Hollow Knight Progress &amp; Map</title>
+  <meta name="description" content="Decode a Hollow Knight save locally, track every check, explore Hallownest on an interactive map, and inspect raw save data.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hallownest Tracker">
+  <meta property="og:description" content="A private Hollow Knight save tracker with full progress, map, filters, and raw data.">
+</head>
+<body>
+  <aside class="app-sidebar" id="app-sidebar">
+    <a class="app-brand" href="#" data-nav-tab="progress" aria-label="Hallownest Tracker progress">
+      <img class="brand-logo" src="/src/favicon.png" alt="Hallownest Tracker logo">
+      <span><strong>Hallownest</strong><small>Tracker</small></span>
+    </a>
+
+    <a class="sidebar-wiki-button" href="https://hollowknight.wiki/" target="_blank" rel="noreferrer">Hollow Knight Wiki</a>
+
+    <div class="sidebar-actions" aria-label="Project links">
+      <a href="https://store.steampowered.com/app/367520/Hollow_Knight/" target="_blank" rel="noreferrer" title="Hollow Knight on Steam">S</a>
+      <a href="https://hollowknight.wiki/" target="_blank" rel="noreferrer" title="Hollow Knight Wiki">W</a>
+      <a href="https://www.ign.com/maps/hollow-knight/hallownest" target="_blank" rel="noreferrer" title="Hallownest map">M</a>
+      <a href="https://github.com/sadabx/hallownest-tracker" target="_blank" rel="noreferrer" title="GitHub repository">GH</a>
+    </div>
+
+    <nav class="app-nav" aria-label="Tracker workspaces">
+      <button data-nav-tab="progress"><i class="nav-icon progress-icon"></i><span>Progress</span></button>
+      <button data-nav-tab="map"><i class="nav-icon map-icon"></i><span>Interactive Map</span></button>
+      <button data-nav-tab="raw"><i class="nav-icon raw-icon"></i><span>Raw Save Data</span></button>
+    </nav>
+
+    <div class="sidebar-save-card">
+      <span class="nav-label">Current journey</span>
+      <strong id="sidebar-completion">No save</strong>
+      <div class="sidebar-meter"><i id="sidebar-progress-fill"></i></div>
+      <small id="sidebar-count">Database ready</small>
+    </div>
+
+    <div class="sidebar-links">
+      <a href="https://www.ign.com/maps/hollow-knight/hallownest" target="_blank" rel="noreferrer">IGN Hallownest Map</a>
+      <a href="https://github.com/sadabx/hallownest-tracker" target="_blank" rel="noreferrer">Source on GitHub</a>
+    </div>
+
+    <p class="sidebar-credit">Original analyzer by ReznoRMichael.<br>Application inspired by Silksong Tracker.<br>GPL-3.0.</p>
+  </aside>
+
+  <div class="app-shell">
+    <header class="app-topbar">
+      <button id="mobile-menu" class="mobile-menu" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <div class="save-indicator"><i></i><span id="save-state">No save loaded</span></div>
+      <div class="topbar-actions">
+        <label class="topbar-category">Categories
+          <select id="global-category">
+            <option value="all">All</option>
+            <option value="main">Main Progress</option>
+            <option value="essentials">Essentials</option>
+            <option value="journal">Hunter's Journal</option>
+            <option value="collectibles">Collectibles</option>
+            <option value="world">World &amp; Secrets</option>
+            <option value="godhome">Godhome</option>
+          </select>
+        </label>
+        <label class="topbar-toggle"><input id="global-missing-only" type="checkbox"><span></span>Show only missing</label>
+        <label class="topbar-toggle"><input id="global-show-spoilers" type="checkbox"><span></span>Show spoilers</label>
+        <button id="global-upload" class="primary-action">Upload save</button>
+        <button id="global-reset" class="topbar-reset">Reset</button>
+      </div>
+    </header>
+
+    <main id="workspace" class="workspace">
+      <section id="progress-view" class="workspace-view"></section>
+      <section id="map-view" class="workspace-view"></section>
+      <section id="raw-view" class="workspace-view"></section>
+    </main>
+  </div>
+
+  <button id="back-to-top" aria-label="Back to top"><span aria-hidden="true">↑</span><small>Top</small></button>
+
+  <aside id="progress-toc" class="progress-toc" aria-label="Progress contents"></aside>
+
+  <div class="drop-overlay" aria-hidden="true"><div><strong>Drop Hollow Knight save</strong><span>Release to analyze it locally</span></div></div>
+
+  <div id="upload-overlay" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="upload-title">
+    <div class="modal-card upload-card">
+      <button id="close-upload" class="modal-close" aria-label="Close upload dialog">×</button>
+      <span class="overline">Local save analysis</span>
+      <h2 id="upload-title">Upload your Hollow Knight save</h2>
+      <div id="save-dropzone" class="save-dropzone" tabindex="0">
+        <strong>Drag and drop your save here</strong>
+        <span>or click to browse for user*.dat</span>
+      </div>
+      <div class="save-help">
+        <strong>Need help finding your save?</strong>
+        <p>Windows: <code>%USERPROFILE%\AppData\LocalLow\Team Cherry\Hollow Knight</code></p>
+        <p>Linux: <code>~/.config/unity3d/Team Cherry/Hollow Knight</code></p>
+        <p>macOS: <code>~/Library/Application Support/unity.Team Cherry.Hollow Knight</code></p>
+      </div>
+      <p>Your save is decrypted and analyzed entirely inside this browser.</p>
+    </div>
+  </div>
+
+  <div id="entry-overlay" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="entry-modal-title">
+    <div id="entry-modal" class="modal-card entry-modal"></div>
+  </div>
+
+  <div class="save-input" aria-hidden="true">
+    <input id="save-area-file" type="file" accept=".dat,.bak*,.json">
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

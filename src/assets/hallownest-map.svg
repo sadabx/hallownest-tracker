@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Hallownest atlas</title>
+  <desc id="desc">An original stylized map of Hallownest's connected regions.</desc>
+  <defs>
+    <radialGradient id="paper" cx="50%" cy="45%" r="65%">
+      <stop offset="0" stop-color="#17343b"/>
+      <stop offset="1" stop-color="#071419"/>
+    </radialGradient>
+    <linearGradient id="land" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#31575a"/>
+      <stop offset="1" stop-color="#142e34"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#91c8c0" stroke-opacity=".05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="1000" fill="url(#paper)"/>
+  <rect width="1200" height="1000" fill="url(#grid)"/>
+  <g fill="none" stroke="#87bbb3" stroke-opacity=".27" stroke-width="17" stroke-linecap="round">
+    <path d="M515 106L475 193 350 282 308 450 244 628"/>
+    <path d="M475 193L640 150 748 348 653 515 615 695 575 820 615 944"/>
+    <path d="M350 282L455 455 653 515 895 400 948 675"/>
+    <path d="M244 628L455 455 615 695 575 820"/>
+    <path d="M615 695L948 675M575 820L835 845 1030 868"/>
+  </g>
+  <g fill="url(#land)" stroke="#91c8c0" stroke-opacity=".48" stroke-width="3" filter="url(#glow)">
+    <path d="M435 28l107 6 54 44-22 61-116 20-54-41z"/>
+    <path d="M84 60l175-26 94 52-10 96-138 65-128-55z"/>
+    <path d="M329 117l181-15 102 84-22 113-183 53-126-79z"/>
+    <path d="M668 42l151 18 75 90-42 148-142 13-90-101z"/>
+    <path d="M63 230l170-64 135 78-28 155-168 58-119-93z"/>
+    <path d="M674 278l153-31 97 86-42 109-167 34-93-91z"/>
+    <path d="M260 366l118-38 87 102-45 112-126 24-81-92z"/>
+    <path d="M392 334l184 9 111 108-48 139-192 31-117-103z"/>
+    <path d="M567 386l206-33 130 121-60 156-212 27-111-121z"/>
+    <path d="M884 226l168 13 97 126-52 167-165 38-102-116z"/>
+    <path d="M28 397l137-58 111 93-18 144-150 55-95-101z"/>
+    <path d="M66 525l222-43 151 124-48 170-240 64L27 708z"/>
+    <path d="M511 601l206-24 104 78-51 110-205 30-107-83z"/>
+    <path d="M881 578l151-31 99 91-39 111-166 35-91-88z"/>
+    <path d="M456 743l205-25 111 81-42 119-208 30-105-92z"/>
+    <path d="M532 872l129-20 63 72-38 70-131 2-62-66z"/>
+    <path d="M755 764l157-37 96 70-27 104-171 38-87-82z"/>
+    <path d="M965 801l137-17 84 66-35 106-143 24-78-75z"/>
+    <path d="M949 176l125-15 79 66-32 89-130 17-67-72z"/>
+  </g>
+  <g fill="none" stroke="#d6eee9" stroke-opacity=".12" stroke-width="2">
+    <path d="M99 121l80 31 82-53M116 325l91-28 80 45M367 207l97-30 82 52M704 133l74 68 57-78M423 445l112 47 71-82M604 488l113 62 107-76M137 632l117-42 96 81M525 832l96-52 74 80M938 661l71 46 61-93"/>
+    <path d="M0 500h1200M600 0v1000" stroke-dasharray="8 18" stroke-opacity=".05"/>
+  </g>
+  <g fill="#b8d8d2" fill-opacity=".32">
+    <circle cx="515" cy="106" r="5"/><circle cx="475" cy="193" r="5"/><circle cx="350" cy="282" r="5"/>
+    <circle cx="455" cy="455" r="5"/><circle cx="653" cy="515" r="5"/><circle cx="615" cy="695" r="5"/>
+    <circle cx="575" cy="820" r="5"/><circle cx="615" cy="944" r="5"/><circle cx="895" cy="400" r="5"/>
+  </g>
+</svg>
