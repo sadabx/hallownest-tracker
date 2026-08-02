@@ -169,16 +169,37 @@ const mapViewer = await evaluate(`(() => {
   };
 })()`);
 
+const uploader = await evaluate(`new Promise(resolve => {
+  Object.defineProperty(navigator, "clipboard", {
+    configurable: true,
+    value: { writeText: value => { window.__copiedSavePath = value; return Promise.resolve(); } }
+  });
+  document.querySelector("#global-upload")?.click();
+  const platformButtons = document.querySelectorAll("[data-save-platform]").length;
+  document.querySelector('[data-save-platform="linux"]')?.click();
+  setTimeout(() => {
+    const result = {
+      opened: !document.querySelector("#upload-overlay")?.classList.contains("hidden"),
+      platformButtons,
+      copiedPath: window.__copiedSavePath,
+      toast: document.querySelector("#upload-toast")?.textContent,
+      duplicateWorkspaceUpload: Boolean(document.querySelector("#workspace [data-upload]"))
+    };
+    document.querySelector("#close-upload")?.click();
+    resolve(result);
+  }, 30);
+})`);
+
 const rawSaveVisible = await evaluate(`
   document.querySelector('[data-nav-tab="raw"]').click();
   document.querySelector("#raw-view pre")?.textContent.includes("playerData");
 `);
 
-const values = { ...overview, progressCards, itemIcons, brokenArtwork, missingCards, mapPins, mapViewer, rawSaveVisible };
+const values = { ...overview, progressCards, itemIcons, brokenArtwork, missingCards, mapPins, mapViewer, uploader, rawSaveVisible };
 
 if (screenshotPath) {
   await evaluate(`document.querySelector("#global-missing-only").checked && document.querySelector("#global-missing-only").click()`);
-  await evaluate(`document.querySelector('[data-nav-tab=${JSON.stringify(screenshotView)}]').click()`);
+  await evaluate(`${JSON.stringify(screenshotView)} === "upload" ? document.querySelector("#global-upload")?.click() : document.querySelector('[data-nav-tab=${JSON.stringify(screenshotView)}]')?.click()`);
   await evaluate(`new Promise(resolve => setTimeout(async () => {
     const target = ${JSON.stringify(screenshotTarget)};
     if (target) document.querySelector(target)?.scrollIntoView({ block: "start" });
@@ -215,6 +236,11 @@ if (
   || values.mapViewer.sectionFiltered !== true
   || values.mapViewer.filtersRestored !== true
   || values.mapViewer.filterMenuClosed !== true
+  || values.uploader.opened !== true
+  || values.uploader.platformButtons !== 4
+  || !values.uploader.copiedPath?.includes("Team Cherry/Hollow Knight")
+  || !values.uploader.toast?.includes("Path copied")
+  || values.uploader.duplicateWorkspaceUpload !== false
   || values.rawSaveVisible !== true
 ) {
   throw new Error(`Unexpected analyzer result: ${JSON.stringify(values)}`);

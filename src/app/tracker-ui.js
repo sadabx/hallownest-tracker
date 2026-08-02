@@ -3,7 +3,7 @@ import { clearPreferences, loadPreferences, savePreferences, state } from "./tra
 import { initBackToTop } from "../components/back-to-top.js";
 import { initEntryModal, showEntryModal } from "../components/entry-modal.js";
 import { initSidebarItems } from "../components/sidebar-items.js";
-import { closeUploader, initUploadSave, openUploader } from "../components/upload-save.js";
+import { closeUploader, initUploadSave } from "../components/upload-save.js";
 import { renderMap } from "../tabs/map.js";
 import { renderProgress, renderProgressTOC } from "../tabs/progress.js";
 import { renderRawSave } from "../tabs/raw-save.js";
@@ -55,7 +55,6 @@ function changeTab(tab) {
 }
 
 function bindDynamicEvents() {
-  document.querySelectorAll("[data-upload]").forEach(button => { button.onclick = openUploader; });
   document.querySelectorAll("[data-tab-target]").forEach(button => { button.onclick = () => changeTab(button.dataset.tabTarget); });
   document.querySelectorAll("[data-open-group]").forEach(button => { button.onclick = () => {
     state.group = button.dataset.openGroup;

@@ -1,4 +1,4 @@
-import { GROUPS, HK, REGIONS, WIKI_ROOT, escapeHTML, flattenEntries } from "../app/tracker-model.js";
+import { GROUPS, REGIONS, WIKI_ROOT, escapeHTML, flattenEntries } from "../app/tracker-model.js";
 import { state } from "../app/tracker-state.js";
 import { itemIconFor } from "../data/item-icons.js";
 
@@ -87,7 +87,7 @@ function renderMap(entries, onSelectEntry) {
   const sectionFilters = sectionFilterMarkup(entries);
 
   document.querySelector("#map-view").innerHTML = `
-    <div class="view-heading compact"><div><span class="overline">Save-aware atlas</span><h1>Interactive Map</h1><p>Explore the real Hallownest map with save-linked checks grouped by scene and area.</p></div><button class="primary-action" data-upload>${HK.saveAnalyzed ? "Load another save" : "Load save"}</button></div>
+    <div class="view-heading compact"><div><span class="overline">Save-aware atlas</span><h1>Interactive Map</h1><p>Explore the real Hallownest map with save-linked checks grouped by scene and area.</p></div></div>
     <div class="map-layout"><div class="map-canvas-wrap">
       <div class="map-filter-anchor">
         <button id="map-filter-toggle" class="map-filter-toggle" type="button" aria-expanded="${state.mapFiltersOpen}"><span>☷</span> Map filters <small>${state.mapHiddenSections.size ? `${state.mapHiddenSections.size} hidden` : "All shown"}</small></button>
