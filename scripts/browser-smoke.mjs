@@ -59,8 +59,7 @@ async function evaluate(expression) {
 }
 
 await evaluate(`
-  document.getElementById("save-area").value = ${JSON.stringify(saveText)};
-  document.getElementById("save-area-read").click();
+  window.HallownestTracker.analyzeSave(JSON.parse(${JSON.stringify(saveText)}));
 `);
 
 const overview = await evaluate(`({

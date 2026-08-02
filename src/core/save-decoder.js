@@ -9,14 +9,7 @@
 // AES JS for file decryption
 const aesjs = require("./vendor/aes.js");
 // For reading the text area after save decoding
-import {
-  HKCheckCompletion
-} from "./completion-engine.js";
-
-import {
-  Benchmark,
-  benchmarkTimes
-} from "./analysis-runtime.js";
+import { analyzeSave } from "./completion-engine.js";
 
 const CSHARP_HEADER = [0, 1, 0, 0, 0, 255, 255, 255, 255, 1, 0, 0, 0, 0, 0, 0, 0, 6, 1, 0, 0, 0]; // 22 bytes
 
@@ -26,30 +19,18 @@ const BASE64_DECODE_TABLE = new Map(BASE64_ARRAY.map((ord, i) => [ord, i]));
 const AES_KEY = new TextEncoder().encode('UKu52ePUBwetZ9wNX88o54dnfKRu0T1l'); // encodes a string to Uint8Array (prepare for AES JS)
 const ECB_STREAM_CIPHER = new aesjs.ModeOfOperation.ecb(AES_KEY); // create a new AES stream cipher object using the encoded key
 
-// ---------------- Variables ----------------- //
-
-/* let benchLSFBegin, benchLSFEnd, benchTotal; */
-
 // ---------------- Functions ----------------- //
 
 /**
  * Main input tag file function. Selects the first file, reads it as an Array Buffer, starts the processing of the file when loaded.
- * Starts benchmarking.
  * @param {FileList} input FileList object containing a list of File objects. The FileList behaves like an array, so you can check its length property to get the number of selected files.
  */
-// eslint-disable-next-line no-unused-vars
-function LoadSaveFile(input, time) {
+function loadSaveFile(input) {
 
   const inputFileList = input.files;
   // console.info("Input length: " + input.files.length)
   // Cease further processing if user canceled the file input dialog
   if (inputFileList.length < 1) return false;
-
-  // start benchmark
-  benchmarkTimes.LoadSaveFile.timeStart = time;
-  benchmarkTimes.Total.timeStart = time;
-  benchmarkTimes.HKReadTextArea.timeStart = 0;
-  benchmarkTimes.HKReadTextArea.timeEnd = 0;
 
   // Prepares a File object from the first file of the input files for reading as an Array Buffer
   let inputFileObject = inputFileList[0];
@@ -70,8 +51,7 @@ function LoadSaveFile(input, time) {
 }
 
 /**
- * Reads the File object as an Array Buffer and does all other operations (decoding, decryption, conversion to string, pasting to text area).
- * Launches the HKReadTextArea() function automatically after pasting the string to text area
+ * Reads, decodes, decrypts, and analyzes a Hollow Knight save file.
  */
 function ProcessFileObject() {
   let inputArrayBuffer = this.result;
@@ -99,33 +79,14 @@ function ProcessFileObject() {
     // Convert ArrayBuffer to string/text TextDecoder().decode(ArrayBuffer)
     decodedString = new TextDecoder().decode(inputArrayBuffer);
 
-    // finish and show benchmark
-    /* benchLSFEnd = new Date(); */
-    benchmarkTimes.LoadSaveFile.timeEnd = performance.now();
-    /* console.info("LoadSaveFile() time (ms) =", benchLSFEnd - benchLSFBegin); */
-
-    // 4. Analyze the decoded string immediately
+    // Analyze the decoded string immediately
     try {
-      HKCheckCompletion(JSON.parse(decodedString));
+      analyzeSave(JSON.parse(decodedString));
     } catch (error) {
       alert(`This seems like not a valid Hollow Knight save. ${error}`);
       console.info(`This seems like not a valid Hollow Knight save. ${error}`);
     }
 
-    // 5. Paste decoded string file to text area
-    (async () => {
-      document.getElementById("save-area").value = "";
-      document.getElementById("save-area").value = await decodedString;
-    })();
-
-    // finish total and show benchmark
-    benchmarkTimes.Total.timeEnd = performance.now();
-
-    Benchmark(benchmarkTimes);
-    /* console.info("Total time (ms) =", benchTotal - benchLSFBegin); */
-
-    // alert(`Decoded String: ${decodedString}`);
-    // alert(`Array Buffer: ${inputArrayBuffer}`);
   } catch (error) {
     alert(`The file cannot be decoded. ${error}`);
     console.info(`The file cannot be decoded. ${error}`);
@@ -207,12 +168,12 @@ function AESDecryption(buffer, cipherObject = ECB_STREAM_CIPHER) {
 
 // Assign actions (functions) to launch when a specific element is used
 document.getElementById("save-area-file").addEventListener("change", (event) => {
-  LoadSaveFile(event.target, performance.now());
+  loadSaveFile(event.target);
 });
 document.getElementById("save-area-file").addEventListener("click", (mouseEvent) => {
   mouseEvent.target.value = "";
 });
 
 export {
-  LoadSaveFile
+  loadSaveFile
 };

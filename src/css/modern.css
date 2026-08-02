@@ -43,7 +43,7 @@ button { cursor: pointer; }
 
 a { color: inherit; }
 
-.legacy-engine { display: none !important; }
+.save-input { display: none !important; }
 
 .app-sidebar {
   position: fixed;

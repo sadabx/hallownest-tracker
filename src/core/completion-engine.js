@@ -6,21 +6,14 @@ import HK from "./completion-database.js";
 
 /* ----------------- Helper functions --------------------------------------------------------------------------------------------- */
 
-import { benchmarkTimes } from "./analysis-runtime.js";
-
 import {
   SetIconGreen,
   SetIconPartial,
   SetIconPartialJournal,
   SetIconRed,
   SetIconNone,
-  SetIcon,
-  TranslateMapName
+  SetIcon
 } from "./completion-helpers.js";
-
-const pSpan = " ";
-
-/* let benchHKCCBegin, benchHKCCEnd; */
 
 /* -------------------------- Functions ------------------------------------------------------------------------------------------- */
 
@@ -28,11 +21,7 @@ const pSpan = " ";
  * Main Function. Checks Hollow Knight game completion by analyzing the save file
  * @param {object} jsonObject Decoded save data in JavaScript Object Notation form (JSON)
  */
-function HKCheckCompletion(jsonObject, benchStart = performance.now()) {
-
-  // start benchmark
-  // benchHKCCBegin = new Date();
-  benchmarkTimes.CheckCompletion.timeStart = benchStart;
+function analyzeSave(jsonObject) {
 
   let HKPlayerData;
   let HKWorldItems;
@@ -289,16 +278,6 @@ function HKCheckCompletion(jsonObject, benchStart = performance.now()) {
     }
   }));
 
-  /* focus the text area after analyzing the save, without scrolling the document (too slow) */
-  /* document.getElementById("save-area").focus({preventScroll: true}); */
-
-  // finish and show benchmark
-  // benchHKCCEnd = new Date();
-  benchmarkTimes.CheckCompletion.timeEnd = performance.now();
-  // console.info("HKCheckCompletion() time (ms) =", benchHKCCEnd - benchHKCCBegin);
-
-  // Benchmark(benchmarkTimes);
-
   return true;
 }
 
@@ -320,8 +299,6 @@ function CheckPlayTime(section, playTime) {
 
   if (sec < 10) sec = "0" + sec;
   if (minutes < 10) minutes = "0" + minutes;
-
-  let textFill = "Time Played:" + pSpan + "<b>" + hours + " h " + minutes + " min " + sec + " sec</b>";
 
   section.entries.timePlayed.spoiler = hours + " h " + minutes + " min " + sec + " sec";
 
@@ -1000,8 +977,6 @@ function CheckSpellLevel(section, dataObject, playerData) {
  */
 function CheckWarriorDreams(section, dataObject, playerData) {
 
-  let sFillText = "";
-
   for (let i in dataObject) {
     (playerData[i] >= 2) ? SetIconGreen(section, i): SetIconRed(section, i);
   }
@@ -1036,8 +1011,6 @@ function CheckNailUpgrades(section, dataObject, playerData) {
   // appends "Nail" to every array element
   // same as names in the database object
   let nail = ["old", "sharpened", "channeled", "coiled", "pure"].map((element) => element + "Nail");
-
-  let sFillText = "";
 
   for (let i = 0; i < 5; i++) {
     (playerData.nailSmithUpgrades >= i) ? SetIconGreen(section, nail[i]): SetIconRed(section, nail[i]);
@@ -1753,78 +1726,20 @@ function CheckAdditionalThings(section, saveFile) {
   }
 
   /**
-   * Counts the total amount of Geo Rocks Unbroken or Broken. Logs to console all the Unbroken IDs and Map locations.
-   * @param {number} arrayLength How many items the Geo Rocks array is currently storing (for iteration)
-   * @param {string} mode Choose which Geo Rocks to count (broken or unbroken)
-   */
-  /* function CountGeoRocks(arrayLength, mode = "unbroken") {
-
-    let countTotal = 0;
-    let geoRocksLog = [];
-
-    if (mode === "unbroken") {
-      for (let i = 0; i < arrayLength; i++) {
-        if (sceneData.geoRocks[i].hitsLeft > 0) {
-          countTotal++;
-          geoRocksLog.push(`#${countTotal} 🏔️ ${sceneData.geoRocks[i].id} 🗺️ ${TranslateMapName(sceneData.geoRocks[i].sceneName)} ⌨️ ${sceneData.geoRocks[i].sceneName}`);
-        }
-      }
-
-      if (!countTotal) {
-        console.log("%cAll Geo Rocks Broken!", "color: #16c60c; font-weight: 700;");
-      } else {
-        console.groupCollapsed(`%cUnbroken Geo Rocks (${countTotal}):`, "color: #16c60c; font-weight: 700;");
-
-        for (let i = 0, length = geoRocksLog.length; i < length; i++) {
-          console.log(geoRocksLog[i]);
-        }
-
-        console.groupEnd();
-      }
-    } else {
-      for (let i = 0; i < arrayLength; i++) {
-        if (sceneData.geoRocks[i].hitsLeft === 0) countTotal++;
-      }
-    }
-
-    return countTotal;
-  } */
-
-  /**
-   * Counts the amount of in-game Interactables Activated or Not Activated. Logs to console all the Not Activated IDs and Map locations.
+   * Counts the amount of in-game interactables activated or not activated.
    * @param {number} arrayLength How many items the Interactables array is currently storing (for iteration)
    * @param {string} mode Choose which Interactables to count (notActivated or activated)
    */
   function CountItems(arrayLength, mode = "notActivated") {
 
     let countTotal = 0;
-    let itemsLog = [];
 
     if (mode === "notActivated") {
-
-      /* 
-      let list = new ItemListBox(worldData);
-      
-      */
-
       for (let i = 0; i < arrayLength; i++) {
         if (worldData[i].activated === false &&
           worldData[i].semiPersistent === false) {
           countTotal++;
-          itemsLog.push(`#${countTotal} ${worldData[i].id} 🗺️ ${TranslateMapName(worldData[i].sceneName)} ⌨️ ${worldData[i].sceneName}`);
         }
-      }
-
-      if (!countTotal) {
-        console.log("%cAll Interactables Activated!", "color: #16c60c; font-weight: 700;");
-      } else {
-        console.groupCollapsed(`%cInteractables Not Activated (${countTotal}):`, "color: #16c60c; font-weight: 700;");
-
-        for (let i = 0, length = itemsLog.length; i < length; i++) {
-          console.log(itemsLog[i]);
-        }
-
-        console.groupEnd();
       }
     } else {
       for (let i = 0; i < arrayLength; i++) {
@@ -1834,47 +1749,6 @@ function CheckAdditionalThings(section, saveFile) {
 
     return countTotal;
   }
-
-  /**
-   * Compares and logs all unrescued Grubs in a list: IDs and map locations
-   */
-  /* function LogMissingGrubs() {
-
-    let rescuedGrubsSceneList = [];
-
-    for (let i = 0, length = worldData.length; i < length; i++) {
-      if (worldData[i].id.includes("Grub Bottle")) {
-        if (worldData[i].activated === true) {
-          // There are 3 duplicates of the same map scene name from older game save files. Prevents adding duplicates
-          //  if (worldData[i].sceneName === "Ruins2_11" && worldData[i].id === "Grub Bottle (1)") {
-          //     continue;
-          // } else if (worldData[i].sceneName === "Ruins2_11" && worldData[i].id === "Grub Bottle (2)") {
-          //     continue;
-          // } else { 
-          rescuedGrubsSceneList.push(worldData[i].sceneName);
-          // }
-        }
-      }
-    }
-
-    // Filtering the reference database Grub list to include only the missing values
-    let missingGrubsList = section.grubsList.filter(x => !rescuedGrubsSceneList.includes(x));
-    let length = missingGrubsList.length;
-
-    if (!length) {
-      console.log("%cAll Grubs Rescued!", "color: #16c60c; font-weight: 700;");
-    } else {
-      console.groupCollapsed(`%cUnrescued Grubs (${length}):`, "color: #16c60c; font-weight: 700;");
-
-      for (let i = 0; i < length; i++) {
-        console.log(`#${section.grubsList.indexOf(missingGrubsList[i]) + 1} 🗺️ ${TranslateMapName(missingGrubsList[i])} ⌨️ ${missingGrubsList[i]}`);
-      }
-
-      console.groupEnd();
-    }
-
-    return false;
-  } */
 } // end function CheckAdditionalThings()
 
 /**
@@ -2268,44 +2142,6 @@ function CheckHintsTrue(section, dataObject, playerData, worldData) {
 } // function CheckHintsTrue()
 
 /**
- * Pre-Cleans HTML. Reads contents inside text area and parses it to a JavaScript object. If not empty, runs HKCheckCompletion() to check data.
- */
-function HKReadTextArea(textAreaId = "") {
-
-  // start benchmark
-  benchmarkTimes.HKReadTextArea.timeStart = performance.now();
-
-  let contents = document.getElementById(textAreaId).value;
-
-  if (contents.length) {
-
-    try {
-      let jsonObject = JSON.parse(contents);
-      // console.log(jsonObject);
-      if (jsonObject.hasOwnProperty("playerData")) {
-
-        HKCheckCompletion(jsonObject);
-      }
-
-      // end benchmark and show results
-      benchmarkTimes.HKReadTextArea.timeEnd = performance.now();
-
-      let result = benchmarkTimes.HKReadTextArea.timeEnd - benchmarkTimes.HKReadTextArea.timeStart;
-
-      console.info(`HKReadTextArea() time (ms) = %c${result.toFixed(2)}`, `color: #008cdc; font-weight: 700;`);
-
-    } catch (error) {
-      HK.saveAnalyzed = false;
-      alert(`This seems like not a valid Hollow Knight save.\n${error}`);
-      console.info(`This seems like not a valid Hollow Knight save.\n${error}`);
-    }
-  } else {
-    /* reset timer */
-    benchmarkTimes.HKReadTextArea.timeStart = 0;
-  }
-}
-
-/**
  * Reset the object state in memory to default values, like before first save analyzing. Undo all changes.
  * @param {object} db database object reference
  */
@@ -2541,14 +2377,6 @@ class DataChecker {
 
 } // end class DataChecker
 
-/* ----------------------- Event Listeners -------------------------- */
-
-// Analyze Text button
-document.getElementById("save-area-read").addEventListener("click", () => {
-  HKReadTextArea("save-area");
-}, false);
-
 export {
-  // to use in LoadSaveFile.js for auto-analyzing file after decoding
-  HKCheckCompletion
+  analyzeSave
 };
