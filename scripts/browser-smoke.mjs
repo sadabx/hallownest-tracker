@@ -119,6 +119,11 @@ const itemIcons = await evaluate(`
   document.querySelectorAll("#progress-view .check-art img").length;
 `);
 
+const brokenArtwork = await evaluate(`
+  [...document.querySelectorAll("#progress-view .check-art img")]
+    .filter(image => image.complete && image.naturalWidth === 0).length;
+`);
+
 const missingCards = await evaluate(`
   document.querySelector("#global-missing-only").click();
   document.querySelectorAll("#progress-view .check-card").length;
@@ -134,15 +139,24 @@ const rawSaveVisible = await evaluate(`
   document.querySelector("#raw-view pre")?.textContent.includes("playerData");
 `);
 
-const values = { ...overview, progressCards, itemIcons, missingCards, mapPins, rawSaveVisible };
+const values = { ...overview, progressCards, itemIcons, brokenArtwork, missingCards, mapPins, rawSaveVisible };
 
 if (screenshotPath) {
   await evaluate(`document.querySelector("#global-missing-only").checked && document.querySelector("#global-missing-only").click()`);
   await evaluate(`document.querySelector('[data-nav-tab=${JSON.stringify(screenshotView)}]').click()`);
-  await evaluate(`new Promise(resolve => setTimeout(() => {
+  await evaluate(`new Promise(resolve => setTimeout(async () => {
     const target = ${JSON.stringify(screenshotTarget)};
     if (target) document.querySelector(target)?.scrollIntoView({ block: "start" });
     else document.querySelector("#workspace").scrollTop = 0;
+    const scope = target ? document.querySelector(target) : document;
+    const images = [...scope.querySelectorAll(".check-art img")];
+    await Promise.race([
+      Promise.all(images.map(image => image.complete ? null : new Promise(done => {
+        image.addEventListener("load", done, { once: true });
+        image.addEventListener("error", done, { once: true });
+      }))),
+      new Promise(done => setTimeout(done, 2000))
+    ]);
     resolve();
   }, 250))`);
   const screenshot = await send("Page.captureScreenshot", { format: "png", captureBeyondViewport: false });
@@ -157,6 +171,7 @@ if (
   || values.categorySections < 20
   || values.progressCards < 500
   || values.itemIcons < 20
+  || values.brokenArtwork !== 0
   || values.missingCards >= values.progressCards
   || values.mapPins < 100
   || values.rawSaveVisible !== true

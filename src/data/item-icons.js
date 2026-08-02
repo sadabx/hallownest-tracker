@@ -1,4 +1,20 @@
 const ITEM_ASSET_ROOT = `${import.meta.env.BASE_URL}assets/items/`;
+const TRACKER_ASSET_ROOT = `${import.meta.env.BASE_URL}assets/tracker/`;
+
+const TRACKER_ICON_SECTIONS = new Set([
+  "bosses",
+  "charms",
+  "equipment",
+  "nailArts",
+  "spells",
+  "dreamNail",
+  "warriorDreams",
+  "dreamers",
+  "colosseum",
+  "grimmTroupe",
+  "lifeblood",
+  "godmaster"
+]);
 
 const ICON_RULES = [
   ["old nail", "old-nail.webp"],
@@ -35,7 +51,11 @@ const ICON_RULES = [
 function itemIconFor(entry) {
   const itemName = entry.name.toLowerCase().replace(/^p\d+\s+/, "");
   const match = ICON_RULES.find(([needle]) => itemName.includes(needle));
-  return match ? `${ITEM_ASSET_ROOT}${match[1]}` : null;
+  if (match) return `${ITEM_ASSET_ROOT}${match[1]}`;
+  if (TRACKER_ICON_SECTIONS.has(entry.sectionKey) && entry.raw.wiki) {
+    return `${TRACKER_ASSET_ROOT}${entry.sectionKey}-${entry.key}.webp`;
+  }
+  return null;
 }
 
 export { itemIconFor };

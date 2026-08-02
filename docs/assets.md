@@ -1,6 +1,6 @@
 # Asset attribution
 
-The inventory and Nail upgrade icons under `public/assets/items/` are Hollow Knight game artwork sourced from the [Hollow Knight Wiki item category](https://hollowknight.fandom.com/wiki/Category:Items_(Hollow_Knight)) and its Nail article. Hollow Knight and its game artwork are © Team Cherry.
+The inventory and Nail upgrade icons under `public/assets/items/`, plus the Main Progress artwork under `public/assets/tracker/`, are Hollow Knight game artwork sourced from the [Hollow Knight Wiki](https://hollowknight.fandom.com/wiki/Hollow_Knight_Wiki). Hollow Knight and its game artwork are © Team Cherry.
 
 These icons are included only for identification in this unofficial, non-commercial fan tracker. They are not covered by the repository's GPL-3.0 license. The `npm run sync:icons` command documents and reproduces the source-to-local-asset import.
 
