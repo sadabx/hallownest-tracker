@@ -13,7 +13,7 @@ function matchesProgress(item) {
 function renderEntryCard(item) {
   const location = item.description || (item.region ? REGIONS[item.region].label : "Location not catalogued");
   const wiki = item.wiki ? `<a class="icon-link" href="${WIKI_ROOT}${encodeURI(item.wiki)}" target="_blank" rel="noreferrer" aria-label="Open wiki">Wiki</a>` : "";
-  const map = item.region ? `<button class="icon-link" data-map-entry="${item.id}">Map</button>` : "";
+  const map = item.region && REGIONS[item.region].atlas !== false ? `<button class="icon-link" data-map-entry="${item.id}">Map</button>` : "";
   const icon = itemIconFor(item);
   const artwork = icon ? `<img src="${icon}" alt="" loading="lazy">` : `<span class="locked-art">?</span>`;
   const displayName = item.name.replace(/^#\d+\s+/, "");

@@ -13,7 +13,8 @@ const state = {
   selectedEntry: null,
   scale: 1,
   panX: 0,
-  panY: 0
+  panY: 0,
+  mapLabels: false
 };
 
 function loadPreferences() {

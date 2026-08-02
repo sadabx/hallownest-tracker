@@ -35,7 +35,7 @@ index.html     Editable Vite application shell
 public/        Static files copied as-is
 src/
   app/         Shared tracker model, state, and rendering orchestration
-  assets/      Original Hallownest atlas artwork
+  assets/      App-owned source artwork
   components/  Upload, modal, navigation, and page controls
   core/        Save decoder, completion engine, and game database
   css/         Application styling
@@ -53,8 +53,8 @@ GitHub Actions builds `main` with Vite and deploys `dist/` to GitHub Pages. The 
 
 Hallownest Tracker is licensed under [GPL-3.0](LICENSE).
 
-The save decoder, completion rules, and initial game database are adapted from Michael "ReznoR"'s GPL-3.0 [Hollow Knight Save Completion Analyzer](https://github.com/ReznoRMichael/hollow-knight-completion-check). The application shell, tracker workspaces, filters, original vector atlas, and ongoing data model are maintained independently under the same license. Its overall workflow is inspired by [Silksong Tracker](https://github.com/th3r3dfox/silksong-tracker), without copying its game assets.
+The save decoder, completion rules, and initial game database are adapted from Michael "ReznoR"'s GPL-3.0 [Hollow Knight Save Completion Analyzer](https://github.com/ReznoRMichael/hollow-knight-completion-check). The application shell, tracker workspaces, filters, map viewer, and ongoing data model are maintained independently under the same license. Its overall workflow is inspired by [Silksong Tracker](https://github.com/th3r3dfox/silksong-tracker), without copying its game assets.
 
 This is an unofficial, non-commercial fan project. Hollow Knight belongs to Team Cherry.
 
-Hollow Knight inventory icons are © Team Cherry, sourced from the [Hollow Knight Wiki item category](https://hollowknight.fandom.com/wiki/Category:Items_(Hollow_Knight)), and excluded from the GPL-3.0 license grant. See [docs/assets.md](docs/assets.md).
+Hollow Knight inventory icons and Hallownest map artwork are © Team Cherry, sourced from the Hollow Knight Wiki, and excluded from the GPL-3.0 license grant. See [docs/assets.md](docs/assets.md).

@@ -134,12 +134,33 @@ const mapPins = await evaluate(`
   document.querySelectorAll("#map-view .map-pin").length;
 `);
 
+const mapViewer = await evaluate(`(() => {
+  const image = document.querySelector("#map-view .hallownest-map-art");
+  const viewport = document.querySelector("#map-viewport");
+  const stage = document.querySelector("#map-stage");
+  const before = stage?.style.transform;
+  const rect = viewport?.getBoundingClientRect();
+  viewport?.dispatchEvent(new WheelEvent("wheel", {
+    deltaY: -100,
+    clientX: rect ? rect.left + rect.width / 2 : 0,
+    clientY: rect ? rect.top + rect.height / 2 : 0,
+    bubbles: true,
+    cancelable: true
+  }));
+  const zoomed = Boolean(before && stage?.style.transform && before !== stage.style.transform);
+  document.querySelector("#map-reset")?.click();
+  return {
+    loaded: Boolean(image?.complete && image.naturalWidth === 2560 && image.naturalHeight === 1651),
+    zoomed
+  };
+})()`);
+
 const rawSaveVisible = await evaluate(`
   document.querySelector('[data-nav-tab="raw"]').click();
   document.querySelector("#raw-view pre")?.textContent.includes("playerData");
 `);
 
-const values = { ...overview, progressCards, itemIcons, brokenArtwork, missingCards, mapPins, rawSaveVisible };
+const values = { ...overview, progressCards, itemIcons, brokenArtwork, missingCards, mapPins, mapViewer, rawSaveVisible };
 
 if (screenshotPath) {
   await evaluate(`document.querySelector("#global-missing-only").checked && document.querySelector("#global-missing-only").click()`);
@@ -174,6 +195,8 @@ if (
   || values.brokenArtwork !== 0
   || values.missingCards >= values.progressCards
   || values.mapPins < 100
+  || values.mapViewer.loaded !== true
+  || values.mapViewer.zoomed !== true
   || values.rawSaveVisible !== true
 ) {
   throw new Error(`Unexpected analyzer result: ${JSON.stringify(values)}`);

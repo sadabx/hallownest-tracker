@@ -55,6 +55,7 @@ function flattenEntries() {
         description: stripMarkup(entry.spoiler),
         status: statusFor(entry),
         region: findRegion(entry, section),
+        sceneName: entry.sceneName || null,
         wiki: entry.wiki || null,
         raw: entry
       });
