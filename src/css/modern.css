@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "TrajanPro";
+  src: url("/hallownest-tracker/assets/fonts/TrajanPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TrajanPro";
+  src: url("/hallownest-tracker/assets/fonts/TrajanPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg-1: #0f0f10;
   --bg-2: #171819;
@@ -17,8 +33,8 @@
   --sidebar-width: 220px;
   --topbar-height: 44px;
   color-scheme: dark;
-  font-family: "Cinzel", "Times New Roman", serif;
-  font-weight: 500;
+  font-family: "TrajanPro", "Times New Roman", serif;
+  font-weight: 400;
   font-synthesis: none;
 }
 
@@ -38,6 +54,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   inset: 0 auto 0 0;
   width: var(--sidebar-width);
   padding: 12px 14px 16px;
+  overflow-x: hidden;
   overflow-y: auto;
   border-right: 1px solid var(--stroke);
   background: var(--bg-2);
@@ -56,16 +73,16 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .brand-logo { width: 30px; height: 30px; object-fit: contain; }
-.app-brand > span { display: grid; }
+.app-brand > span { display: grid; min-width: 0; }
 .app-brand strong, .app-brand small {
   color: #fff;
-  font-size: 1.28rem;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: .05em;
   line-height: 1.2;
   text-transform: uppercase;
 }
-.app-brand small { font-size: 1.28rem; }
+.app-brand small { font-size: 1.2rem; }
 
 .sidebar-wiki-button {
   display: flex;
@@ -140,7 +157,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .topbar-category, .topbar-toggle { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); font-size: .9rem; font-variant: small-caps; text-transform: uppercase; white-space: nowrap; }
 .topbar-category { height: 31px; padding: 0 5px 0 11px; border: 1px solid var(--stroke); border-radius: 7px; background: var(--bg-3); }
 .topbar-category > i { color: var(--ink-1); font-size: .72rem; }
-.topbar-category select { width: 118px; height: 29px; padding: 0 24px 0 2px; color: var(--ink-2); border: 0; outline: 0; background: transparent; font-family: "Cinzel", "Times New Roman", serif; font-size: .85rem; text-transform: uppercase; }
+.topbar-category select { width: 132px; height: 29px; padding: 0 24px 0 2px; color: var(--ink-2); border: 0; outline: 0; background: transparent; font-family: "TrajanPro", "Times New Roman", serif; font-size: .85rem; text-transform: uppercase; }
 .topbar-toggle input { width: 16px; height: 16px; margin: 0; accent-color: var(--accent); }
 .topbar-toggle > span { display: none; }
 .primary-action {
@@ -225,7 +242,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   background: var(--bg-2);
 }
 .hero-stats article { display: flex; align-items: baseline; gap: 7px; min-width: 0; padding: 6px 12px; border: 0; border-radius: 6px; background: rgba(255,255,255,.05); box-shadow: 0 0 4px rgba(0,0,0,.3); }
-.hero-stats article span { color: #aaa; font-size: 1rem; font-variant: small-caps; text-transform: uppercase; }
+.hero-stats article span { color: #aaa; font-size: 1rem; font-variant: small-caps; text-transform: uppercase; white-space: nowrap; }
 .hero-stats article strong { color: var(--ink-1); font-size: 1rem; font-weight: 500; white-space: nowrap; }
 .hero-stats article small, .hero-stats .meter { display: none; }
 
@@ -275,7 +292,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .check-section { position: absolute; top: -9px; left: 50%; padding: 2px 7px; color: var(--ink-3); border: 1px solid var(--stroke); border-radius: 6px; background: #0c0c0d; font-size: .7rem; letter-spacing: .05em; text-transform: uppercase; transform: translateX(-50%); white-space: nowrap; max-width: 90%; overflow: hidden; text-overflow: ellipsis; }
 .check-art { display: grid; width: 62px; height: 62px; place-items: center; margin: 8px auto 7px; color: #c7c7c7; font-size: 2.5rem; text-shadow: 0 2px 12px #000; }
 .check-art img { display: block; width: auto; height: 100%; min-width: 0; min-height: 0; max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 3px 5px rgba(0,0,0,.65)); }
-.locked-art { color: #aaa; font-family: "Cinzel", serif; font-size: 3rem; line-height: 1; }
+.locked-art { color: #aaa; font-family: "TrajanPro", serif; font-size: 3rem; line-height: 1; }
 .check-copy h3 { margin: 0; color: var(--ink-1); font-size: 1rem; line-height: 1.2; text-transform: uppercase; overflow-wrap: anywhere; }
 .spoiler-copy { margin: 7px 0 0; color: var(--ink-3); font-size: .62rem; line-height: 1.25; }
 .spoiler-copy:empty { display: none; }
