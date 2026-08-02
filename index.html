@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#071117">
+  <link href="./assets/fontawesome/css/all.min.css" rel="stylesheet">
   <link href="/src/favicon.png" rel="icon">
-  <title>Hallownest Tracker — Hollow Knight Progress &amp; Map</title>
+  <title>Hallownest Tracker - Hollow Knight Progress &amp; Map</title>
   <meta name="description" content="Decode a Hollow Knight save locally, track every check, explore Hallownest on an interactive map, and inspect raw save data.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Hallownest Tracker">
@@ -18,13 +19,13 @@
       <span><strong>Hallownest</strong><small>Tracker</small></span>
     </a>
 
-    <a class="sidebar-wiki-button" href="https://hollowknight.wiki/" target="_blank" rel="noreferrer">Hollow Knight Wiki</a>
+    <a class="sidebar-wiki-button" href="https://hollowknight.wiki/" target="_blank" rel="noreferrer">Wiki</a>
 
     <div class="sidebar-actions" aria-label="Project links">
-      <a href="https://store.steampowered.com/app/367520/Hollow_Knight/" target="_blank" rel="noreferrer" title="Hollow Knight on Steam">S</a>
-      <a href="https://hollowknight.wiki/" target="_blank" rel="noreferrer" title="Hollow Knight Wiki">W</a>
-      <a href="https://www.ign.com/maps/hollow-knight/hallownest" target="_blank" rel="noreferrer" title="Hallownest map">M</a>
-      <a href="https://github.com/sadabx/hallownest-tracker" target="_blank" rel="noreferrer" title="GitHub repository">GH</a>
+      <a href="https://store.steampowered.com/app/367520/Hollow_Knight/" target="_blank" rel="noreferrer" title="Hollow Knight on Steam" aria-label="Hollow Knight on Steam"><i class="fa-brands fa-steam"></i></a>
+      <a href="https://discord.gg/hollowknight" target="_blank" rel="noreferrer" title="Hollow Knight Discord" aria-label="Hollow Knight Discord"><i class="fa-brands fa-discord"></i></a>
+      <a href="https://www.reddit.com/r/HollowKnight/" target="_blank" rel="noreferrer" title="Hollow Knight Reddit" aria-label="Hollow Knight Reddit"><i class="fa-brands fa-reddit-alien"></i></a>
+      <a href="https://github.com/sadabx/hallownest-tracker" target="_blank" rel="noreferrer" title="GitHub repository" aria-label="GitHub repository"><i class="fa-brands fa-github"></i></a>
     </div>
 
     <nav class="app-nav" aria-label="Tracker workspaces">
@@ -51,11 +52,11 @@
   <div class="app-shell">
     <header class="app-topbar">
       <button id="mobile-menu" class="mobile-menu" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-      <div class="save-indicator"><i></i><span id="save-state">No save loaded</span></div>
+      <div class="save-indicator"><span id="save-state">No save loaded</span></div>
       <div class="topbar-actions">
-        <label class="topbar-category">Categories
+        <label class="topbar-category" aria-label="Filter progress category"><i class="fa-solid fa-feather-pointed"></i>
           <select id="global-category">
-            <option value="all">All</option>
+            <option value="all">Categories</option>
             <option value="main">Main Progress</option>
             <option value="essentials">Essentials</option>
             <option value="journal">Hunter's Journal</option>
@@ -67,7 +68,7 @@
         <label class="topbar-toggle"><input id="global-missing-only" type="checkbox"><span></span>Show only missing</label>
         <label class="topbar-toggle"><input id="global-show-spoilers" type="checkbox"><span></span>Show spoilers</label>
         <button id="global-upload" class="primary-action">Upload save</button>
-        <button id="global-reset" class="topbar-reset">Reset</button>
+        <button id="global-reset" class="topbar-reset"><i class="fa-solid fa-trash-can" aria-hidden="true"></i> Reset</button>
       </div>
     </header>
 

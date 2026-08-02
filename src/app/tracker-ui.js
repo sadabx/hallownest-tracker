@@ -14,8 +14,9 @@ function renderSidebarStats(entries) {
   document.querySelector("#sidebar-completion").textContent = HK.saveAnalyzed ? completion : "No save";
   document.querySelector("#sidebar-progress-fill").style.width = HK.saveAnalyzed ? `${Math.min(Number(statValue("gameCompletion", 0)), 112) / 1.12}%` : "0%";
   document.querySelector("#sidebar-count").textContent = HK.saveAnalyzed ? `${stats.complete} checks complete` : `${entries.length} checks indexed`;
-  document.querySelector("#save-state").textContent = HK.saveAnalyzed ? "Save loaded" : "No save loaded";
+  document.querySelector("#save-state").textContent = HK.saveAnalyzed ? "Normal save loaded" : "No save loaded";
   document.querySelector("#save-state").classList.toggle("is-loaded", HK.saveAnalyzed);
+  document.querySelector(".save-indicator").classList.toggle("is-loaded", HK.saveAnalyzed);
 }
 
 function selectEntryOnMap(entryId) {
@@ -58,11 +59,17 @@ function bindDynamicEvents() {
   document.querySelectorAll("[data-tab-target]").forEach(button => { button.onclick = () => changeTab(button.dataset.tabTarget); });
   document.querySelectorAll("[data-open-group]").forEach(button => { button.onclick = () => {
     state.group = button.dataset.openGroup;
+    state.tocGroup = state.group;
     changeTab("progress");
   }; });
   document.querySelectorAll("[data-group]").forEach(button => { button.onclick = () => {
     state.group = button.dataset.group;
+    if (state.group !== "all") state.tocGroup = state.group;
     savePreferences();
+    render();
+  }; });
+  document.querySelectorAll("[data-toc-group]").forEach(button => { button.onclick = () => {
+    state.tocGroup = button.dataset.tocGroup;
     render();
   }; });
   document.querySelector("#progress-search")?.addEventListener("input", event => {
@@ -132,6 +139,7 @@ function init() {
   });
   document.querySelector("#global-category").addEventListener("change", event => {
     state.group = event.target.value;
+    if (state.group !== "all") state.tocGroup = state.group;
     savePreferences();
     render();
   });

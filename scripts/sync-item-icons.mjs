@@ -30,6 +30,13 @@ const ITEM_NAMES = new Set([
   "Vessel Fragment",
   "Wanderer's Journal"
 ]);
+const EXTRA_ICONS = new Map([
+  ["Old Nail", "https://static.wikia.nocookie.net/hollowknight/images/6/65/Nail_1_Old_Nail.png/revision/latest/scale-to-width-down/72?cb=20170717212304"],
+  ["Sharpened Nail", "https://static.wikia.nocookie.net/hollowknight/images/0/0e/Nail_2_Sharpened_Nail.png/revision/latest/scale-to-width-down/72?cb=20170717212321"],
+  ["Channelled Nail", "https://static.wikia.nocookie.net/hollowknight/images/2/29/Nail_3_Channelled_Nail.png/revision/latest/scale-to-width-down/72?cb=20170717212328"],
+  ["Coiled Nail", "https://static.wikia.nocookie.net/hollowknight/images/e/e4/Nail_4_Coiled_Nail.png/revision/latest/scale-to-width-down/72?cb=20170717212335"],
+  ["Pure Nail", "https://static.wikia.nocookie.net/hollowknight/images/4/4a/Nail_5_Pure_Nail.png/revision/latest/scale-to-width-down/72?cb=20170717212343"]
+]);
 
 function decodeEntities(value) {
   return value
@@ -63,6 +70,8 @@ for (const row of html.split("<tr").slice(1)) {
   icons.set(itemName, decodeEntities(image[1]));
 }
 
+for (const [itemName, source] of EXTRA_ICONS) icons.set(itemName, source);
+
 await mkdir(OUTPUT_DIRECTORY, { recursive: true });
 for (const [itemName, source] of icons) {
   const response = await fetch(source);
@@ -72,7 +81,7 @@ for (const [itemName, source] of icons) {
   console.log(`${itemName} -> ${destination}`);
 }
 
-if (icons.size !== ITEM_NAMES.size) {
-  const missing = [...ITEM_NAMES].filter(itemName => !icons.has(itemName));
+if (![...ITEM_NAMES, ...EXTRA_ICONS.keys()].every(itemName => icons.has(itemName))) {
+  const missing = [...ITEM_NAMES, ...EXTRA_ICONS.keys()].filter(itemName => !icons.has(itemName));
   throw new Error(`Missing icons: ${missing.join(", ")}`);
 }

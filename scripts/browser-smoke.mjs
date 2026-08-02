@@ -87,7 +87,7 @@ if (siteUrl) {
   await send("Page.navigate", { url: siteUrl });
   let ready = false;
   for (let attempt = 0; attempt < 100; attempt += 1) {
-    if (await evaluate(`Boolean(window.HallownestTracker)`)) {
+    if (await evaluate(`Boolean(window.HallownestTracker) && document.readyState === "complete" && Boolean(document.querySelector("#progress-view")?.children.length)`)) {
       ready = true;
       break;
     }
@@ -137,6 +137,7 @@ const rawSaveVisible = await evaluate(`
 const values = { ...overview, progressCards, itemIcons, missingCards, mapPins, rawSaveVisible };
 
 if (screenshotPath) {
+  await evaluate(`document.querySelector("#global-missing-only").checked && document.querySelector("#global-missing-only").click()`);
   await evaluate(`document.querySelector('[data-nav-tab=${JSON.stringify(screenshotView)}]').click()`);
   await evaluate(`new Promise(resolve => setTimeout(() => {
     const target = ${JSON.stringify(screenshotTarget)};

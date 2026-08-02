@@ -4,6 +4,7 @@ const state = {
   save: null,
   activeTab: "progress",
   group: "all",
+  tocGroup: "main",
   query: "",
   missingOnly: false,
   spoilers: false,

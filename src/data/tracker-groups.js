@@ -1,7 +1,7 @@
 const GROUPS = {
   main: {
     label: "Main Progress",
-    sections: ["bosses", "charms", "colosseum", "dreamers", "dreamNail", "equipment", "nailUpgrades", "maskShards", "nailArts", "spells", "vesselFragments", "warriorDreams", "grimmTroupe", "lifeblood", "godmaster"]
+    sections: ["nailUpgrades", "maskShards", "vesselFragments", "nailArts", "spells", "dreamNail", "equipment", "charms", "dreamers", "bosses", "warriorDreams", "colosseum", "grimmTroupe", "lifeblood", "godmaster"]
   },
   essentials: {
     label: "Essentials",

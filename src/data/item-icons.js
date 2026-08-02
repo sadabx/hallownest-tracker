@@ -1,6 +1,12 @@
 const ITEM_ASSET_ROOT = `${import.meta.env.BASE_URL}assets/items/`;
 
 const ICON_RULES = [
+  ["old nail", "old-nail.webp"],
+  ["sharpened nail", "sharpened-nail.webp"],
+  ["channelled nail", "channelled-nail.webp"],
+  ["channeled nail", "channelled-nail.webp"],
+  ["coiled nail", "coiled-nail.webp"],
+  ["pure nail", "pure-nail.webp"],
   ["shopkeeper's key", "shopkeepers-key.webp"],
   ["collector's map", "collectors-map.webp"],
   ["hunter's journal", "hunters-journal.webp"],
