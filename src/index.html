@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071117">
+  <link href="favicon.png" rel="icon">
+  <title>Hallownest Tracker — Hollow Knight Progress &amp; Map</title>
+  <meta name="description" content="Decode a Hollow Knight save locally, track every check, explore Hallownest on an interactive map, and inspect raw save data.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hallownest Tracker">
+  <meta property="og:description" content="A private Hollow Knight save tracker with full progress, map, filters, and raw data.">
+</head>
+<body>
+  <aside class="app-sidebar" id="app-sidebar">
+    <a class="app-brand" href="#" data-nav-tab="dashboard" aria-label="Hallownest Tracker dashboard">
+      <span class="brand-sigil" aria-hidden="true">H</span>
+      <span><strong>Hallownest</strong><small>Tracker</small></span>
+    </a>
+
+    <nav class="app-nav" aria-label="Tracker workspaces">
+      <span class="nav-label">Tracker</span>
+      <button data-nav-tab="dashboard"><i class="nav-icon dashboard-icon"></i><span>Dashboard</span></button>
+      <button data-nav-tab="progress"><i class="nav-icon progress-icon"></i><span>All progress</span></button>
+      <button data-nav-tab="map"><i class="nav-icon map-icon"></i><span>Interactive map</span></button>
+      <button data-nav-tab="raw"><i class="nav-icon raw-icon"></i><span>Raw save data</span></button>
+    </nav>
+
+    <div class="sidebar-save-card">
+      <span class="nav-label">Current journey</span>
+      <strong id="sidebar-completion">No save</strong>
+      <div class="sidebar-meter"><i id="sidebar-progress-fill"></i></div>
+      <small id="sidebar-count">Database ready</small>
+    </div>
+
+    <div class="sidebar-links">
+      <a href="https://hollowknight.wiki/" target="_blank" rel="noreferrer">Hollow Knight Wiki</a>
+      <a href="https://github.com/sadabx/hallownest-tracker" target="_blank" rel="noreferrer">Source on GitHub</a>
+    </div>
+
+    <p class="sidebar-credit">Original analyzer by ReznoRMichael.<br>Extended under GPL-3.0.</p>
+  </aside>
+
+  <div class="app-shell">
+    <header class="app-topbar">
+      <button id="mobile-menu" class="mobile-menu" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <div class="save-indicator"><i></i><span id="save-state">No save loaded</span></div>
+      <div class="topbar-actions">
+        <button id="global-reset" class="topbar-reset">Reset</button>
+        <button id="global-upload" class="primary-action">Load save</button>
+      </div>
+    </header>
+
+    <main id="workspace" class="workspace">
+      <section id="dashboard-view" class="workspace-view"></section>
+      <section id="progress-view" class="workspace-view"></section>
+      <section id="map-view" class="workspace-view"></section>
+      <section id="raw-view" class="workspace-view"></section>
+    </main>
+  </div>
+
+  <div class="drop-overlay" aria-hidden="true"><div><strong>Drop Hollow Knight save</strong><span>Release to analyze it locally</span></div></div>
+
+  <div class="legacy-engine" aria-hidden="true">
+    <input id="save-area-file" type="file" accept=".dat,.bak*">
+    <button id="save-area-read" type="button">Analyze save text</button>
+    <textarea id="save-area"></textarea>
+  </div>
+</body>
+</html>
