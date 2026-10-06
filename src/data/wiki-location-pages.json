@@ -1,0 +1,2288 @@
+{
+  "Hornet_Protector": [
+    {
+      "file": "hornet-protector-location-1.webp",
+      "label": "Location in Greenpath"
+    }
+  ],
+  "False_Knight": [
+    {
+      "file": "false-knight-location-1.webp",
+      "label": "Location in the Forgotten Crossroads"
+    }
+  ],
+  "Soul_Master": [
+    {
+      "file": "soul-master-location-1.webp",
+      "label": "Location in Soul Sanctum"
+    }
+  ],
+  "Dung_Defender": [
+    {
+      "file": "dung-defender-location-1.webp",
+      "label": "Location in the Royal Waterways"
+    }
+  ],
+  "Brooding_Mawlek": [
+    {
+      "file": "brooding-mawlek-location-1.webp",
+      "label": "Location in the Forgotten Crossroads"
+    },
+    {
+      "file": "brooding-mawlek-location-2.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Gruz_Mother": [
+    {
+      "file": "gruz-mother-location-1.webp",
+      "label": "Colosseum of Fools"
+    },
+    {
+      "file": "gruz-mother-location-2.webp",
+      "label": "Location in Forgotten Crossroads"
+    }
+  ],
+  "Mantis_Lords": [
+    {
+      "file": "mantis-lords-location-1.webp",
+      "label": "Mantis Lords at the bottom of the Mantis Village in Fungal Wastes"
+    }
+  ],
+  "Nosk": [
+    {
+      "file": "nosk-location-1.webp",
+      "label": "Location in Deepnest"
+    }
+  ],
+  "Broken_Vessel": [
+    {
+      "file": "broken-vessel-location-1.webp",
+      "label": "Location in Ancient Basin"
+    }
+  ],
+  "Hornet_Sentinel": [
+    {
+      "file": "hornet-sentinel-location-1.webp",
+      "label": "Hornet's second arena"
+    }
+  ],
+  "Collector": [
+    {
+      "file": "collector-location-1.webp",
+      "label": "Location in the Tower of Love"
+    }
+  ],
+  "Uumuu": [
+    {
+      "file": "uumuu-location-1.webp",
+      "label": "Location in Fog Canyon"
+    }
+  ],
+  "Traitor_Lord": [
+    {
+      "file": "traitor-lord-location-1.webp",
+      "label": "Location in the Queen's Gardens"
+    }
+  ],
+  "Watcher_Knight": [
+    {
+      "file": "watcher-knight-location-1.webp",
+      "label": "Location in Watcher's Spire"
+    }
+  ],
+  "Gathering_Swarm": [
+    {
+      "file": "gathering-swarm-location-1.webp",
+      "label": "Location of Sly in Dirtmouth"
+    }
+  ],
+  "Stalwart_Shell": [
+    {
+      "file": "stalwart-shell-location-1.webp",
+      "label": "Location of Sly in Dirtmouth"
+    }
+  ],
+  "Grubsong": [
+    {
+      "file": "grubsong-location-1.webp",
+      "label": "Location of Grubfather in Forgotten Crossroads"
+    }
+  ],
+  "Wayward_Compass": [
+    {
+      "file": "wayward-compass-location-1.webp",
+      "label": "Location of Iselda in Dirtmouth"
+    }
+  ],
+  "Baldur_Shell": [
+    {
+      "file": "baldur-shell-location-1.webp",
+      "label": "Location in the Howling Cliffs"
+    }
+  ],
+  "Quick_Focus": [
+    {
+      "file": "quick-focus-location-1.webp",
+      "label": "Location of Salubra in the Forgotten Crossroads"
+    }
+  ],
+  "Fury_of_the_Fallen": [
+    {
+      "file": "fury-of-the-fallen-location-1.webp",
+      "label": "Location in the King's Pass"
+    }
+  ],
+  "Lifeblood_Core": [
+    {
+      "file": "lifeblood-core-location-1.webp",
+      "label": "Location of the Charm"
+    }
+  ],
+  "Lifeblood_Heart": [
+    {
+      "file": "lifeblood-heart-location-1.webp",
+      "label": "Location of Salubra in the Forgotten Crossroads"
+    }
+  ],
+  "Flukenest": [
+    {
+      "file": "flukenest-location-1.webp",
+      "label": "Location of Flukemarm in the Royal Waterways"
+    }
+  ],
+  "Defender's_Crest": [
+    {
+      "file": "defenders-crest-location-1.webp",
+      "label": "Location of Dung Defender in the Royal Waterways"
+    }
+  ],
+  "Thorns_of_Agony": [
+    {
+      "file": "thorns-of-agony-location-1.webp",
+      "label": "Thorns of Agony"
+    }
+  ],
+  "Heavy_Blow": [
+    {
+      "file": "heavy-blow-location-1.webp",
+      "label": "Location of Sly in Dirtmouth"
+    }
+  ],
+  "Steady_Body": [
+    {
+      "file": "steady-body-location-1.webp",
+      "label": "Location of Salubra in the Forgotten Crossroads"
+    }
+  ],
+  "Mark_of_Pride": [
+    {
+      "file": "mark-of-pride-location-1.webp",
+      "label": "Location in Fungal Wastes"
+    }
+  ],
+  "Longnail": [
+    {
+      "file": "longnail-location-1.webp",
+      "label": "Location of Salubra in the Forgotten Crossroads"
+    }
+  ],
+  "Shaman_Stone": [
+    {
+      "file": "shaman-stone-location-1.webp",
+      "label": "Location of Salubra in the Forgotten Crossroads"
+    }
+  ],
+  "Sharp_Shadow": [
+    {
+      "file": "sharp-shadow-location-1.webp",
+      "label": "Location of Sharp Shadow in Deepnest"
+    }
+  ],
+  "Spore_Shroom": [
+    {
+      "file": "spore-shroom-location-1.webp",
+      "label": "Location in the Fungal Wastes"
+    }
+  ],
+  "Soul_Eater": [
+    {
+      "file": "soul-eater-location-1.webp",
+      "label": "Location in the Resting Grounds"
+    }
+  ],
+  "Soul_Catcher": [
+    {
+      "file": "soul-catcher-location-1.webp",
+      "label": "Location in the Forgotten Crossroads"
+    }
+  ],
+  "Fragile_Heart": [
+    {
+      "file": "fragile-heart-location-1.webp",
+      "label": "Leg Eater's location in the Fungal Wastes"
+    }
+  ],
+  "Glowing_Womb": [
+    {
+      "file": "glowing-womb-location-1.webp",
+      "label": "Location in the Forgotten Crossroads"
+    }
+  ],
+  "Fragile_Greed": [
+    {
+      "file": "fragile-greed-location-1.webp",
+      "label": "Leg Eater's location in the Fungal Wastes"
+    }
+  ],
+  "Fragile_Strength": [
+    {
+      "file": "fragile-strength-location-1.webp",
+      "label": "Leg Eater's location in the Fungal Wastes"
+    }
+  ],
+  "Nailmaster's_Glory": [
+    {
+      "file": "nailmasters-glory-location-1.webp",
+      "label": "Location of Sly in Dirtmouth"
+    }
+  ],
+  "Joni's_Blessing": [
+    {
+      "file": "jonis-blessing-location-1.webp",
+      "label": "Joni's Blessing location"
+    }
+  ],
+  "Hiveblood": [
+    {
+      "file": "hiveblood-location-1.webp",
+      "label": "Location in the Hive"
+    }
+  ],
+  "Dream_Wielder": [
+    {
+      "file": "dream-wielder-location-1.webp",
+      "label": "Seer location in the Resting Grounds"
+    }
+  ],
+  "Dashmaster": [
+    {
+      "file": "dashmaster-location-1.webp",
+      "label": "Location of Dashmaster in the Fungal Wastes"
+    }
+  ],
+  "Quick_Slash": [
+    {
+      "file": "quick-slash-location-1.webp",
+      "label": "Location in Kingdom's Edge"
+    }
+  ],
+  "Shape_of_Unn": [
+    {
+      "file": "shape-of-unn-location-1.webp",
+      "label": "Location of Unn in Greenpath"
+    }
+  ],
+  "Grubberfly's_Elegy": [
+    {
+      "file": "grubberflys-elegy-location-1.webp",
+      "label": "Location of Grubfather in Forgotten Crossroads"
+    }
+  ],
+  "Deep_Focus": [
+    {
+      "file": "deep-focus-location-1.webp",
+      "label": "Deep Focus Location"
+    }
+  ],
+  "Spell_Twister": [
+    {
+      "file": "spell-twister-location-1.webp",
+      "label": "Location in Soul Sanctum"
+    }
+  ],
+  "Mothwing_Cloak": [
+    {
+      "file": "mothwing-cloak-location-1.webp",
+      "label": "Location in Greenpath"
+    }
+  ],
+  "Mantis_Claw": [
+    {
+      "file": "mantis-claw-location-1.webp",
+      "label": "Location in Mantis Village"
+    }
+  ],
+  "Kingsoul": [
+    {
+      "file": "kingsoul-location-1.webp",
+      "label": "Location of the White Lady in the Queen's Gardens"
+    },
+    {
+      "file": "kingsoul-location-2.webp",
+      "label": "Location of the charm's second half in the White Palace"
+    }
+  ],
+  "Crystal_Heart": [
+    {
+      "file": "crystal-heart-location-1.webp",
+      "label": "Location in Crystal Peak"
+    }
+  ],
+  "Monarch_Wings": [
+    {
+      "file": "monarch-wings-location-1.webp",
+      "label": "Location in Ancient Basin"
+    }
+  ],
+  "Isma's_Tear": [
+    {
+      "file": "ismas-tear-location-1.webp",
+      "label": "Location in Isma's Grove"
+    }
+  ],
+  "Shade_Cloak": [
+    {
+      "file": "shade-cloak-location-1.webp",
+      "label": "Location in the Abyss"
+    }
+  ],
+  "King's_Brand": [
+    {
+      "file": "kings-brand-location-1.webp",
+      "label": "Location in Ancient Basin"
+    },
+    {
+      "file": "kings-brand-location-2.webp",
+      "label": "Location in Kingdom's Edge"
+    }
+  ],
+  "Vengeful_Spirit": [
+    {
+      "file": "vengeful-spirit-location-1.webp",
+      "label": "Location in Ancestral Mound"
+    }
+  ],
+  "Great_Slash": [
+    {
+      "file": "great-slash-location-1.webp",
+      "label": "Sheo's location"
+    }
+  ],
+  "Dash_Slash": [
+    {
+      "file": "dash-slash-location-1.webp",
+      "label": "Nailmaster Oro 01"
+    }
+  ],
+  "Cyclone_Slash": [
+    {
+      "file": "cyclone-slash-location-1.webp",
+      "label": "Nailmaster Mato 01"
+    }
+  ],
+  "Shade_Soul": [
+    {
+      "file": "shade-soul-location-1.webp",
+      "label": "Location in the City of Tears"
+    }
+  ],
+  "Desolate_Dive": [
+    {
+      "file": "desolate-dive-location-1.webp",
+      "label": "Location in Soul Sanctum"
+    }
+  ],
+  "Abyss_Shriek": [
+    {
+      "file": "abyss-shriek-location-1.webp",
+      "label": "Location in the Abyss"
+    }
+  ],
+  "Howling_Wraiths": [
+    {
+      "file": "howling-wraiths-location-1.webp",
+      "label": "Location in Overgrown Mound"
+    }
+  ],
+  "Seer": [
+    {
+      "file": "seer-location-1.webp",
+      "label": "Location in the Resting Grounds"
+    }
+  ],
+  "Dream_Nail": [
+    {
+      "file": "dream-nail-location-1.webp",
+      "label": "Location of the Dream Nail"
+    }
+  ],
+  "Descending_Dark": [
+    {
+      "file": "descending-dark-location-1.webp",
+      "label": "Location"
+    }
+  ],
+  "Gorb": [
+    {
+      "file": "gorb-location-1.webp",
+      "label": "Location in the Howling Cliffs"
+    }
+  ],
+  "Xero": [
+    {
+      "file": "xero-location-1.webp",
+      "label": "Location in the Resting Grounds"
+    }
+  ],
+  "Marmu": [
+    {
+      "file": "marmu-location-1.webp",
+      "label": "Location in Queen's Gardens"
+    }
+  ],
+  "Elder_Hu": [
+    {
+      "file": "elder-hu-location-1.webp",
+      "label": "Location in Fungal Wastes"
+    }
+  ],
+  "Galien": [
+    {
+      "file": "galien-location-1.webp",
+      "label": "Location in Deepnest"
+    }
+  ],
+  "Vessel_Fragment": [
+    {
+      "file": "vessel-fragment-location-1.webp",
+      "label": "Sly 02"
+    },
+    {
+      "file": "vessel-fragment-location-2.webp",
+      "label": "Vessel Fragment 02"
+    },
+    {
+      "file": "vessel-fragment-location-3.webp",
+      "label": "Vessel Fragment 03"
+    },
+    {
+      "file": "vessel-fragment-location-4.webp",
+      "label": "Vessel Fragment 04"
+    },
+    {
+      "file": "vessel-fragment-location-5.webp",
+      "label": "Vessel Fragment 05"
+    },
+    {
+      "file": "vessel-fragment-location-6.webp",
+      "label": "Vessel Fragment 06"
+    },
+    {
+      "file": "vessel-fragment-location-7.webp",
+      "label": "Seer 01"
+    },
+    {
+      "file": "vessel-fragment-location-8.webp",
+      "label": "Vessel Fragment 08"
+    }
+  ],
+  "Markoth": [
+    {
+      "file": "markoth-location-1.webp",
+      "label": "Markoth Location"
+    }
+  ],
+  "No_Eyes": [
+    {
+      "file": "no-eyes-location-1.webp",
+      "label": "No Eyes 01"
+    }
+  ],
+  "Lurien": [
+    {
+      "file": "lurien-location-1.webp",
+      "label": "Lurien's location"
+    }
+  ],
+  "Monomon": [
+    {
+      "file": "monomon-location-1.webp",
+      "label": "Monomon's location"
+    }
+  ],
+  "Herrah": [
+    {
+      "file": "herrah-location-1.webp",
+      "label": "Location in Deepnest in Hollow Knight"
+    },
+    {
+      "file": "herrah-location-2.webp",
+      "label": "Red Memory location in Hollow Knight: Silksong"
+    }
+  ],
+  "Sprintmaster": [
+    {
+      "file": "sprintmaster-location-1.webp",
+      "label": "Location of Sly in Dirtmouth"
+    }
+  ],
+  "Dreamshield": [
+    {
+      "file": "dreamshield-location-1.webp",
+      "label": "Location of Dreamshield in Resting Grounds"
+    }
+  ],
+  "Weaversong": [
+    {
+      "file": "weaversong-location-1.webp",
+      "label": "Location of Weaver's Den in Deepnest"
+    }
+  ],
+  "Grimm": [
+    {
+      "file": "grimm-location-1.webp",
+      "label": "Location in Dirtmouth"
+    }
+  ],
+  "Grimmchild": [
+    {
+      "file": "grimmchild-location-1.webp",
+      "label": "Troupe Master Grimm location in Dirtmouth"
+    }
+  ],
+  "Hive_Knight": [
+    {
+      "file": "hive-knight-location-1.webp",
+      "label": "Location in the Hive"
+    }
+  ],
+  "Godtuner": [
+    {
+      "file": "godtuner-location-1.webp",
+      "label": "Location in Junk Pit"
+    }
+  ],
+  "Lumafly_Lantern": [
+    {
+      "file": "lumafly-lantern-location-1.webp",
+      "label": "Location in Dirtmouth"
+    }
+  ],
+  "Shopkeeper's_Key": [
+    {
+      "file": "shopkeepers-key-location-1.webp",
+      "label": "Sly's location in Dirtmouth, after being rescued"
+    },
+    {
+      "file": "shopkeepers-key-location-2.webp",
+      "label": "Location in Crystal Peak"
+    }
+  ],
+  "Elegant_Key": [
+    {
+      "file": "elegant-key-location-1.webp",
+      "label": "Location in the City of Tears where the Elegant Key can be used"
+    },
+    {
+      "file": "elegant-key-location-2.webp",
+      "label": "Location in Dirtmouth"
+    }
+  ],
+  "Love_Key": [
+    {
+      "file": "love-key-location-1.webp",
+      "label": "Location in the City of Tears where the Love Key can be used"
+    },
+    {
+      "file": "love-key-location-2.webp",
+      "label": "Location in Queen's Gardens"
+    }
+  ],
+  "Greenpath": [
+    {
+      "file": "greenpath-location-1.webp",
+      "label": "Greenpath Arena 1"
+    },
+    {
+      "file": "greenpath-location-2.webp",
+      "label": "Greenpath Arena 2"
+    }
+  ],
+  "Fungal_Wastes": [
+    {
+      "file": "fungal-wastes-location-1.webp",
+      "label": "Charm Notch 02"
+    }
+  ],
+  "Pale_Ore": [
+    {
+      "file": "pale-ore-location-1.webp",
+      "label": "Pale Ore 01"
+    },
+    {
+      "file": "pale-ore-location-2.webp",
+      "label": "Seer 01"
+    },
+    {
+      "file": "pale-ore-location-3.webp",
+      "label": "Pale Ore 03"
+    },
+    {
+      "file": "pale-ore-location-4.webp",
+      "label": "Pale Ore 04"
+    },
+    {
+      "file": "pale-ore-location-5.webp",
+      "label": "Mask Shard 02"
+    },
+    {
+      "file": "pale-ore-location-6.webp",
+      "label": "Zote 05"
+    }
+  ],
+  "Tram_Pass": [
+    {
+      "file": "tram-pass-location-1.webp",
+      "label": "Tram Pass 01"
+    },
+    {
+      "file": "tram-pass-location-2.webp",
+      "label": "Tram Pass 02"
+    },
+    {
+      "file": "tram-pass-location-3.webp",
+      "label": "Tram Pass 03"
+    },
+    {
+      "file": "tram-pass-location-4.webp",
+      "label": "Tram Pass 04"
+    },
+    {
+      "file": "tram-pass-location-5.webp",
+      "label": "Tram Pass 05"
+    },
+    {
+      "file": "tram-pass-location-6.webp",
+      "label": "Location in Deepnest"
+    }
+  ],
+  "Forgotten_Crossroads": [
+    {
+      "file": "forgotten-crossroads-location-1.webp",
+      "label": "Forgotten Crossroads Arena 1"
+    },
+    {
+      "file": "forgotten-crossroads-location-2.webp",
+      "label": "Forgotten Crossroads Arena 2"
+    },
+    {
+      "file": "forgotten-crossroads-location-3.webp",
+      "label": "Forgotten Crossroads Arena 3"
+    },
+    {
+      "file": "forgotten-crossroads-location-4.webp",
+      "label": "Forgotten Crossroads Arena 4"
+    },
+    {
+      "file": "forgotten-crossroads-location-5.webp",
+      "label": "Snail Shaman 01"
+    }
+  ],
+  "Deepnest": [
+    {
+      "file": "deepnest-location-1.webp",
+      "label": "Deepnest Arena 1"
+    },
+    {
+      "file": "deepnest-location-2.webp",
+      "label": "Location of the breakable wall that leads to this area"
+    }
+  ],
+  "Howling_Cliffs": [
+    {
+      "file": "howling-cliffs-location-1.webp",
+      "label": "Howling Cliffs Arena 1"
+    }
+  ],
+  "City_of_Tears": [
+    {
+      "file": "city-of-tears-location-1.webp",
+      "label": "City of Tears Arena 1"
+    },
+    {
+      "file": "city-of-tears-location-2.webp",
+      "label": "City of Tears Arena 2"
+    },
+    {
+      "file": "city-of-tears-location-3.webp",
+      "label": "City of Tears Arena 3"
+    },
+    {
+      "file": "city-of-tears-location-4.webp",
+      "label": "Soul Sanctum Arena 1"
+    },
+    {
+      "file": "city-of-tears-location-5.webp",
+      "label": "Watcher's Spire Arena 1"
+    },
+    {
+      "file": "city-of-tears-location-6.webp",
+      "label": "Watcher's Spire Arena 2"
+    }
+  ],
+  "Leg_Eater": [
+    {
+      "file": "leg-eater-location-1.webp",
+      "label": "Location in the Fungal Wastes"
+    }
+  ],
+  "Sly": [
+    {
+      "file": "sly-location-1.webp",
+      "label": "Location in the Forgotten Crossroads"
+    },
+    {
+      "file": "sly-location-2.webp",
+      "label": "Location in Dirtmouth"
+    }
+  ],
+  "Bretta": [
+    {
+      "file": "bretta-location-1.webp",
+      "label": "Location in the Fungal Wastes"
+    },
+    {
+      "file": "bretta-location-2.webp",
+      "label": "Location in Dirtmouth"
+    }
+  ],
+  "Grey_Mourner": [
+    {
+      "file": "grey-mourner-location-1.webp",
+      "label": "Location in the Resting Grounds"
+    }
+  ],
+  "Royal_Waterways": [
+    {
+      "file": "royal-waterways-location-1.webp",
+      "label": "Royal Waterways Arena 1"
+    },
+    {
+      "file": "royal-waterways-location-2.webp",
+      "label": "Isma's Grove Arena 1"
+    }
+  ],
+  "Queen's_Gardens": [
+    {
+      "file": "queens-gardens-location-1.webp",
+      "label": "Queen's Gardens Arena 1"
+    },
+    {
+      "file": "queens-gardens-location-2.webp",
+      "label": "Queen's Gardens Arena 2"
+    },
+    {
+      "file": "queens-gardens-location-3.webp",
+      "label": "Queen's Gardens Arena 3"
+    },
+    {
+      "file": "queens-gardens-location-4.webp",
+      "label": "Traitor Lord 01"
+    }
+  ],
+  "Massive_Moss_Charger": [
+    {
+      "file": "massive-moss-charger-location-1.webp",
+      "label": "Location in Greenpath"
+    }
+  ],
+  "Crystal_Guardian": [
+    {
+      "file": "crystal-guardian-location-1.webp",
+      "label": "Location in Crystal Peak"
+    }
+  ],
+  "Colosseum_of_Fools": [
+    {
+      "file": "colosseum-of-fools-location-1.webp",
+      "label": "Zote 05"
+    },
+    {
+      "file": "colosseum-of-fools-location-2.webp",
+      "label": "Zote 05"
+    },
+    {
+      "file": "colosseum-of-fools-location-3.webp",
+      "label": "Zote 05"
+    },
+    {
+      "file": "colosseum-of-fools-location-4.webp",
+      "label": "Pale Lurker 01"
+    }
+  ],
+  "Soul_Warrior": [
+    {
+      "file": "soul-warrior-location-1.webp",
+      "label": "Locations in Soul Sanctum"
+    },
+    {
+      "file": "soul-warrior-location-2.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Vengefly_King": [
+    {
+      "file": "vengefly-king-location-1.webp",
+      "label": "Location in Greenpath"
+    },
+    {
+      "file": "vengefly-king-location-2.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Oblobbles": [
+    {
+      "file": "oblobbles-location-1.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "God_Tamer": [
+    {
+      "file": "god-tamer-location-1.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Enraged_Guardian": [
+    {
+      "file": "enraged-guardian-location-1.webp",
+      "label": "Location in Crystal Peak"
+    }
+  ],
+  "Flukemarm": [
+    {
+      "file": "flukemarm-location-1.webp",
+      "label": "Location in the Royal Waterways"
+    }
+  ],
+  "Salubra's_Blessing": [
+    {
+      "file": "salubras-blessing-location-1.webp",
+      "label": "Salubra's location in the Forgotten Crossroads"
+    }
+  ],
+  "Hunter's_Mark": [
+    {
+      "file": "hunters-mark-location-1.webp",
+      "label": "Location of the Hunter in Greenpath"
+    }
+  ],
+  "Void_Heart": [
+    {
+      "file": "void-heart-location-1.webp",
+      "label": "Location of the entrance to the Birthplace"
+    }
+  ],
+  "Fog_Canyon": [
+    {
+      "file": "fog-canyon-location-1.webp",
+      "label": "Howling Wraiths 01"
+    }
+  ],
+  "Nailsmith": [
+    {
+      "file": "nailsmith-location-1.webp",
+      "label": "Location in the City of Tears"
+    }
+  ],
+  "Failed_Champion": [
+    {
+      "file": "failed-champion-location-1.webp",
+      "label": "Location in the Forgotten Crossroads"
+    }
+  ],
+  "Soul_Tyrant": [
+    {
+      "file": "soul-tyrant-location-1.webp",
+      "label": "Location in Soul Sanctum"
+    }
+  ],
+  "Zote": [
+    {
+      "file": "zote-location-1.webp",
+      "label": "Location in Greenpath"
+    },
+    {
+      "file": "zote-location-2.webp",
+      "label": "Location in Dirtmouth"
+    },
+    {
+      "file": "zote-location-3.webp",
+      "label": "Location in City of Tears"
+    },
+    {
+      "file": "zote-location-4.webp",
+      "label": "Location in Deepnest"
+    },
+    {
+      "file": "zote-location-5.webp",
+      "label": "Location in Kingdom's Edge"
+    }
+  ],
+  "Lost_Kin": [
+    {
+      "file": "lost-kin-location-1.webp",
+      "label": "Location in Ancient Basin"
+    }
+  ],
+  "Grey_Prince_Zote": [
+    {
+      "file": "grey-prince-zote-location-1.webp",
+      "label": "Location in Dirtmouth"
+    }
+  ],
+  "Radiance": [
+    {
+      "file": "radiance-location-1.webp",
+      "label": "Location in the Forgotten Crossroads"
+    }
+  ],
+  "White_Defender": [
+    {
+      "file": "white-defender-location-1.webp",
+      "label": "Location of Dung Defender in the Royal Waterways"
+    }
+  ],
+  "Quirrel": [
+    {
+      "file": "quirrel-location-1.webp",
+      "label": "Location in the Forgotten Crossroads"
+    },
+    {
+      "file": "quirrel-location-2.webp",
+      "label": "Location in Greenpath"
+    },
+    {
+      "file": "quirrel-location-3.webp",
+      "label": "Location in the Fungal Wastes"
+    },
+    {
+      "file": "quirrel-location-4.webp",
+      "label": "Location in the City of Tears"
+    },
+    {
+      "file": "quirrel-location-5.webp",
+      "label": "Location in Deepnest"
+    },
+    {
+      "file": "quirrel-location-6.webp",
+      "label": "Location in Crystal Peak"
+    },
+    {
+      "file": "quirrel-location-7.webp",
+      "label": "Location in Fog Canyon"
+    },
+    {
+      "file": "quirrel-location-8.webp",
+      "label": "Location in the Resting Grounds"
+    }
+  ],
+  "Maggot": [
+    {
+      "file": "maggot-location-1.webp",
+      "label": "Locations in the Forgotten Crossroads"
+    }
+  ],
+  "Lightseed": [
+    {
+      "file": "lightseed-location-1.webp",
+      "label": "Location in Ancient Basin before defeating Broken Vessel"
+    },
+    {
+      "file": "lightseed-location-2.webp",
+      "label": "Location in the Forgotten Crossroads after it has become infected"
+    }
+  ],
+  "Duranda": [
+    {
+      "file": "duranda-location-1.webp",
+      "label": "Locations in Greenpath"
+    }
+  ],
+  "Aluba": [
+    {
+      "file": "aluba-location-1.webp",
+      "label": "Location at the Lake of Unn"
+    },
+    {
+      "file": "aluba-location-2.webp",
+      "label": "Location in the Queen's Gardens"
+    }
+  ],
+  "Maskfly": [
+    {
+      "file": "maskfly-location-1.webp",
+      "label": "Locations in Greenpath"
+    },
+    {
+      "file": "maskfly-location-2.webp",
+      "label": "Locations in Queen's Gardens"
+    }
+  ],
+  "Gulka": [
+    {
+      "file": "gulka-location-1.webp",
+      "label": "Locations in Greenpath"
+    }
+  ],
+  "Durandoo": [
+    {
+      "file": "durandoo-location-1.webp",
+      "label": "Locations in Greenpath"
+    },
+    {
+      "file": "durandoo-location-2.webp",
+      "label": "Location in the Queen's Gardens"
+    }
+  ],
+  "Sporg": [
+    {
+      "file": "sporg-location-1.webp",
+      "label": "Locations in the Fungal Wastes"
+    }
+  ],
+  "Gorgeous_Husk": [
+    {
+      "file": "gorgeous-husk-location-1.webp",
+      "label": "Location in the City of Tears"
+    }
+  ],
+  "Crystal_Crawler": [
+    {
+      "file": "crystal-crawler-location-1.webp",
+      "label": "Locations in Crystal Peak"
+    }
+  ],
+  "Charged_Lumafly": [
+    {
+      "file": "charged-lumafly-location-1.webp",
+      "label": "Locations in Greenpath"
+    },
+    {
+      "file": "charged-lumafly-location-2.webp",
+      "label": "Locations in Fog Canyon"
+    }
+  ],
+  "Garpede": [
+    {
+      "file": "garpede-location-1.webp",
+      "label": "Locations in Deepnest"
+    },
+    {
+      "file": "garpede-location-2.webp",
+      "label": "Garpede's journal entry location"
+    }
+  ],
+  "Goam": [
+    {
+      "file": "goam-location-1.webp",
+      "label": "Locations in Forgotten/Infected Crossroads"
+    },
+    {
+      "file": "goam-location-2.webp",
+      "label": "Locations in Deepnest"
+    },
+    {
+      "file": "goam-location-3.webp",
+      "label": "Goam's Journal entry location"
+    }
+  ],
+  "Flukemunga": [
+    {
+      "file": "flukemunga-location-1.webp",
+      "label": "Flukemunga 01"
+    }
+  ],
+  "Pale_Lurker": [
+    {
+      "file": "pale-lurker-location-1.webp",
+      "label": "Location in Kingdom's Edge"
+    }
+  ],
+  "Crawlid": [
+    {
+      "file": "crawlid-location-1.webp",
+      "label": "Locations in the Howling Cliffs, King's Pass, and Greenpath"
+    },
+    {
+      "file": "crawlid-location-2.webp",
+      "label": "Locations in the Forgotten Crossroads"
+    },
+    {
+      "file": "crawlid-location-3.webp",
+      "label": "Location in the Blue Lake"
+    }
+  ],
+  "Hopper": [
+    {
+      "file": "hopper-location-1.webp",
+      "label": "Locations in Kingdom's Edge"
+    }
+  ],
+  "Gruzzer": [
+    {
+      "file": "gruzzer-location-1.webp",
+      "label": "Locations in the Forgotten Crossroads"
+    },
+    {
+      "file": "gruzzer-location-2.webp",
+      "label": "Locations in the Infected Crossroads"
+    }
+  ],
+  "Aspid_Hunter": [
+    {
+      "file": "aspid-hunter-location-1.webp",
+      "label": "Locations in Ancient Basin"
+    },
+    {
+      "file": "aspid-hunter-location-2.webp",
+      "label": "Locations in the Forgotten Crossroads"
+    }
+  ],
+  "Vengefly": [
+    {
+      "file": "vengefly-location-1.webp",
+      "label": "Locations in the Howling Cliffs and King's Pass"
+    },
+    {
+      "file": "vengefly-location-2.webp",
+      "label": "Locations in the Forgotten Crossroads"
+    },
+    {
+      "file": "vengefly-location-3.webp",
+      "label": "Location in the Infected Crossroads"
+    },
+    {
+      "file": "vengefly-location-4.webp",
+      "label": "Locations in Greenpath"
+    },
+    {
+      "file": "vengefly-location-5.webp",
+      "label": "Locations in the Resting Grounds"
+    },
+    {
+      "file": "vengefly-location-6.webp",
+      "label": "Locations in the City of Tears"
+    }
+  ],
+  "Tiktik": [
+    {
+      "file": "tiktik-location-1.webp",
+      "label": "Locations in the Howling Cliffs and Greenpath"
+    },
+    {
+      "file": "tiktik-location-2.webp",
+      "label": "Locations in the Forgotten Crossroads"
+    },
+    {
+      "file": "tiktik-location-3.webp",
+      "label": "Location in the Blue Lake"
+    }
+  ],
+  "Aspid_Mother": [
+    {
+      "file": "aspid-mother-location-1.webp",
+      "label": "Locations in the Forgotten Crossroads"
+    }
+  ],
+  "Aspid_Hatchling": [
+    {
+      "file": "aspid-hatchling-location-1.webp",
+      "label": "Aspid Mother locations in the Forgotten Crossroads"
+    }
+  ],
+  "Husk_Warrior": [
+    {
+      "file": "husk-warrior-location-1.webp",
+      "label": "Location in the Forgotten Crossroads and Infected Crossroads"
+    }
+  ],
+  "Wandering_Husk": [
+    {
+      "file": "wandering-husk-location-1.webp",
+      "label": "Locations in the City of Tears"
+    },
+    {
+      "file": "wandering-husk-location-2.webp",
+      "label": "Locations in Greenpath"
+    },
+    {
+      "file": "wandering-husk-location-3.webp",
+      "label": "Location in the Infected Crossroads"
+    },
+    {
+      "file": "wandering-husk-location-4.webp",
+      "label": "Locations in the Forgotten Crossroads"
+    },
+    {
+      "file": "wandering-husk-location-5.webp",
+      "label": "Locations in Deepnest"
+    }
+  ],
+  "Husk_Guard": [
+    {
+      "file": "husk-guard-location-1.webp",
+      "label": "Locations in the Forgotten Crossroads"
+    }
+  ],
+  "Husk_Bully": [
+    {
+      "file": "husk-bully-location-1.webp",
+      "label": "Locations in the Howling Cliffs"
+    },
+    {
+      "file": "husk-bully-location-2.webp",
+      "label": "Locations in the Forgotten/Infected Crossroads"
+    },
+    {
+      "file": "husk-bully-location-3.webp",
+      "label": "Location in Greenpath"
+    },
+    {
+      "file": "husk-bully-location-4.webp",
+      "label": "Locations in the City of Tears"
+    },
+    {
+      "file": "husk-bully-location-5.webp",
+      "label": "Locations in the Royal Waterways"
+    }
+  ],
+  "Husk_Hornhead": [
+    {
+      "file": "husk-hornhead-location-1.webp",
+      "label": "Location in the Royal Waterways"
+    },
+    {
+      "file": "husk-hornhead-location-2.webp",
+      "label": "Locations in the City of Tears"
+    },
+    {
+      "file": "husk-hornhead-location-3.webp",
+      "label": "Location in the Fungal Wastes"
+    },
+    {
+      "file": "husk-hornhead-location-4.webp",
+      "label": "Locations in Greenpath"
+    },
+    {
+      "file": "husk-hornhead-location-5.webp",
+      "label": "Locations in the Forgotten Crossroads"
+    },
+    {
+      "file": "husk-hornhead-location-6.webp",
+      "label": "Locations in the Howling Cliffs"
+    },
+    {
+      "file": "husk-hornhead-location-7.webp",
+      "label": "Locations in Deepnest"
+    }
+  ],
+  "Elder_Baldur": [
+    {
+      "file": "elder-baldur-location-1.webp",
+      "label": "Locations in the Forgotten Crossroads"
+    },
+    {
+      "file": "elder-baldur-location-2.webp",
+      "label": "Locations in the Howling Cliffs"
+    }
+  ],
+  "Mosskin": [
+    {
+      "file": "mosskin-location-1.webp",
+      "label": "Locations in Greenpath"
+    }
+  ],
+  "Leaping_Husk": [
+    {
+      "file": "leaping-husk-location-1.webp",
+      "label": "Locations in the Forgotten Crossroads"
+    },
+    {
+      "file": "leaping-husk-location-2.webp",
+      "label": "Locations in the Infected Crossroads"
+    },
+    {
+      "file": "leaping-husk-location-3.webp",
+      "label": "Location in Greenpath"
+    },
+    {
+      "file": "leaping-husk-location-4.webp",
+      "label": "Locations in the City of Tears"
+    },
+    {
+      "file": "leaping-husk-location-5.webp",
+      "label": "Locations in the Howling Cliffs"
+    }
+  ],
+  "Baldur": [
+    {
+      "file": "baldur-location-1.webp",
+      "label": "Location in the Howling Cliffs"
+    },
+    {
+      "file": "baldur-location-2.webp",
+      "label": "Location in Crystal Peak"
+    },
+    {
+      "file": "baldur-location-3.webp",
+      "label": "Locations in the Forgotten Crossroads"
+    }
+  ],
+  "Volatile_Mosskin": [
+    {
+      "file": "volatile-mosskin-location-1.webp",
+      "label": "Locations in Greenpath"
+    }
+  ],
+  "Obble": [
+    {
+      "file": "obble-location-1.webp",
+      "label": "Locations in Greenpath"
+    }
+  ],
+  "Fungified_Husk": [
+    {
+      "file": "fungified-husk-location-1.webp",
+      "label": "Locations in the Fungal Wastes"
+    }
+  ],
+  "Squit": [
+    {
+      "file": "squit-location-1.webp",
+      "label": "Locations in Greenpath"
+    },
+    {
+      "file": "squit-location-2.webp",
+      "label": "Location in Fog Canyon"
+    }
+  ],
+  "Moss_Charger": [
+    {
+      "file": "moss-charger-location-1.webp",
+      "label": "Locations in Greenpath"
+    }
+  ],
+  "Fool_Eater": [
+    {
+      "file": "fool-eater-location-1.webp",
+      "label": "Locations in Greenpath"
+    },
+    {
+      "file": "fool-eater-location-2.webp",
+      "label": "Locations in the Queen's Gardens"
+    }
+  ],
+  "Loodle": [
+    {
+      "file": "loodle-location-1.webp",
+      "label": "Within Queen's Gardens"
+    }
+  ],
+  "Mossy_Vagabond": [
+    {
+      "file": "mossy-vagabond-location-1.webp",
+      "label": "Location in the Queen's Gardens"
+    }
+  ],
+  "Moss_Knight": [
+    {
+      "file": "moss-knight-location-1.webp",
+      "label": "Locations in Greenpath"
+    }
+  ],
+  "Mossfly": [
+    {
+      "file": "mossfly-location-1.webp",
+      "label": "Locations in the Queen's Gardens"
+    },
+    {
+      "file": "mossfly-location-2.webp",
+      "label": "Locations in Fog Canyon"
+    }
+  ],
+  "Ooma": [
+    {
+      "file": "ooma-location-1.webp",
+      "label": "Locations in Fog Canyon"
+    }
+  ],
+  "Mosscreep": [
+    {
+      "file": "mosscreep-location-1.webp",
+      "label": "Locations in Greenpath"
+    },
+    {
+      "file": "mosscreep-location-2.webp",
+      "label": "Locations in the Queen's Gardens"
+    }
+  ],
+  "Uoma": [
+    {
+      "file": "uoma-location-1.webp",
+      "label": "Locations in Fog Canyon"
+    }
+  ],
+  "Shrumal_Warrior": [
+    {
+      "file": "shrumal-warrior-location-1.webp",
+      "label": "Locations in the Fungal Wastes"
+    }
+  ],
+  "Mantis_Warrior": [
+    {
+      "file": "mantis-warrior-location-1.webp",
+      "label": "Locations in the Mantis Village"
+    }
+  ],
+  "Fungling": [
+    {
+      "file": "fungling-location-1.webp",
+      "label": "Locations in Fungal Wastes"
+    },
+    {
+      "file": "fungling-location-2.webp",
+      "label": "Locations in the Royal Waterways"
+    }
+  ],
+  "Shrumeling": [
+    {
+      "file": "shrumeling-location-1.webp",
+      "label": "Locations in the Fungal Wastes"
+    }
+  ],
+  "Shrumal_Ogre": [
+    {
+      "file": "shrumal-ogre-location-1.webp",
+      "label": "Locations in the Fungal Wastes"
+    }
+  ],
+  "Mantis_Youth": [
+    {
+      "file": "mantis-youth-location-1.webp",
+      "label": "Locations in the Fungal Wastes"
+    }
+  ],
+  "Fungoon": [
+    {
+      "file": "fungoon-location-1.webp",
+      "label": "Locations in the Fungal Wastes"
+    }
+  ],
+  "Volt_Twister": [
+    {
+      "file": "volt-twister-location-1.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Ambloom": [
+    {
+      "file": "ambloom-location-1.webp",
+      "label": "Locations in Fungal Wastes"
+    }
+  ],
+  "Soul_Twister": [
+    {
+      "file": "soul-twister-location-1.webp",
+      "label": "Locations in Soul Sanctum"
+    }
+  ],
+  "Husk_Dandy": [
+    {
+      "file": "husk-dandy-location-1.webp",
+      "label": "Locations in the City of Tears"
+    }
+  ],
+  "Cowardly_Husk": [
+    {
+      "file": "cowardly-husk-location-1.webp",
+      "label": "Found in the City of Tears"
+    }
+  ],
+  "Gluttonous_Husk": [
+    {
+      "file": "gluttonous-husk-location-1.webp",
+      "label": "Locations in the City of Tears"
+    }
+  ],
+  "Mistake": [
+    {
+      "file": "mistake-location-1.webp",
+      "label": "Locations in Soul Sanctum"
+    }
+  ],
+  "Husk_Sentry": [
+    {
+      "file": "husk-sentry-location-1.webp",
+      "label": "Locations in the City of Tears"
+    },
+    {
+      "file": "husk-sentry-location-2.webp",
+      "label": "Locations in the Royal Waterways"
+    }
+  ],
+  "Winged_Sentry": [
+    {
+      "file": "winged-sentry-location-1.webp",
+      "label": "Locations in the City of Tears"
+    },
+    {
+      "file": "winged-sentry-location-2.webp",
+      "label": "Location in the Resting Grounds"
+    },
+    {
+      "file": "winged-sentry-location-3.webp",
+      "label": "Locations in the Royal Waterways"
+    }
+  ],
+  "Heavy_Sentry": [
+    {
+      "file": "heavy-sentry-location-1.webp",
+      "label": "Locations in the City of Tears"
+    },
+    {
+      "file": "heavy-sentry-location-2.webp",
+      "label": "Locations in the Royal Waterways"
+    }
+  ],
+  "The_Collector": [
+    {
+      "file": "the-collector-location-1.webp",
+      "label": "Location in the Tower of Love"
+    }
+  ],
+  "Lance_Sentry": [
+    {
+      "file": "lance-sentry-location-1.webp",
+      "label": "Locations in the City of Tears"
+    },
+    {
+      "file": "lance-sentry-location-2.webp",
+      "label": "Locations in the Royal Waterways"
+    }
+  ],
+  "Great_Husk_Sentry": [
+    {
+      "file": "great-husk-sentry-location-1.webp",
+      "label": "Locations in the City of Tears"
+    },
+    {
+      "file": "great-husk-sentry-location-2.webp",
+      "label": "Location in the Resting Grounds"
+    }
+  ],
+  "Flukemon": [
+    {
+      "file": "flukemon-location-1.webp",
+      "label": "Locations in the Royal Waterways"
+    }
+  ],
+  "Folly": [
+    {
+      "file": "folly-location-1.webp",
+      "label": "Locations in Soul Sanctum"
+    },
+    {
+      "file": "folly-location-2.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Pilflip": [
+    {
+      "file": "pilflip-location-1.webp",
+      "label": "Locations in the Royal Waterways"
+    }
+  ],
+  "Flukefey": [
+    {
+      "file": "flukefey-location-1.webp",
+      "label": "Locations in the Royal Waterways"
+    }
+  ],
+  "Hwurmp": [
+    {
+      "file": "hwurmp-location-1.webp",
+      "label": "Locations in the Royal Waterways"
+    }
+  ],
+  "Crystal_Hunter": [
+    {
+      "file": "crystal-hunter-location-1.webp",
+      "label": "Locations in Crystal Peak"
+    }
+  ],
+  "Glimback": [
+    {
+      "file": "glimback-location-1.webp",
+      "label": "Locations in the Forgotten Crossroads"
+    },
+    {
+      "file": "glimback-location-2.webp",
+      "label": "Locations in Crystal Peak"
+    }
+  ],
+  "Shardmite": [
+    {
+      "file": "shardmite-location-1.webp",
+      "label": "Locations in Crystal Peak"
+    }
+  ],
+  "Furious_Vengefly": [
+    {
+      "file": "furious-vengefly-location-1.webp",
+      "label": "Locations in the Infected Crossroads"
+    },
+    {
+      "file": "furious-vengefly-location-2.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Crystallised_Husk": [
+    {
+      "file": "crystallised-husk-location-1.webp",
+      "label": "Locations in Crystal Peak"
+    }
+  ],
+  "Husk_Miner": [
+    {
+      "file": "husk-miner-location-1.webp",
+      "label": "Locations in Crystal Peak"
+    },
+    {
+      "file": "husk-miner-location-2.webp",
+      "label": "Myla's location in the Forgotten Crossroads"
+    }
+  ],
+  "Violent_Husk": [
+    {
+      "file": "violent-husk-location-1.webp",
+      "label": "Locations in the Infected Crossroad"
+    }
+  ],
+  "Volatile_Gruzzer": [
+    {
+      "file": "volatile-gruzzer-location-1.webp",
+      "label": "Locations in the Infected Crossroads"
+    }
+  ],
+  "Dirtcarver": [
+    {
+      "file": "dirtcarver-location-1.webp",
+      "label": "Locations in Deepnest"
+    }
+  ],
+  "Slobbering_Husk": [
+    {
+      "file": "slobbering-husk-location-1.webp",
+      "label": "Locations in the Infected Crossroads"
+    }
+  ],
+  "Lesser_Mawlek": [
+    {
+      "file": "lesser-mawlek-location-1.webp",
+      "label": "Locations in Ancient Basin"
+    }
+  ],
+  "Carver_Hatcher": [
+    {
+      "file": "carver-hatcher-location-1.webp",
+      "label": "Locations in Deepnest"
+    }
+  ],
+  "Corpse_Creeper": [
+    {
+      "file": "corpse-creeper-location-1.webp",
+      "label": "Locations in Deepnest"
+    }
+  ],
+  "Deephunter": [
+    {
+      "file": "deephunter-location-1.webp",
+      "label": "Locations in Deepnest"
+    }
+  ],
+  "Deepling": [
+    {
+      "file": "deepling-location-1.webp",
+      "label": "Locations in Deepnest"
+    }
+  ],
+  "Stalking_Devout": [
+    {
+      "file": "stalking-devout-location-1.webp",
+      "label": "Locations in Deepnest"
+    }
+  ],
+  "Little_Weaver": [
+    {
+      "file": "little-weaver-location-1.webp",
+      "label": "Locations in Deepnest"
+    }
+  ],
+  "Hiveling": [
+    {
+      "file": "hiveling-location-1.webp",
+      "label": "Locations in Kingdom's Edge"
+    },
+    {
+      "file": "hiveling-location-2.webp",
+      "label": "Locations in the Hive"
+    }
+  ],
+  "Hive_Guardian": [
+    {
+      "file": "hive-guardian-location-1.webp",
+      "label": "Locations in the Hive"
+    }
+  ],
+  "Hive_Soldier": [
+    {
+      "file": "hive-soldier-location-1.webp",
+      "label": "Locations in the Hive"
+    }
+  ],
+  "Boofly": [
+    {
+      "file": "boofly-location-1.webp",
+      "label": "Locations in Kingdom's Edge"
+    }
+  ],
+  "Great_Hopper": [
+    {
+      "file": "great-hopper-location-1.webp",
+      "label": "Locations in Kingdom's Edge"
+    }
+  ],
+  "Mawlurk": [
+    {
+      "file": "mawlurk-location-1.webp",
+      "label": "Locations in Ancient Basin"
+    }
+  ],
+  "Lifeseed": [
+    {
+      "file": "lifeseed-location-1.webp",
+      "label": "Cocoon locations"
+    }
+  ],
+  "Grub_Mimic": [
+    {
+      "file": "grub-mimic-location-1.webp",
+      "label": "Location in Crystal Peak"
+    },
+    {
+      "file": "grub-mimic-location-2.webp",
+      "label": "Locations in Deepnest"
+    }
+  ],
+  "Husk_Hive": [
+    {
+      "file": "husk-hive-location-1.webp",
+      "label": "Locations in the Hive"
+    }
+  ],
+  "Belfly": [
+    {
+      "file": "belfly-location-1.webp",
+      "label": "Locations in the City of Tears"
+    },
+    {
+      "file": "belfly-location-2.webp",
+      "label": "Locations in the Royal Waterways"
+    },
+    {
+      "file": "belfly-location-3.webp",
+      "label": "Locations in Kingdom's Edge"
+    },
+    {
+      "file": "belfly-location-4.webp",
+      "label": "Locations in Ancient Basin"
+    },
+    {
+      "file": "belfly-location-5.webp",
+      "label": "Locations in the Resting Grounds"
+    },
+    {
+      "file": "belfly-location-6.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Sibling": [
+    {
+      "file": "sibling-location-1.webp",
+      "label": "Siblings locations. The Siblings marked outside the map are located in the Birthplace"
+    }
+  ],
+  "Primal_Aspid": [
+    {
+      "file": "primal-aspid-location-1.webp",
+      "label": "Locations in Kingdom's Edge"
+    }
+  ],
+  "Entombed_Husk": [
+    {
+      "file": "entombed-husk-location-1.webp",
+      "label": "Locations in the Resting Grounds"
+    }
+  ],
+  "Infected_Balloon": [
+    {
+      "file": "infected-balloon-location-1.webp",
+      "label": "Locations in Ancient Basin"
+    }
+  ],
+  "Bluggsac": [
+    {
+      "file": "bluggsac-location-1.webp",
+      "label": "Locations in Hallownest"
+    }
+  ],
+  "Mantis_Traitor": [
+    {
+      "file": "mantis-traitor-location-1.webp",
+      "label": "Locations in the Queen's Gardens"
+    }
+  ],
+  "Spiny_Husk": [
+    {
+      "file": "spiny-husk-location-1.webp",
+      "label": "Locations in the Queen's Gardens"
+    }
+  ],
+  "Battle_Obble": [
+    {
+      "file": "battle-obble-location-1.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Mantis_Petra": [
+    {
+      "file": "mantis-petra-location-1.webp",
+      "label": "Locations in the Queen's Gardens"
+    }
+  ],
+  "Kingsmould": [
+    {
+      "file": "kingsmould-location-1.webp",
+      "label": "Locations in the White Palace. Unofficial map by MolaMolasses"
+    }
+  ],
+  "Royal_Retainer": [
+    {
+      "file": "royal-retainer-location-1.webp",
+      "label": "Royal Retainer locations within the White Palace. Unofficial map by MolaMolasses"
+    }
+  ],
+  "Armoured_Squit": [
+    {
+      "file": "armoured-squit-location-1.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Sharp_Baldur": [
+    {
+      "file": "sharp-baldur-location-1.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Winged_Fool": [
+    {
+      "file": "winged-fool-location-1.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Sturdy_Fool": [
+    {
+      "file": "sturdy-fool-location-1.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Shielded_Fool": [
+    {
+      "file": "shielded-fool-location-1.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Heavy_Fool": [
+    {
+      "file": "heavy-fool-location-1.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Death_Loodle": [
+    {
+      "file": "death-loodle-location-1.webp",
+      "label": "Location of the Colosseum of Fools"
+    }
+  ],
+  "Shade": [
+    {
+      "file": "shade-location-1.webp",
+      "label": "All Shade spawn locations"
+    }
+  ],
+  "Volatile_Zoteling": [
+    {
+      "file": "volatile-zoteling-location-1.webp",
+      "label": "Location in Dirtmouth"
+    }
+  ],
+  "Winged_Zoteling": [
+    {
+      "file": "winged-zoteling-location-1.webp",
+      "label": "Location in Dirtmouth"
+    }
+  ],
+  "Hopping_Zoteling": [
+    {
+      "file": "hopping-zoteling-location-1.webp",
+      "label": "Location in Dirtmouth"
+    }
+  ],
+  "Menderbug": [
+    {
+      "file": "menderbug-location-1.webp",
+      "label": "Location in the Forgotten Crossroads"
+    }
+  ],
+  "Grimmkin_Novice": [
+    {
+      "file": "grimmkin-novice-location-1.webp",
+      "label": "Location in Greenpath"
+    },
+    {
+      "file": "grimmkin-novice-location-2.webp",
+      "label": "Location in Crystal Peak"
+    },
+    {
+      "file": "grimmkin-novice-location-3.webp",
+      "label": "Location in the City of Tears"
+    }
+  ],
+  "Nightmare_King": [
+    {
+      "file": "nightmare-king-location-1.webp",
+      "label": "Location of Grimm in Dirtmouth"
+    }
+  ],
+  "Grimmkin_Master": [
+    {
+      "file": "grimmkin-master-location-1.webp",
+      "label": "Location in King's Pass"
+    },
+    {
+      "file": "grimmkin-master-location-2.webp",
+      "label": "Location in the Resting Grounds"
+    },
+    {
+      "file": "grimmkin-master-location-3.webp",
+      "label": "Location in Kingdom's Edge"
+    }
+  ],
+  "Grimmkin_Nightmare": [
+    {
+      "file": "grimmkin-nightmare-location-1.webp",
+      "label": "Location in the Fungal Core"
+    },
+    {
+      "file": "grimmkin-nightmare-location-2.webp",
+      "label": "Location in the Royal Waterways (at the edge of the Ancient Basin)"
+    },
+    {
+      "file": "grimmkin-nightmare-location-3.webp",
+      "label": "Location in the Hive"
+    }
+  ],
+  "Hallownest_Seal": [
+    {
+      "file": "hallownest-seal-location-1.webp",
+      "label": "Locations in Hallownest"
+    }
+  ],
+  "King's_Idol": [
+    {
+      "file": "kings-idol-location-1.webp",
+      "label": "Locations in Hallownest"
+    }
+  ],
+  "Wanderer's_Journal": [
+    {
+      "file": "wanderers-journal-location-1.webp",
+      "label": "Locations in Hallownest"
+    }
+  ],
+  "Bench_(Hollow_Knight)": [
+    {
+      "file": "bench-hollow-knight-location-1.webp",
+      "label": "Benches"
+    }
+  ],
+  "Tuk": [
+    {
+      "file": "tuk-location-1.webp",
+      "label": "Location in the Royal Waterways"
+    }
+  ],
+  "Lifeblood_Cocoon": [
+    {
+      "file": "lifeblood-cocoon-location-1.webp",
+      "label": "All Cocoon locations"
+    }
+  ],
+  "Rancid_Egg": [
+    {
+      "file": "rancid-egg-location-1.webp",
+      "label": "Location of Confessor Jiji in Dirtmouth"
+    },
+    {
+      "file": "rancid-egg-location-2.webp",
+      "label": "Location of Steel Soul Jinn in Dirtmouth"
+    },
+    {
+      "file": "rancid-egg-location-3.webp",
+      "label": "Location of Tuk in Royal Waterways"
+    },
+    {
+      "file": "rancid-egg-location-4.webp",
+      "label": "Locations"
+    }
+  ],
+  "Hot_Spring": [
+    {
+      "file": "hot-spring-location-1.webp",
+      "label": "Locations around Hallownest"
+    }
+  ],
+  "Iselda": [
+    {
+      "file": "iselda-location-1.webp",
+      "label": "Location in Dirtmouth"
+    }
+  ],
+  "Temple_of_the_Black_Egg": [
+    {
+      "file": "temple-of-the-black-egg-location-1.webp",
+      "label": "Forgotten Crossroads Arena 1"
+    },
+    {
+      "file": "temple-of-the-black-egg-location-2.webp",
+      "label": "Forgotten Crossroads Arena 2"
+    },
+    {
+      "file": "temple-of-the-black-egg-location-3.webp",
+      "label": "Forgotten Crossroads Arena 3"
+    },
+    {
+      "file": "temple-of-the-black-egg-location-4.webp",
+      "label": "Forgotten Crossroads Arena 4"
+    },
+    {
+      "file": "temple-of-the-black-egg-location-5.webp",
+      "label": "Snail Shaman 01"
+    }
+  ],
+  "Dreamers": [
+    {
+      "file": "dreamers-location-1.webp",
+      "label": "Encounter in Greenpath"
+    },
+    {
+      "file": "dreamers-location-2.webp",
+      "label": "Encounter in the Resting Grounds"
+    },
+    {
+      "file": "dreamers-location-3.webp",
+      "label": "Monomon's location"
+    },
+    {
+      "file": "dreamers-location-4.webp",
+      "label": "Lurien's location"
+    },
+    {
+      "file": "dreamers-location-5.webp",
+      "label": "Herrah's location"
+    }
+  ],
+  "City_Crest": [
+    {
+      "file": "city-crest-location-1.webp",
+      "label": "Location where the City Crest is used"
+    },
+    {
+      "file": "city-crest-location-2.webp",
+      "label": "Location of False Knight"
+    }
+  ],
+  "Dreamgate": [
+    {
+      "file": "dreamgate-location-1.webp",
+      "label": "Seer location in the Resting Grounds"
+    }
+  ],
+  "Divine": [
+    {
+      "file": "divine-location-1.webp",
+      "label": "Location in Dirtmouth"
+    }
+  ],
+  "World_Sense": [
+    {
+      "file": "world-sense-location-1.webp",
+      "label": "Location in the Forgotten Crossroads"
+    }
+  ],
+  "Jiji": [
+    {
+      "file": "jiji-location-1.webp",
+      "label": "Location in Dirtmouth"
+    }
+  ],
+  "Whispering_Root": [
+    {
+      "file": "whispering-root-location-1.webp",
+      "label": "Snail Shaman 01"
+    },
+    {
+      "file": "whispering-root-location-2.webp",
+      "label": "Whispering Root 02"
+    },
+    {
+      "file": "whispering-root-location-3.webp",
+      "label": "Whispering Root 03"
+    },
+    {
+      "file": "whispering-root-location-4.webp",
+      "label": "Whispering Root 04"
+    },
+    {
+      "file": "whispering-root-location-5.webp",
+      "label": "Whispering Root 05"
+    },
+    {
+      "file": "whispering-root-location-6.webp",
+      "label": "Whispering Root 06"
+    },
+    {
+      "file": "whispering-root-location-7.webp",
+      "label": "Whispering Root 07"
+    },
+    {
+      "file": "whispering-root-location-8.webp",
+      "label": "Whispering Root 08"
+    },
+    {
+      "file": "whispering-root-location-9.webp",
+      "label": "Whispering Root 09"
+    },
+    {
+      "file": "whispering-root-location-10.webp",
+      "label": "Whispering Root 10"
+    },
+    {
+      "file": "whispering-root-location-11.webp",
+      "label": "Whispering Root 11"
+    },
+    {
+      "file": "whispering-root-location-12.webp",
+      "label": "Whispering Root 12"
+    },
+    {
+      "file": "whispering-root-location-13.webp",
+      "label": "Whispering Root 13"
+    },
+    {
+      "file": "whispering-root-location-14.webp",
+      "label": "Whispering Root 14"
+    },
+    {
+      "file": "whispering-root-location-15.webp",
+      "label": "Whispering Root 15"
+    }
+  ],
+  "Millibelle": [
+    {
+      "file": "millibelle-location-1.webp",
+      "label": "Location in Fog Canyon"
+    },
+    {
+      "file": "millibelle-location-2.webp",
+      "label": "Location in the City of Tears"
+    }
+  ],
+  "Cornifer": [
+    {
+      "file": "cornifer-location-1.webp",
+      "label": "Locations across Hallownest"
+    }
+  ],
+  "White_Palace": [
+    {
+      "file": "white-palace-location-1.webp",
+      "label": "White Palace Arena 1"
+    },
+    {
+      "file": "white-palace-location-2.webp",
+      "label": "White Palace Arena 2"
+    },
+    {
+      "file": "white-palace-location-3.webp",
+      "label": "Path Of Pain Arena 1"
+    }
+  ],
+  "Lemm": [
+    {
+      "file": "lemm-location-1.webp",
+      "label": "Location in the City of Tears"
+    }
+  ],
+  "Jinn": [
+    {
+      "file": "jinn-location-1.webp",
+      "label": "Location in Dirtmouth"
+    }
+  ],
+  "Delicate_Flower": [
+    {
+      "file": "delicate-flower-location-1.webp",
+      "label": "Location of the Traitors' Child's Grave in Queen's Gardens"
+    },
+    {
+      "file": "delicate-flower-location-2.webp",
+      "label": "Nymm 01"
+    },
+    {
+      "file": "delicate-flower-location-3.webp",
+      "label": "Nailmaster Oro 01"
+    },
+    {
+      "file": "delicate-flower-location-4.webp",
+      "label": "Godseeker 01"
+    },
+    {
+      "file": "delicate-flower-location-5.webp",
+      "label": "Emilitia 01"
+    },
+    {
+      "file": "delicate-flower-location-6.webp",
+      "label": "White Lady 01"
+    },
+    {
+      "file": "delicate-flower-location-7.webp",
+      "label": "Location of Grey Mourner in Resting Grounds"
+    },
+    {
+      "file": "delicate-flower-location-8.webp",
+      "label": "Location of Delicate Flowers in Queen's Gardens"
+    }
+  ]
+}

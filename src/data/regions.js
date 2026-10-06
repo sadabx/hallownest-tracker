@@ -34,12 +34,13 @@ const REGION_MATCHES = [
   ["city", /city of tears|ruins_|soul sanctum|tower of love|watcher'?s spire/],
   ["fungal", /fungal wastes|fungus2_|mantis village/],
   ["fog", /fog canyon|fogcanyon_|teacher'?s archives/],
-  ["resting", /resting grounds|restinggrounds_|blue lake/],
+  ["resting", /\bseer\b|resting grounds|restinggrounds_|blue lake/],
   ["greenpath", /greenpath|fungus1_|stone sanctuary|lake of unn/],
   ["crystal", /crystal peak|mines_|crystallised mound/],
-  ["crossroads", /forgotten crossroads|infected crossroads|crossroads_|black egg/],
-  ["cliffs", /howling cliffs|cliffs_|joni'?s repose/],
-  ["dirtmouth", /dirtmouth|town_|king'?s pass/]
+  ["crossroads", /forgotten crossroads|infected crossroads|crossroads_|black egg|grubfather|salubra/],
+  ["cliffs", /howling cliffs|cliffs_|joni'?s repose|king'?s pass/],
+  ["fungal", /leg eater/],
+  ["dirtmouth", /dirtmouth|\bsly\b|iselda|town_/]
 ];
 
 export { REGIONS, REGION_MATCHES };

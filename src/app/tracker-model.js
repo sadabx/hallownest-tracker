@@ -29,8 +29,13 @@ function statusFor(entry) {
 }
 
 function findRegion(entry, section) {
-  const haystack = `${entry.sceneName || ""} ${stripMarkup(entry.spoiler)} ${stripMarkup(entry.name)} ${stripMarkup(section.h2)}`.toLowerCase();
-  const match = REGION_MATCHES.find(([, pattern]) => pattern.test(haystack));
+  const scene = String(entry.sceneName || "").toLowerCase();
+  const spoiler = stripMarkup(entry.spoiler).toLowerCase();
+  const primaryLocation = spoiler.split(/[,:;+]/, 1)[0];
+  const haystack = `${scene} ${spoiler} ${stripMarkup(entry.name)} ${stripMarkup(section.h2)}`.toLowerCase();
+  const match = REGION_MATCHES.find(([, pattern]) => scene && pattern.test(scene))
+    || REGION_MATCHES.find(([, pattern]) => pattern.test(primaryLocation))
+    || REGION_MATCHES.find(([, pattern]) => pattern.test(haystack));
   return match ? match[0] : null;
 }
 
@@ -54,7 +59,9 @@ function flattenEntries() {
         name,
         description: stripMarkup(entry.spoiler),
         status: statusFor(entry),
-        region: findRegion(entry, section),
+        region: sectionKey === "nailUpgrades" && entryKey !== "oldNail"
+          ? "city"
+          : findRegion(entry, section),
         sceneName: entry.sceneName || null,
         wiki: entry.wiki || null,
         raw: entry

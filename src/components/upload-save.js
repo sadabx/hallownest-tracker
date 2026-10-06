@@ -1,10 +1,9 @@
 const SAVE_PATHS = Object.freeze({
   windows: String.raw`%USERPROFILE%\AppData\LocalLow\Team Cherry\Hollow Knight`,
   mac: "~/Library/Application Support/unity.Team Cherry.Hollow Knight",
-  linux: "~/.config/unity3d/Team Cherry/Hollow Knight"
+  linux: "~/.config/unity3d/Team Cherry/Hollow Knight",
+  android: "/storage/emulated/0/Android/data/com.TeamCherry.HollowKnight/files"
 });
-
-const STEAM_CLOUD_URL = "https://store.steampowered.com/account/remotestorageapp/?appid=367520";
 
 function showUploadToast(message, type = "success") {
   document.querySelector("#upload-toast")?.remove();
@@ -79,15 +78,11 @@ function initUploadSave() {
   document.querySelectorAll("[data-save-platform]").forEach(button => {
     button.addEventListener("click", async () => {
       const platform = button.dataset.savePlatform;
-      if (platform === "steam") {
-        window.open(STEAM_CLOUD_URL, "_blank", "noopener,noreferrer");
-        return;
-      }
       const path = SAVE_PATHS[platform];
       if (!path) return;
       try {
         await copySavePath(path);
-        showUploadToast("Path copied to clipboard!");
+        showUploadToast(platform === "android" ? "Android folder path copied!" : "Path copied to clipboard!");
       } catch (_) {
         showUploadToast("Unable to copy the path.", "error");
       }

@@ -1,6 +1,6 @@
-import { GROUPS, REGIONS, WIKI_ROOT, escapeHTML, flattenEntries } from "../app/tracker-model.js";
+import { GROUPS, REGIONS, escapeHTML, flattenEntries } from "../app/tracker-model.js";
 import { state } from "../app/tracker-state.js";
-import { itemIconFor } from "../data/item-icons.js";
+import { itemIconFor, wikiArticleIconFor, wikiMapPointFor } from "../data/item-icons.js";
 
 const MAP_WIDTH = 2560;
 const MAP_HEIGHT = 1651;
@@ -11,32 +11,9 @@ const MAP_SOURCE = "https://hollowknight.wiki/w/File:Clean_map_updated.png";
 let mapResizeObserver = null;
 let mapFilterScroll = 0;
 
-function hashText(value) {
-  let hash = 2166136261;
-  for (const char of String(value || "")) {
-    hash ^= char.charCodeAt(0);
-    hash = Math.imul(hash, 16777619);
-  }
-  return hash >>> 0;
-}
-
-function mapPoint(item, index) {
-  const region = REGIONS[item.region];
-  const sceneHash = hashText(item.sceneName || item.description || item.name);
-  const itemHash = hashText(item.id);
-  const sceneX = ((sceneHash % 10000) / 9999 - 0.5) * region.w * 0.66;
-  const sceneY = (((Math.floor(sceneHash / 10000) % 10000) / 9999) - 0.5) * region.h * 0.62;
-  const angle = ((itemHash % 360) * Math.PI) / 180;
-  const radius = 0.2 + ((itemHash >>> 9) % 100) / 180;
-  return {
-    x: Math.max(1.5, Math.min(98.5, region.x + sceneX + Math.cos(angle) * radius)),
-    y: Math.max(1.5, Math.min(98.5, region.y + sceneY + Math.sin(angle) * radius)),
-    z: index + 1
-  };
-}
-
 function mapFiltered(entries) {
   return entries.filter(item => {
+    if (state.group !== "all" && item.group !== state.group) return false;
     if (!item.region || REGIONS[item.region].atlas === false) return false;
     if (state.mapHiddenSections.has(item.sectionKey)) return false;
     if (state.missingOnly && item.status === "complete") return false;
@@ -47,7 +24,7 @@ function mapFiltered(entries) {
 }
 
 function sectionFilterMarkup(entries) {
-  return Object.entries(GROUPS).map(([groupKey, group]) => {
+  return Object.entries(GROUPS).filter(([groupKey]) => state.group === "all" || state.group === groupKey).map(([groupKey, group]) => {
     const sections = group.sections.map(sectionKey => {
       const items = entries.filter(item => item.sectionKey === sectionKey && item.region && REGIONS[item.region].atlas !== false);
       if (!items.length) return "";
@@ -58,32 +35,43 @@ function sectionFilterMarkup(entries) {
   }).join("");
 }
 
-function regionMarkup() {
-  if (!state.mapLabels) return "";
-  return Object.entries(REGIONS).filter(([, region]) => region.atlas !== false).map(([key, region]) => `<div class="map-region map-region-${key}" style="left:${region.x - region.w / 2}%;top:${region.y - region.h / 2}%;width:${region.w}%;height:${region.h}%"><span>${escapeHTML(region.label)}</span></div>`).join("");
+function mapPointFor(item) {
+  const regionLabel = REGIONS[item.region].label.replace(/^the\s+/i, "").toLowerCase();
+  return wikiMapPointFor({ ...item, regionLabel });
 }
 
-function pinMarkup(filtered) {
-  return filtered.map((item, index) => {
-    const point = mapPoint(item, index);
-    const icon = itemIconFor(item);
-    const artwork = icon ? `<img src="${icon}" alt="" loading="lazy">` : "<span></span>";
-    const exactness = item.sceneName ? `Scene: ${item.sceneName}` : `Area: ${REGIONS[item.region].label}`;
-    return `<button class="map-pin status-${item.status} ${icon ? "has-art" : ""} ${state.selectedEntry === item.id ? "selected" : ""}" style="left:${point.x}%;top:${point.y}%;z-index:${point.z}" data-select-entry="${item.id}" title="${escapeHTML(item.name)} · ${escapeHTML(exactness)}">${artwork}</button>`;
-  }).join("");
-}
+function mapPins(filtered) {
+  const located = filtered.map(item => ({ item, point: mapPointFor(item) })).filter(entry => entry.point);
+  const groups = new Map();
+  located.forEach(({ point }, index) => {
+    const key = `${Math.round(point.x / 4)}:${Math.round(point.y / 4)}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(index);
+  });
 
-function selectedDetail(entries) {
-  const selected = entries.find(item => item.id === state.selectedEntry && item.region && REGIONS[item.region].atlas !== false);
-  if (!selected) return `<div class="map-detail empty"><div><small>Map details</small><h3>Select a marker</h3><p>Choose a marker to inspect its save status and location notes.</p></div></div>`;
-  const location = selected.sceneName ? `${REGIONS[selected.region].label} · ${selected.sceneName}` : REGIONS[selected.region].label;
-  return `<div class="map-detail status-${selected.status}"><span class="status-mark"></span><div><small>${escapeHTML(location)} · ${escapeHTML(selected.section)}</small><h3>${escapeHTML(selected.name)}</h3><p>${state.spoilers ? escapeHTML(selected.description || "No additional directions.") : "Enable Show spoilers to reveal directions."}</p></div>${selected.wiki ? `<a href="${WIKI_ROOT}${encodeURI(selected.wiki)}" target="_blank" rel="noreferrer">Wiki</a>` : ""}</div>`;
+  return located.map(({ item, point }, index) => {
+    const key = `${Math.round(point.x / 4)}:${Math.round(point.y / 4)}`;
+    const group = groups.get(key);
+    let x = point.x;
+    let y = point.y;
+    if (group.length > 1) {
+      const angle = -Math.PI / 2 + 2 * Math.PI * group.indexOf(index) / group.length;
+      x += Math.cos(angle) * 48;
+      y += Math.sin(angle) * 48;
+    }
+    const fallback = itemIconFor(item);
+    const icon = wikiArticleIconFor(item) || fallback;
+    const artwork = icon ? `<img src="${icon}" alt="" draggable="false" loading="lazy"${fallback && icon !== fallback ? ` onerror="this.onerror=null;this.src='${fallback}'"` : ""}>` : `<span class="map-pin-placeholder" aria-hidden="true"></span>`;
+    const title = `${item.name} · ${point.label}`;
+    const crowded = group.length > 1 ? " crowded-pin" : "";
+    return `<button class="map-pin${crowded} status-${item.status} ${item.id === state.selectedEntry ? "selected" : ""}" type="button" style="left:${x}px;top:${y}px" data-select-entry="${item.id}" title="${escapeHTML(title)}" aria-label="${escapeHTML(title)}">${artwork}</button>`;
+  });
 }
 
 function renderMap(entries, onSelectEntry) {
   mapResizeObserver?.disconnect();
   const filtered = mapFiltered(entries);
-  const sceneCount = new Set(filtered.map(item => item.sceneName).filter(Boolean)).size;
+  const pins = mapPins(filtered);
   const sectionFilters = sectionFilterMarkup(entries);
 
   document.querySelector("#map-view").innerHTML = `
@@ -96,15 +84,14 @@ function renderMap(entries, onSelectEntry) {
           <label class="map-search-label"><span>Search locations</span><input id="map-search" value="${escapeHTML(state.mapQuery)}" placeholder="Name, scene, or area..."></label>
           <div class="map-filter-actions"><button id="map-sections-show-all" type="button">Show all</button><button id="map-sections-hide-all" type="button">Hide all</button></div>
           <div class="map-filter-sections">${sectionFilters}</div>
-          <div class="map-filter-utilities"><label class="map-label-toggle"><input id="map-labels" type="checkbox" ${state.mapLabels ? "checked" : ""}>Show area guides</label><button class="secondary-action" id="map-reset-filters" type="button">Reset all filters</button></div>
+          <div class="map-filter-utilities"><button class="secondary-action" id="map-reset-filters" type="button">Reset all filters</button></div>
           <div class="map-legend"><span><i class="legend-complete"></i>Complete</span><span><i class="legend-missing"></i>Missing</span><span><i class="legend-partial"></i>Partial</span><span><i class="legend-unknown"></i>Unknown</span></div>
-          <p class="map-placement-note">Pins use save-database scene IDs and calibrated area placement. They are approximate, not room-perfect. White Palace and Godhome use separate maps.</p>
+          <p class="map-placement-note">Item icons use positions matched from marked Hollow Knight Wiki location maps. Checks without a verified map position stay in the area list below.</p>
         </aside>
       </div>
       <div class="map-tools"><button id="map-zoom-out" aria-label="Zoom out">−</button><button id="map-reset" aria-label="Fit map">Fit</button><button id="map-zoom-in" aria-label="Zoom in">+</button></div>
-      <div id="map-viewport" aria-label="Interactive Hallownest map"><div id="map-stage"><img class="hallownest-map-art" src="${MAP_URL}" width="${MAP_WIDTH}" height="${MAP_HEIGHT}" alt="Clean map of Hallownest" draggable="false"><div class="map-regions">${regionMarkup()}</div><div class="map-pins">${pinMarkup(filtered)}</div></div><div class="map-result-count"><strong>${filtered.length}</strong><span>markers across ${sceneCount} known scenes</span></div></div>
+      <div id="map-viewport" aria-label="Hallownest map with wiki-positioned item icons"><div id="map-stage"><img class="hallownest-map-art" src="${MAP_URL}" width="${MAP_WIDTH}" height="${MAP_HEIGHT}" alt="Clean map of Hallownest" draggable="false"><div class="map-pins">${pins.join("")}</div></div><div class="map-result-count"><strong>${pins.length}</strong><span>wiki-mapped items · ${filtered.length} checks total</span></div></div>
       <div class="map-attribution">Map artwork © Team Cherry · <a href="${MAP_SOURCE}" target="_blank" rel="noreferrer">Hollow Knight Wiki source</a> · Drag to pan, scroll to zoom</div>
-      ${selectedDetail(entries)}
     </div></div>`;
   const filterMenu = document.querySelector("#map-filter-menu");
   if (filterMenu && state.mapFiltersOpen) filterMenu.scrollTop = mapFilterScroll;
@@ -209,16 +196,11 @@ function bindMapInteractions(onSelectEntry) {
     state.mapFiltersOpen = true;
     rerender(onSelectEntry);
   });
-  document.querySelector("#map-labels")?.addEventListener("change", event => {
-    state.mapLabels = event.target.checked;
-    rerender(onSelectEntry);
-  });
   document.querySelector("#map-reset-filters")?.addEventListener("click", () => {
     state.mapQuery = "";
     state.mapCategory = "all";
     state.mapHiddenSections.clear();
     state.missingOnly = false;
-    state.mapLabels = false;
     state.mapFiltersOpen = true;
     const missing = document.querySelector("#global-missing-only");
     if (missing) missing.checked = false;

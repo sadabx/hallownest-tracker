@@ -1,0 +1,1947 @@
+{
+  "sly-location-2.webp": {
+    "x": 1131.1,
+    "y": 355.3,
+    "confidence": 18
+  },
+  "iselda-location-1.webp": {
+    "x": 1161.1,
+    "y": 351.8,
+    "confidence": 17
+  },
+  "hornet-protector-location-1.webp": {
+    "x": 463.3,
+    "y": 410.4,
+    "confidence": 102
+  },
+  "false-knight-location-1.webp": {
+    "x": 1218.2,
+    "y": 476.0,
+    "confidence": 195
+  },
+  "soul-master-location-1.webp": {
+    "x": 1498.7,
+    "y": 694.7,
+    "confidence": 128
+  },
+  "dung-defender-location-1.webp": {
+    "x": 1677.1,
+    "y": 1022.6,
+    "confidence": 76
+  },
+  "brooding-mawlek-location-1.webp": {
+    "x": 1092.5,
+    "y": 495.6,
+    "confidence": 207
+  },
+  "brooding-mawlek-location-2.webp": {
+    "x": 2078.9,
+    "y": 715.9,
+    "confidence": 99
+  },
+  "gruz-mother-location-1.webp": {
+    "x": 2078.9,
+    "y": 715.9,
+    "confidence": 99
+  },
+  "gruz-mother-location-2.webp": {
+    "x": 1479.4,
+    "y": 561.1,
+    "confidence": 207
+  },
+  "mantis-lords-location-1.webp": {
+    "x": 1060.8,
+    "y": 1044.8,
+    "confidence": 133
+  },
+  "nosk-location-1.webp": {
+    "x": 812.0,
+    "y": 1207.5,
+    "confidence": 108
+  },
+  "broken-vessel-location-1.webp": {
+    "x": 1194.9,
+    "y": 1275.2,
+    "confidence": 82
+  },
+  "hornet-sentinel-location-1.webp": {
+    "x": 2458.7,
+    "y": 960.8,
+    "confidence": 105
+  },
+  "collector-location-1.webp": {
+    "x": 2056.4,
+    "y": 877.6,
+    "confidence": 125
+  },
+  "uumuu-location-1.webp": {
+    "x": 909.7,
+    "y": 693.4,
+    "confidence": 66
+  },
+  "traitor-lord-location-1.webp": {
+    "x": 417.6,
+    "y": 653.5,
+    "confidence": 128
+  },
+  "watcher-knight-location-1.webp": {
+    "x": 1710.3,
+    "y": 795.4,
+    "confidence": 128
+  },
+  "grubsong-location-1.webp": {
+    "x": 1075.0,
+    "y": 404.6,
+    "confidence": 147
+  },
+  "baldur-shell-location-1.webp": {
+    "x": 783.6,
+    "y": 373.2,
+    "confidence": 85
+  },
+  "quick-focus-location-1.webp": {
+    "x": 1523.3,
+    "y": 575.8,
+    "confidence": 148
+  },
+  "fury-of-the-fallen-location-1.webp": {
+    "x": 979.9,
+    "y": 368.0,
+    "confidence": 23
+  },
+  "lifeblood-core-location-1.webp": {
+    "x": 1448.9,
+    "y": 1498.5,
+    "confidence": 23
+  },
+  "lifeblood-heart-location-1.webp": {
+    "x": 1523.0,
+    "y": 576.1,
+    "confidence": 206
+  },
+  "flukenest-location-1.webp": {
+    "x": 1385.8,
+    "y": 1103.1,
+    "confidence": 81
+  },
+  "defenders-crest-location-1.webp": {
+    "x": 1677.1,
+    "y": 1022.6,
+    "confidence": 76
+  },
+  "thorns-of-agony-location-1.webp": {
+    "x": 742.8,
+    "y": 530.1,
+    "confidence": 97
+  },
+  "steady-body-location-1.webp": {
+    "x": 1523.0,
+    "y": 576.1,
+    "confidence": 206
+  },
+  "mark-of-pride-location-1.webp": {
+    "x": 1121.5,
+    "y": 969.9,
+    "confidence": 115
+  },
+  "longnail-location-1.webp": {
+    "x": 1523.3,
+    "y": 575.8,
+    "confidence": 146
+  },
+  "shaman-stone-location-1.webp": {
+    "x": 1523.1,
+    "y": 575.8,
+    "confidence": 148
+  },
+  "sharp-shadow-location-1.webp": {
+    "x": 955.7,
+    "y": 1234.9,
+    "confidence": 124
+  },
+  "spore-shroom-location-1.webp": {
+    "x": 879.8,
+    "y": 880.6,
+    "confidence": 119
+  },
+  "soul-eater-location-1.webp": {
+    "x": 2124.6,
+    "y": 556.6,
+    "confidence": 94
+  },
+  "soul-catcher-location-1.webp": {
+    "x": 1168.0,
+    "y": 472.7,
+    "confidence": 197
+  },
+  "fragile-heart-location-1.webp": {
+    "x": 1200.9,
+    "y": 675.1,
+    "confidence": 120
+  },
+  "glowing-womb-location-1.webp": {
+    "x": 1325.2,
+    "y": 460.1,
+    "confidence": 205
+  },
+  "fragile-greed-location-1.webp": {
+    "x": 1200.9,
+    "y": 675.1,
+    "confidence": 119
+  },
+  "fragile-strength-location-1.webp": {
+    "x": 1200.9,
+    "y": 675.1,
+    "confidence": 120
+  },
+  "jonis-blessing-location-1.webp": {
+    "x": 830.4,
+    "y": 287.0,
+    "confidence": 75
+  },
+  "hiveblood-location-1.webp": {
+    "x": 2276.1,
+    "y": 1130.7,
+    "confidence": 26
+  },
+  "dream-wielder-location-1.webp": {
+    "x": 1947.4,
+    "y": 461.9,
+    "confidence": 73
+  },
+  "dashmaster-location-1.webp": {
+    "x": 1131.7,
+    "y": 1042.3,
+    "confidence": 129
+  },
+  "quick-slash-location-1.webp": {
+    "x": 2394.5,
+    "y": 1086.5,
+    "confidence": 112
+  },
+  "shape-of-unn-location-1.webp": {
+    "x": 225.8,
+    "y": 516.7,
+    "confidence": 114
+  },
+  "grubberflys-elegy-location-1.webp": {
+    "x": 1075.0,
+    "y": 404.5,
+    "confidence": 148
+  },
+  "deep-focus-location-1.webp": {
+    "x": 1411.8,
+    "y": 370.7,
+    "confidence": 101
+  },
+  "spell-twister-location-1.webp": {
+    "x": 1609.3,
+    "y": 690.5,
+    "confidence": 131
+  },
+  "mothwing-cloak-location-1.webp": {
+    "x": 463.3,
+    "y": 410.4,
+    "confidence": 103
+  },
+  "mantis-claw-location-1.webp": {
+    "x": 1031.1,
+    "y": 936.9,
+    "confidence": 119
+  },
+  "kingsoul-location-1.webp": {
+    "x": 311.9,
+    "y": 646.1,
+    "confidence": 136
+  },
+  "crystal-heart-location-1.webp": {
+    "x": 1943.6,
+    "y": 360.5,
+    "confidence": 108
+  },
+  "monarch-wings-location-1.webp": {
+    "x": 1056.9,
+    "y": 1286.7,
+    "confidence": 82
+  },
+  "ismas-tear-location-1.webp": {
+    "x": 1920.0,
+    "y": 1108.4,
+    "confidence": 85
+  },
+  "shade-cloak-location-1.webp": {
+    "x": 2080.9,
+    "y": 1559.2,
+    "confidence": 21
+  },
+  "kings-brand-location-1.webp": {
+    "x": 1533.3,
+    "y": 1336.9,
+    "confidence": 78
+  },
+  "kings-brand-location-2.webp": {
+    "x": 2448.8,
+    "y": 989.4,
+    "confidence": 101
+  },
+  "vengeful-spirit-location-1.webp": {
+    "x": 1168.0,
+    "y": 472.7,
+    "confidence": 197
+  },
+  "great-slash-location-1.webp": {
+    "x": 271.1,
+    "y": 534.9,
+    "confidence": 100
+  },
+  "dash-slash-location-1.webp": {
+    "x": 2441.6,
+    "y": 1043.6,
+    "confidence": 148
+  },
+  "cyclone-slash-location-1.webp": {
+    "x": 800.2,
+    "y": 217.7,
+    "confidence": 76
+  },
+  "shade-soul-location-1.webp": {
+    "x": 1537.5,
+    "y": 759.4,
+    "confidence": 116
+  },
+  "desolate-dive-location-1.webp": {
+    "x": 1502.9,
+    "y": 712.9,
+    "confidence": 109
+  },
+  "abyss-shriek-location-1.webp": {
+    "x": 1345.9,
+    "y": 1571.6,
+    "confidence": 23
+  },
+  "howling-wraiths-location-1.webp": {
+    "x": 620.3,
+    "y": 673.2,
+    "confidence": 64
+  },
+  "seer-location-1.webp": {
+    "x": 1947.3,
+    "y": 462.1,
+    "confidence": 94
+  },
+  "dream-nail-location-1.webp": {
+    "x": 1889.6,
+    "y": 533.9,
+    "confidence": 109
+  },
+  "descending-dark-location-1.webp": {
+    "x": 1882.9,
+    "y": 425.5,
+    "confidence": 96
+  },
+  "gorb-location-1.webp": {
+    "x": 732.2,
+    "y": 188.1,
+    "confidence": 76
+  },
+  "xero-location-1.webp": {
+    "x": 1808.4,
+    "y": 530.2,
+    "confidence": 124
+  },
+  "marmu-location-1.webp": {
+    "x": 395.0,
+    "y": 778.0,
+    "confidence": 131
+  },
+  "elder-hu-location-1.webp": {
+    "x": 1285.4,
+    "y": 773.1,
+    "confidence": 128
+  },
+  "galien-location-1.webp": {
+    "x": 545.1,
+    "y": 1052.6,
+    "confidence": 109
+  },
+  "vessel-fragment-location-2.webp": {
+    "x": 589.8,
+    "y": 600.9,
+    "confidence": 108
+  },
+  "vessel-fragment-location-3.webp": {
+    "x": 1186.9,
+    "y": 560.5,
+    "confidence": 201
+  },
+  "vessel-fragment-location-4.webp": {
+    "x": 1968.7,
+    "y": 841.7,
+    "confidence": 120
+  },
+  "vessel-fragment-location-5.webp": {
+    "x": 1024.6,
+    "y": 1128.9,
+    "confidence": 122
+  },
+  "vessel-fragment-location-6.webp": {
+    "x": 694.6,
+    "y": 170.2,
+    "confidence": 77
+  },
+  "vessel-fragment-location-7.webp": {
+    "x": 1947.3,
+    "y": 462.1,
+    "confidence": 94
+  },
+  "vessel-fragment-location-8.webp": {
+    "x": 1577.0,
+    "y": 1226.3,
+    "confidence": 84
+  },
+  "markoth-location-1.webp": {
+    "x": 2336.6,
+    "y": 1011.7,
+    "confidence": 127
+  },
+  "no-eyes-location-1.webp": {
+    "x": 948.8,
+    "y": 585.2,
+    "confidence": 110
+  },
+  "lurien-location-1.webp": {
+    "x": 1555.1,
+    "y": 957.3,
+    "confidence": 103
+  },
+  "herrah-location-1.webp": {
+    "x": 233.8,
+    "y": 1024.8,
+    "confidence": 85
+  },
+  "dreamshield-location-1.webp": {
+    "x": 1891.5,
+    "y": 485.4,
+    "confidence": 108
+  },
+  "weaversong-location-1.webp": {
+    "x": 560.3,
+    "y": 1109.8,
+    "confidence": 114
+  },
+  "grimm-location-1.webp": {
+    "x": 1096.2,
+    "y": 350.4,
+    "confidence": 22
+  },
+  "grimmchild-location-1.webp": {
+    "x": 1096.2,
+    "y": 350.4,
+    "confidence": 22
+  },
+  "hive-knight-location-1.webp": {
+    "x": 2316.9,
+    "y": 1107.7,
+    "confidence": 25
+  },
+  "godtuner-location-1.webp": {
+    "x": 1192.6,
+    "y": 1121.5,
+    "confidence": 80
+  },
+  "shopkeepers-key-location-2.webp": {
+    "x": 1598.8,
+    "y": 283.8,
+    "confidence": 104
+  },
+  "elegant-key-location-1.webp": {
+    "x": 1547.5,
+    "y": 770.7,
+    "confidence": 117
+  },
+  "love-key-location-1.webp": {
+    "x": 2042.1,
+    "y": 901.7,
+    "confidence": 117
+  },
+  "love-key-location-2.webp": {
+    "x": 764.3,
+    "y": 841.5,
+    "confidence": 145
+  },
+  "greenpath-location-1.webp": {
+    "x": 633.1,
+    "y": 408.5,
+    "confidence": 110
+  },
+  "greenpath-location-2.webp": {
+    "x": 578.0,
+    "y": 401.5,
+    "confidence": 116
+  },
+  "fungal-wastes-location-1.webp": {
+    "x": 1084.1,
+    "y": 716.4,
+    "confidence": 234
+  },
+  "pale-ore-location-1.webp": {
+    "x": 1341.4,
+    "y": 1214.3,
+    "confidence": 85
+  },
+  "pale-ore-location-2.webp": {
+    "x": 1947.3,
+    "y": 462.1,
+    "confidence": 94
+  },
+  "pale-ore-location-3.webp": {
+    "x": 1776.3,
+    "y": 61.3,
+    "confidence": 109
+  },
+  "pale-ore-location-4.webp": {
+    "x": 880.3,
+    "y": 1213.1,
+    "confidence": 110
+  },
+  "pale-ore-location-5.webp": {
+    "x": 1075.2,
+    "y": 404.9,
+    "confidence": 209
+  },
+  "pale-ore-location-6.webp": {
+    "x": 2078.7,
+    "y": 715.6,
+    "confidence": 138
+  },
+  "tram-pass-location-1.webp": {
+    "x": 1481.2,
+    "y": 528.4,
+    "confidence": 159
+  },
+  "tram-pass-location-2.webp": {
+    "x": 1668.8,
+    "y": 529.9,
+    "confidence": 75
+  },
+  "tram-pass-location-3.webp": {
+    "x": 1000.6,
+    "y": 1178.8,
+    "confidence": 91
+  },
+  "tram-pass-location-4.webp": {
+    "x": 1580.0,
+    "y": 1180.6,
+    "confidence": 70
+  },
+  "tram-pass-location-5.webp": {
+    "x": 1888.9,
+    "y": 1179.2,
+    "confidence": 116
+  },
+  "tram-pass-location-6.webp": {
+    "x": 503.7,
+    "y": 990.7,
+    "confidence": 123
+  },
+  "forgotten-crossroads-location-1.webp": {
+    "x": 1180.7,
+    "y": 528.9,
+    "confidence": 226
+  },
+  "forgotten-crossroads-location-2.webp": {
+    "x": 1437.3,
+    "y": 397.1,
+    "confidence": 238
+  },
+  "forgotten-crossroads-location-3.webp": {
+    "x": 1073.9,
+    "y": 436.4,
+    "confidence": 226
+  },
+  "forgotten-crossroads-location-4.webp": {
+    "x": 1314.1,
+    "y": 463.2,
+    "confidence": 235
+  },
+  "forgotten-crossroads-location-5.webp": {
+    "x": 1167.8,
+    "y": 473.0,
+    "confidence": 229
+  },
+  "deepnest-location-1.webp": {
+    "x": 720.6,
+    "y": 1047.8,
+    "confidence": 131
+  },
+  "deepnest-location-2.webp": {
+    "x": 560.1,
+    "y": 1109.7,
+    "confidence": 115
+  },
+  "city-of-tears-location-1.webp": {
+    "x": 1528.4,
+    "y": 835.6,
+    "confidence": 124
+  },
+  "city-of-tears-location-2.webp": {
+    "x": 1857.9,
+    "y": 961.6,
+    "confidence": 114
+  },
+  "city-of-tears-location-3.webp": {
+    "x": 1946.3,
+    "y": 839.2,
+    "confidence": 121
+  },
+  "city-of-tears-location-4.webp": {
+    "x": 1599.6,
+    "y": 824.6,
+    "confidence": 130
+  },
+  "city-of-tears-location-5.webp": {
+    "x": 1676.0,
+    "y": 909.4,
+    "confidence": 124
+  },
+  "city-of-tears-location-6.webp": {
+    "x": 1710.8,
+    "y": 819.3,
+    "confidence": 126
+  },
+  "leg-eater-location-1.webp": {
+    "x": 1200.9,
+    "y": 675.1,
+    "confidence": 121
+  },
+  "sly-location-1.webp": {
+    "x": 1470.9,
+    "y": 584.2,
+    "confidence": 204
+  },
+  "bretta-location-1.webp": {
+    "x": 1150.9,
+    "y": 1006.4,
+    "confidence": 122
+  },
+  "bretta-location-2.webp": {
+    "x": 1166.9,
+    "y": 353.3,
+    "confidence": 24
+  },
+  "grey-mourner-location-1.webp": {
+    "x": 2084.0,
+    "y": 537.8,
+    "confidence": 94
+  },
+  "royal-waterways-location-1.webp": {
+    "x": 1195.3,
+    "y": 1028.7,
+    "confidence": 92
+  },
+  "royal-waterways-location-2.webp": {
+    "x": 1895.9,
+    "y": 1064.1,
+    "confidence": 95
+  },
+  "queens-gardens-location-1.webp": {
+    "x": 515.9,
+    "y": 815.4,
+    "confidence": 220
+  },
+  "queens-gardens-location-2.webp": {
+    "x": 601.4,
+    "y": 783.5,
+    "confidence": 223
+  },
+  "queens-gardens-location-3.webp": {
+    "x": 744.5,
+    "y": 840.2,
+    "confidence": 230
+  },
+  "queens-gardens-location-4.webp": {
+    "x": 417.7,
+    "y": 653.2,
+    "confidence": 227
+  },
+  "massive-moss-charger-location-1.webp": {
+    "x": 770.9,
+    "y": 595.9,
+    "confidence": 104
+  },
+  "crystal-guardian-location-1.webp": {
+    "x": 1627.6,
+    "y": 294.6,
+    "confidence": 114
+  },
+  "colosseum-of-fools-location-1.webp": {
+    "x": 2078.7,
+    "y": 715.8,
+    "confidence": 163
+  },
+  "colosseum-of-fools-location-2.webp": {
+    "x": 2078.7,
+    "y": 715.8,
+    "confidence": 161
+  },
+  "colosseum-of-fools-location-3.webp": {
+    "x": 2078.7,
+    "y": 715.8,
+    "confidence": 161
+  },
+  "colosseum-of-fools-location-4.webp": {
+    "x": 2353.7,
+    "y": 755.7,
+    "confidence": 167
+  },
+  "soul-warrior-location-1.webp": {
+    "x": 1527.6,
+    "y": 764.4,
+    "confidence": 119
+  },
+  "soul-warrior-location-2.webp": {
+    "x": 2079.0,
+    "y": 715.9,
+    "confidence": 99
+  },
+  "vengefly-king-location-1.webp": {
+    "x": 562.6,
+    "y": 358.3,
+    "confidence": 105
+  },
+  "vengefly-king-location-2.webp": {
+    "x": 2079.1,
+    "y": 715.9,
+    "confidence": 99
+  },
+  "oblobbles-location-1.webp": {
+    "x": 2079.0,
+    "y": 715.9,
+    "confidence": 100
+  },
+  "god-tamer-location-1.webp": {
+    "x": 2078.9,
+    "y": 715.9,
+    "confidence": 102
+  },
+  "enraged-guardian-location-1.webp": {
+    "x": 1632.4,
+    "y": 271.7,
+    "confidence": 101
+  },
+  "flukemarm-location-1.webp": {
+    "x": 1385.8,
+    "y": 1103.1,
+    "confidence": 80
+  },
+  "salubras-blessing-location-1.webp": {
+    "x": 1523.0,
+    "y": 576.1,
+    "confidence": 205
+  },
+  "hunters-mark-location-1.webp": {
+    "x": 947.8,
+    "y": 532.2,
+    "confidence": 103
+  },
+  "void-heart-location-1.webp": {
+    "x": 1500.9,
+    "y": 1573.1,
+    "confidence": 22
+  },
+  "fog-canyon-location-1.webp": {
+    "x": 620.3,
+    "y": 673.3,
+    "confidence": 81
+  },
+  "nailsmith-location-1.webp": {
+    "x": 1242.1,
+    "y": 955.5,
+    "confidence": 117
+  },
+  "failed-champion-location-1.webp": {
+    "x": 1218.2,
+    "y": 476.0,
+    "confidence": 194
+  },
+  "soul-tyrant-location-1.webp": {
+    "x": 1498.7,
+    "y": 694.7,
+    "confidence": 128
+  },
+  "zote-location-1.webp": {
+    "x": 562.4,
+    "y": 368.6,
+    "confidence": 105
+  },
+  "zote-location-2.webp": {
+    "x": 1166.9,
+    "y": 353.3,
+    "confidence": 24
+  },
+  "zote-location-3.webp": {
+    "x": 1451.9,
+    "y": 797.9,
+    "confidence": 111
+  },
+  "zote-location-4.webp": {
+    "x": 739.1,
+    "y": 1046.7,
+    "confidence": 114
+  },
+  "zote-location-5.webp": {
+    "x": 2078.9,
+    "y": 715.9,
+    "confidence": 99
+  },
+  "lost-kin-location-1.webp": {
+    "x": 1194.9,
+    "y": 1275.2,
+    "confidence": 82
+  },
+  "grey-prince-zote-location-1.webp": {
+    "x": 1166.9,
+    "y": 353.3,
+    "confidence": 24
+  },
+  "radiance-location-1.webp": {
+    "x": 1273.3,
+    "y": 393.0,
+    "confidence": 191
+  },
+  "white-defender-location-1.webp": {
+    "x": 1683.0,
+    "y": 1047.5,
+    "confidence": 86
+  },
+  "quirrel-location-1.webp": {
+    "x": 1273.3,
+    "y": 393.0,
+    "confidence": 191
+  },
+  "quirrel-location-2.webp": {
+    "x": 333.0,
+    "y": 426.7,
+    "confidence": 109
+  },
+  "quirrel-location-3.webp": {
+    "x": 1123.6,
+    "y": 944.0,
+    "confidence": 112
+  },
+  "quirrel-location-4.webp": {
+    "x": 1411.0,
+    "y": 862.4,
+    "confidence": 111
+  },
+  "quirrel-location-5.webp": {
+    "x": 806.4,
+    "y": 1175.9,
+    "confidence": 114
+  },
+  "quirrel-location-6.webp": {
+    "x": 1582.6,
+    "y": 241.1,
+    "confidence": 105
+  },
+  "quirrel-location-7.webp": {
+    "x": 909.7,
+    "y": 693.4,
+    "confidence": 64
+  },
+  "quirrel-location-8.webp": {
+    "x": 1745.2,
+    "y": 569.1,
+    "confidence": 100
+  },
+  "lightseed-location-1.webp": {
+    "x": 1319.6,
+    "y": 1346.4,
+    "confidence": 56
+  },
+  "lightseed-location-2.webp": {
+    "x": 1399.5,
+    "y": 397.9,
+    "confidence": 133
+  },
+  "duranda-location-1.webp": {
+    "x": 519.9,
+    "y": 551.7,
+    "confidence": 108
+  },
+  "aluba-location-1.webp": {
+    "x": 290.9,
+    "y": 424.3,
+    "confidence": 107
+  },
+  "aluba-location-2.webp": {
+    "x": 305.7,
+    "y": 642.5,
+    "confidence": 137
+  },
+  "maskfly-location-1.webp": {
+    "x": 820.8,
+    "y": 428.7,
+    "confidence": 69
+  },
+  "gulka-location-1.webp": {
+    "x": 814.4,
+    "y": 573.6,
+    "confidence": 99
+  },
+  "durandoo-location-1.webp": {
+    "x": 675.0,
+    "y": 625.9,
+    "confidence": 103
+  },
+  "durandoo-location-2.webp": {
+    "x": 699.1,
+    "y": 871.0,
+    "confidence": 144
+  },
+  "sporg-location-1.webp": {
+    "x": 1049.2,
+    "y": 780.5,
+    "confidence": 122
+  },
+  "gorgeous-husk-location-1.webp": {
+    "x": 1814.7,
+    "y": 952.3,
+    "confidence": 112
+  },
+  "crystal-crawler-location-1.webp": {
+    "x": 1592.7,
+    "y": 359.3,
+    "confidence": 137
+  },
+  "charged-lumafly-location-1.webp": {
+    "x": 690.0,
+    "y": 530.2,
+    "confidence": 108
+  },
+  "charged-lumafly-location-2.webp": {
+    "x": 1028.1,
+    "y": 633.7,
+    "confidence": 75
+  },
+  "garpede-location-1.webp": {
+    "x": 844.6,
+    "y": 953.3,
+    "confidence": 108
+  },
+  "garpede-location-2.webp": {
+    "x": 910.4,
+    "y": 1193.8,
+    "confidence": 121
+  },
+  "goam-location-1.webp": {
+    "x": 1260.1,
+    "y": 536.1,
+    "confidence": 208
+  },
+  "goam-location-3.webp": {
+    "x": 1161.9,
+    "y": 567.4,
+    "confidence": 199
+  },
+  "flukemunga-location-1.webp": {
+    "x": 1315.1,
+    "y": 1057.9,
+    "confidence": 96
+  },
+  "pale-lurker-location-1.webp": {
+    "x": 2354.2,
+    "y": 755.8,
+    "confidence": 102
+  },
+  "crawlid-location-1.webp": {
+    "x": 631.0,
+    "y": 308.6,
+    "confidence": 75
+  },
+  "crawlid-location-2.webp": {
+    "x": 1126.6,
+    "y": 407.9,
+    "confidence": 201
+  },
+  "crawlid-location-3.webp": {
+    "x": 1578.3,
+    "y": 561.0,
+    "confidence": 97
+  },
+  "hopper-location-1.webp": {
+    "x": 2481.1,
+    "y": 1118.1,
+    "confidence": 53
+  },
+  "gruzzer-location-1.webp": {
+    "x": 1091.1,
+    "y": 464.7,
+    "confidence": 200
+  },
+  "gruzzer-location-2.webp": {
+    "x": 1072.5,
+    "y": 463.6,
+    "confidence": 205
+  },
+  "aspid-hunter-location-2.webp": {
+    "x": 1296.4,
+    "y": 464.6,
+    "confidence": 199
+  },
+  "vengefly-location-1.webp": {
+    "x": 920.5,
+    "y": 348.6,
+    "confidence": 82
+  },
+  "vengefly-location-2.webp": {
+    "x": 1242.8,
+    "y": 537.5,
+    "confidence": 192
+  },
+  "vengefly-location-3.webp": {
+    "x": 1282.0,
+    "y": 533.4,
+    "confidence": 201
+  },
+  "vengefly-location-4.webp": {
+    "x": 577.3,
+    "y": 371.0,
+    "confidence": 104
+  },
+  "vengefly-location-6.webp": {
+    "x": 1986.5,
+    "y": 980.5,
+    "confidence": 122
+  },
+  "tiktik-location-1.webp": {
+    "x": 648.9,
+    "y": 242.4,
+    "confidence": 74
+  },
+  "tiktik-location-2.webp": {
+    "x": 1126.3,
+    "y": 437.3,
+    "confidence": 219
+  },
+  "tiktik-location-3.webp": {
+    "x": 1622.7,
+    "y": 553.7,
+    "confidence": 111
+  },
+  "aspid-mother-location-1.webp": {
+    "x": 1003.2,
+    "y": 535.3,
+    "confidence": 215
+  },
+  "aspid-hatchling-location-1.webp": {
+    "x": 1003.2,
+    "y": 535.3,
+    "confidence": 214
+  },
+  "husk-warrior-location-1.webp": {
+    "x": 1397.2,
+    "y": 490.6,
+    "confidence": 202
+  },
+  "wandering-husk-location-2.webp": {
+    "x": 639.1,
+    "y": 441.1,
+    "confidence": 94
+  },
+  "wandering-husk-location-3.webp": {
+    "x": 1180.8,
+    "y": 404.5,
+    "confidence": 206
+  },
+  "wandering-husk-location-4.webp": {
+    "x": 1213.9,
+    "y": 556.9,
+    "confidence": 196
+  },
+  "wandering-husk-location-5.webp": {
+    "x": 678.2,
+    "y": 1031.8,
+    "confidence": 106
+  },
+  "husk-guard-location-1.webp": {
+    "x": 1445.8,
+    "y": 398.9,
+    "confidence": 215
+  },
+  "husk-bully-location-1.webp": {
+    "x": 740.7,
+    "y": 214.1,
+    "confidence": 74
+  },
+  "husk-bully-location-2.webp": {
+    "x": 1211.6,
+    "y": 542.5,
+    "confidence": 202
+  },
+  "husk-bully-location-3.webp": {
+    "x": 647.7,
+    "y": 434.2,
+    "confidence": 104
+  },
+  "husk-bully-location-4.webp": {
+    "x": 1291.8,
+    "y": 730.0,
+    "confidence": 121
+  },
+  "husk-bully-location-5.webp": {
+    "x": 1578.7,
+    "y": 1144.5,
+    "confidence": 78
+  },
+  "husk-hornhead-location-1.webp": {
+    "x": 1589.0,
+    "y": 1144.1,
+    "confidence": 77
+  },
+  "husk-hornhead-location-2.webp": {
+    "x": 1392.4,
+    "y": 822.7,
+    "confidence": 115
+  },
+  "husk-hornhead-location-3.webp": {
+    "x": 1004.1,
+    "y": 796.9,
+    "confidence": 117
+  },
+  "husk-hornhead-location-4.webp": {
+    "x": 892.8,
+    "y": 587.8,
+    "confidence": 103
+  },
+  "husk-hornhead-location-5.webp": {
+    "x": 1214.1,
+    "y": 556.9,
+    "confidence": 202
+  },
+  "husk-hornhead-location-6.webp": {
+    "x": 723.9,
+    "y": 225.0,
+    "confidence": 72
+  },
+  "husk-hornhead-location-7.webp": {
+    "x": 766.9,
+    "y": 1056.7,
+    "confidence": 109
+  },
+  "elder-baldur-location-1.webp": {
+    "x": 1064.7,
+    "y": 436.4,
+    "confidence": 209
+  },
+  "mosskin-location-1.webp": {
+    "x": 605.3,
+    "y": 427.7,
+    "confidence": 95
+  },
+  "leaping-husk-location-1.webp": {
+    "x": 1249.4,
+    "y": 430.2,
+    "confidence": 203
+  },
+  "leaping-husk-location-2.webp": {
+    "x": 1228.5,
+    "y": 554.9,
+    "confidence": 214
+  },
+  "leaping-husk-location-3.webp": {
+    "x": 867.7,
+    "y": 588.0,
+    "confidence": 110
+  },
+  "leaping-husk-location-4.webp": {
+    "x": 1404.2,
+    "y": 764.0,
+    "confidence": 124
+  },
+  "leaping-husk-location-5.webp": {
+    "x": 714.5,
+    "y": 288.9,
+    "confidence": 68
+  },
+  "baldur-location-2.webp": {
+    "x": 1882.9,
+    "y": 427.0,
+    "confidence": 100
+  },
+  "baldur-location-3.webp": {
+    "x": 1064.7,
+    "y": 436.4,
+    "confidence": 208
+  },
+  "volatile-mosskin-location-1.webp": {
+    "x": 620.3,
+    "y": 465.8,
+    "confidence": 68
+  },
+  "obble-location-1.webp": {
+    "x": 611.1,
+    "y": 441.3,
+    "confidence": 95
+  },
+  "fungified-husk-location-1.webp": {
+    "x": 1019.7,
+    "y": 792.8,
+    "confidence": 119
+  },
+  "squit-location-1.webp": {
+    "x": 654.9,
+    "y": 476.4,
+    "confidence": 109
+  },
+  "squit-location-2.webp": {
+    "x": 620.7,
+    "y": 672.7,
+    "confidence": 72
+  },
+  "moss-charger-location-1.webp": {
+    "x": 541.9,
+    "y": 408.2,
+    "confidence": 99
+  },
+  "fool-eater-location-1.webp": {
+    "x": 542.8,
+    "y": 480.9,
+    "confidence": 100
+  },
+  "fool-eater-location-2.webp": {
+    "x": 588.3,
+    "y": 796.3,
+    "confidence": 143
+  },
+  "loodle-location-1.webp": {
+    "x": 352.6,
+    "y": 746.1,
+    "confidence": 133
+  },
+  "mossy-vagabond-location-1.webp": {
+    "x": 755.2,
+    "y": 867.2,
+    "confidence": 137
+  },
+  "moss-knight-location-1.webp": {
+    "x": 549.6,
+    "y": 397.6,
+    "confidence": 108
+  },
+  "mossfly-location-1.webp": {
+    "x": 560.3,
+    "y": 805.6,
+    "confidence": 134
+  },
+  "mossfly-location-2.webp": {
+    "x": 657.4,
+    "y": 675.9,
+    "confidence": 66
+  },
+  "ooma-location-1.webp": {
+    "x": 996.8,
+    "y": 618.4,
+    "confidence": 74
+  },
+  "mosscreep-location-1.webp": {
+    "x": 555.6,
+    "y": 481.1,
+    "confidence": 101
+  },
+  "mosscreep-location-2.webp": {
+    "x": 429.9,
+    "y": 911.1,
+    "confidence": 140
+  },
+  "shrumal-warrior-location-1.webp": {
+    "x": 973.1,
+    "y": 1024.4,
+    "confidence": 134
+  },
+  "mantis-warrior-location-1.webp": {
+    "x": 1197.2,
+    "y": 969.7,
+    "confidence": 119
+  },
+  "fungling-location-1.webp": {
+    "x": 1059.4,
+    "y": 825.6,
+    "confidence": 90
+  },
+  "shrumeling-location-1.webp": {
+    "x": 1080.1,
+    "y": 743.4,
+    "confidence": 93
+  },
+  "shrumal-ogre-location-1.webp": {
+    "x": 967.4,
+    "y": 999.5,
+    "confidence": 136
+  },
+  "mantis-youth-location-1.webp": {
+    "x": 1061.4,
+    "y": 986.4,
+    "confidence": 120
+  },
+  "fungoon-location-1.webp": {
+    "x": 1138.6,
+    "y": 592.5,
+    "confidence": 118
+  },
+  "volt-twister-location-1.webp": {
+    "x": 2078.9,
+    "y": 715.9,
+    "confidence": 100
+  },
+  "ambloom-location-1.webp": {
+    "x": 1140.5,
+    "y": 748.3,
+    "confidence": 116
+  },
+  "husk-dandy-location-1.webp": {
+    "x": 1950.2,
+    "y": 939.7,
+    "confidence": 114
+  },
+  "cowardly-husk-location-1.webp": {
+    "x": 1816.4,
+    "y": 950.7,
+    "confidence": 120
+  },
+  "husk-sentry-location-1.webp": {
+    "x": 1937.4,
+    "y": 838.5,
+    "confidence": 113
+  },
+  "husk-sentry-location-2.webp": {
+    "x": 1776.4,
+    "y": 1068.5,
+    "confidence": 89
+  },
+  "winged-sentry-location-1.webp": {
+    "x": 1336.5,
+    "y": 716.8,
+    "confidence": 128
+  },
+  "winged-sentry-location-2.webp": {
+    "x": 1853.1,
+    "y": 558.9,
+    "confidence": 115
+  },
+  "winged-sentry-location-3.webp": {
+    "x": 1627.9,
+    "y": 1143.1,
+    "confidence": 87
+  },
+  "heavy-sentry-location-1.webp": {
+    "x": 1516.7,
+    "y": 933.4,
+    "confidence": 114
+  },
+  "heavy-sentry-location-2.webp": {
+    "x": 1768.3,
+    "y": 1062.4,
+    "confidence": 78
+  },
+  "the-collector-location-1.webp": {
+    "x": 2056.4,
+    "y": 877.6,
+    "confidence": 124
+  },
+  "lance-sentry-location-1.webp": {
+    "x": 1337.2,
+    "y": 782.0,
+    "confidence": 112
+  },
+  "lance-sentry-location-2.webp": {
+    "x": 1572.2,
+    "y": 1145.9,
+    "confidence": 83
+  },
+  "great-husk-sentry-location-1.webp": {
+    "x": 1817.2,
+    "y": 964.5,
+    "confidence": 118
+  },
+  "great-husk-sentry-location-2.webp": {
+    "x": 1840.4,
+    "y": 565.9,
+    "confidence": 108
+  },
+  "flukemon-location-1.webp": {
+    "x": 1491.0,
+    "y": 1061.3,
+    "confidence": 88
+  },
+  "folly-location-1.webp": {
+    "x": 1454.2,
+    "y": 755.7,
+    "confidence": 111
+  },
+  "folly-location-2.webp": {
+    "x": 2078.9,
+    "y": 715.9,
+    "confidence": 99
+  },
+  "pilflip-location-1.webp": {
+    "x": 1499.7,
+    "y": 1008.1,
+    "confidence": 74
+  },
+  "flukefey-location-1.webp": {
+    "x": 1593.8,
+    "y": 1099.0,
+    "confidence": 83
+  },
+  "crystal-hunter-location-1.webp": {
+    "x": 1680.1,
+    "y": 436.5,
+    "confidence": 131
+  },
+  "glimback-location-2.webp": {
+    "x": 1595.9,
+    "y": 271.9,
+    "confidence": 108
+  },
+  "shardmite-location-1.webp": {
+    "x": 1921.7,
+    "y": 207.2,
+    "confidence": 129
+  },
+  "furious-vengefly-location-2.webp": {
+    "x": 2078.9,
+    "y": 715.9,
+    "confidence": 98
+  },
+  "crystallised-husk-location-1.webp": {
+    "x": 1778.9,
+    "y": 227.5,
+    "confidence": 107
+  },
+  "husk-miner-location-1.webp": {
+    "x": 1675.9,
+    "y": 369.6,
+    "confidence": 97
+  },
+  "husk-miner-location-2.webp": {
+    "x": 1463.1,
+    "y": 437.5,
+    "confidence": 200
+  },
+  "violent-husk-location-1.webp": {
+    "x": 1213.9,
+    "y": 556.9,
+    "confidence": 195
+  },
+  "volatile-gruzzer-location-1.webp": {
+    "x": 1126.7,
+    "y": 464.3,
+    "confidence": 211
+  },
+  "dirtcarver-location-1.webp": {
+    "x": 788.7,
+    "y": 900.2,
+    "confidence": 101
+  },
+  "slobbering-husk-location-1.webp": {
+    "x": 1181.0,
+    "y": 534.9,
+    "confidence": 185
+  },
+  "lesser-mawlek-location-1.webp": {
+    "x": 1381.7,
+    "y": 1185.1,
+    "confidence": 93
+  },
+  "corpse-creeper-location-1.webp": {
+    "x": 648.5,
+    "y": 1137.4,
+    "confidence": 102
+  },
+  "deephunter-location-1.webp": {
+    "x": 754.2,
+    "y": 1044.5,
+    "confidence": 100
+  },
+  "deepling-location-1.webp": {
+    "x": 546.7,
+    "y": 1132.4,
+    "confidence": 110
+  },
+  "little-weaver-location-1.webp": {
+    "x": 447.1,
+    "y": 974.3,
+    "confidence": 108
+  },
+  "hiveling-location-1.webp": {
+    "x": 2355.0,
+    "y": 1083.6,
+    "confidence": 104
+  },
+  "hiveling-location-2.webp": {
+    "x": 2154.5,
+    "y": 1182.9,
+    "confidence": 47
+  },
+  "hive-guardian-location-1.webp": {
+    "x": 2191.1,
+    "y": 1109.9,
+    "confidence": 25
+  },
+  "hive-soldier-location-1.webp": {
+    "x": 2088.8,
+    "y": 1093.7,
+    "confidence": 32
+  },
+  "boofly-location-1.webp": {
+    "x": 2172.0,
+    "y": 915.3,
+    "confidence": 111
+  },
+  "great-hopper-location-1.webp": {
+    "x": 2499.3,
+    "y": 1047.3,
+    "confidence": 100
+  },
+  "mawlurk-location-1.webp": {
+    "x": 1297.9,
+    "y": 1323.6,
+    "confidence": 80
+  },
+  "grub-mimic-location-1.webp": {
+    "x": 1301.4,
+    "y": 368.9,
+    "confidence": 114
+  },
+  "husk-hive-location-1.webp": {
+    "x": 2176.8,
+    "y": 1204.1,
+    "confidence": 30
+  },
+  "belfly-location-1.webp": {
+    "x": 1539.8,
+    "y": 902.3,
+    "confidence": 116
+  },
+  "belfly-location-2.webp": {
+    "x": 1503.6,
+    "y": 1014.2,
+    "confidence": 82
+  },
+  "belfly-location-3.webp": {
+    "x": 2038.8,
+    "y": 721.9,
+    "confidence": 117
+  },
+  "belfly-location-4.webp": {
+    "x": 1429.8,
+    "y": 1217.5,
+    "confidence": 86
+  },
+  "belfly-location-5.webp": {
+    "x": 2007.7,
+    "y": 557.9,
+    "confidence": 95
+  },
+  "belfly-location-6.webp": {
+    "x": 2078.9,
+    "y": 715.9,
+    "confidence": 98
+  },
+  "sibling-location-1.webp": {
+    "x": 1773.7,
+    "y": 1545.0,
+    "confidence": 26
+  },
+  "primal-aspid-location-1.webp": {
+    "x": 2272.6,
+    "y": 986.1,
+    "confidence": 115
+  },
+  "entombed-husk-location-1.webp": {
+    "x": 1966.3,
+    "y": 569.1,
+    "confidence": 104
+  },
+  "infected-balloon-location-1.webp": {
+    "x": 1303.0,
+    "y": 1250.8,
+    "confidence": 77
+  },
+  "mantis-traitor-location-1.webp": {
+    "x": 749.1,
+    "y": 842.4,
+    "confidence": 122
+  },
+  "spiny-husk-location-1.webp": {
+    "x": 482.8,
+    "y": 673.0,
+    "confidence": 130
+  },
+  "battle-obble-location-1.webp": {
+    "x": 2079.0,
+    "y": 715.9,
+    "confidence": 101
+  },
+  "mantis-petra-location-1.webp": {
+    "x": 607.6,
+    "y": 786.4,
+    "confidence": 135
+  },
+  "armoured-squit-location-1.webp": {
+    "x": 2078.9,
+    "y": 715.9,
+    "confidence": 100
+  },
+  "sharp-baldur-location-1.webp": {
+    "x": 2079.0,
+    "y": 715.9,
+    "confidence": 100
+  },
+  "winged-fool-location-1.webp": {
+    "x": 2079.0,
+    "y": 715.9,
+    "confidence": 100
+  },
+  "sturdy-fool-location-1.webp": {
+    "x": 2079.0,
+    "y": 715.9,
+    "confidence": 100
+  },
+  "shielded-fool-location-1.webp": {
+    "x": 2078.9,
+    "y": 716.0,
+    "confidence": 98
+  },
+  "heavy-fool-location-1.webp": {
+    "x": 2078.9,
+    "y": 715.9,
+    "confidence": 99
+  },
+  "death-loodle-location-1.webp": {
+    "x": 2079.0,
+    "y": 715.9,
+    "confidence": 100
+  },
+  "volatile-zoteling-location-1.webp": {
+    "x": 1166.9,
+    "y": 353.3,
+    "confidence": 24
+  },
+  "winged-zoteling-location-1.webp": {
+    "x": 1166.9,
+    "y": 353.3,
+    "confidence": 24
+  },
+  "hopping-zoteling-location-1.webp": {
+    "x": 1166.9,
+    "y": 353.3,
+    "confidence": 24
+  },
+  "menderbug-location-1.webp": {
+    "x": 1192.4,
+    "y": 400.7,
+    "confidence": 210
+  },
+  "grimmkin-novice-location-1.webp": {
+    "x": 705.9,
+    "y": 551.3,
+    "confidence": 106
+  },
+  "grimmkin-novice-location-2.webp": {
+    "x": 1359.0,
+    "y": 328.3,
+    "confidence": 105
+  },
+  "grimmkin-novice-location-3.webp": {
+    "x": 1327.1,
+    "y": 725.3,
+    "confidence": 114
+  },
+  "nightmare-king-location-1.webp": {
+    "x": 1096.2,
+    "y": 350.4,
+    "confidence": 22
+  },
+  "grimmkin-master-location-1.webp": {
+    "x": 933.8,
+    "y": 354.5,
+    "confidence": 23
+  },
+  "grimmkin-master-location-2.webp": {
+    "x": 1817.6,
+    "y": 559.3,
+    "confidence": 113
+  },
+  "grimmkin-master-location-3.webp": {
+    "x": 2124.0,
+    "y": 1016.4,
+    "confidence": 106
+  },
+  "grimmkin-nightmare-location-1.webp": {
+    "x": 982.4,
+    "y": 1002.3,
+    "confidence": 122
+  },
+  "grimmkin-nightmare-location-2.webp": {
+    "x": 1657.9,
+    "y": 1141.6,
+    "confidence": 85
+  },
+  "grimmkin-nightmare-location-3.webp": {
+    "x": 2086.6,
+    "y": 1119.4,
+    "confidence": 29
+  },
+  "hallownest-seal-location-1.webp": {
+    "x": 1969.3,
+    "y": 563.8,
+    "confidence": 538
+  },
+  "wanderers-journal-location-1.webp": {
+    "x": 1056.1,
+    "y": 767.8,
+    "confidence": 549
+  },
+  "tuk-location-1.webp": {
+    "x": 1654.4,
+    "y": 992.6,
+    "confidence": 84
+  },
+  "rancid-egg-location-1.webp": {
+    "x": 1250.7,
+    "y": 356.8,
+    "confidence": 24
+  },
+  "rancid-egg-location-2.webp": {
+    "x": 1250.7,
+    "y": 356.8,
+    "confidence": 24
+  },
+  "rancid-egg-location-3.webp": {
+    "x": 1654.4,
+    "y": 992.6,
+    "confidence": 83
+  },
+  "rancid-egg-location-4.webp": {
+    "x": 1680.2,
+    "y": 272.6,
+    "confidence": 575
+  },
+  "hot-spring-location-1.webp": {
+    "x": 2081.3,
+    "y": 719.5,
+    "confidence": 549
+  },
+  "temple-of-the-black-egg-location-1.webp": {
+    "x": 1180.7,
+    "y": 528.9,
+    "confidence": 226
+  },
+  "temple-of-the-black-egg-location-2.webp": {
+    "x": 1437.3,
+    "y": 397.1,
+    "confidence": 239
+  },
+  "temple-of-the-black-egg-location-3.webp": {
+    "x": 1073.9,
+    "y": 436.4,
+    "confidence": 225
+  },
+  "temple-of-the-black-egg-location-4.webp": {
+    "x": 1314.1,
+    "y": 463.2,
+    "confidence": 235
+  },
+  "temple-of-the-black-egg-location-5.webp": {
+    "x": 1167.8,
+    "y": 473.0,
+    "confidence": 228
+  },
+  "dreamers-location-1.webp": {
+    "x": 463.3,
+    "y": 410.4,
+    "confidence": 103
+  },
+  "dreamers-location-2.webp": {
+    "x": 1889.7,
+    "y": 533.3,
+    "confidence": 109
+  },
+  "dreamers-location-4.webp": {
+    "x": 1555.1,
+    "y": 957.4,
+    "confidence": 101
+  },
+  "dreamers-location-5.webp": {
+    "x": 233.0,
+    "y": 1024.7,
+    "confidence": 85
+  },
+  "city-crest-location-1.webp": {
+    "x": 1256.0,
+    "y": 819.7,
+    "confidence": 151
+  },
+  "city-crest-location-2.webp": {
+    "x": 1218.2,
+    "y": 476.0,
+    "confidence": 193
+  },
+  "dreamgate-location-1.webp": {
+    "x": 1947.3,
+    "y": 462.1,
+    "confidence": 94
+  },
+  "divine-location-1.webp": {
+    "x": 1080.8,
+    "y": 352.0,
+    "confidence": 21
+  },
+  "world-sense-location-1.webp": {
+    "x": 1273.3,
+    "y": 393.0,
+    "confidence": 190
+  },
+  "jiji-location-1.webp": {
+    "x": 1250.7,
+    "y": 356.8,
+    "confidence": 24
+  },
+  "whispering-root-location-1.webp": {
+    "x": 1168.0,
+    "y": 472.7,
+    "confidence": 70
+  },
+  "whispering-root-location-2.webp": {
+    "x": 1399.7,
+    "y": 777.1,
+    "confidence": 43
+  },
+  "whispering-root-location-3.webp": {
+    "x": 1817.1,
+    "y": 242.2,
+    "confidence": 54
+  },
+  "whispering-root-location-4.webp": {
+    "x": 425.5,
+    "y": 1125.9,
+    "confidence": 50
+  },
+  "whispering-root-location-5.webp": {
+    "x": 1118.6,
+    "y": 384.2,
+    "confidence": 72
+  },
+  "whispering-root-location-6.webp": {
+    "x": 1092.9,
+    "y": 672.9,
+    "confidence": 61
+  },
+  "whispering-root-location-7.webp": {
+    "x": 1067.2,
+    "y": 907.9,
+    "confidence": 60
+  },
+  "whispering-root-location-8.webp": {
+    "x": 522.0,
+    "y": 607.4,
+    "confidence": 55
+  },
+  "whispering-root-location-10.webp": {
+    "x": 620.9,
+    "y": 313.1,
+    "confidence": 28
+  },
+  "whispering-root-location-11.webp": {
+    "x": 2136.0,
+    "y": 912.8,
+    "confidence": 51
+  },
+  "whispering-root-location-12.webp": {
+    "x": 665.7,
+    "y": 835.7,
+    "confidence": 56
+  },
+  "whispering-root-location-13.webp": {
+    "x": 1960.2,
+    "y": 501.9,
+    "confidence": 44
+  },
+  "whispering-root-location-14.webp": {
+    "x": 1750.8,
+    "y": 1138.1,
+    "confidence": 33
+  },
+  "whispering-root-location-15.webp": {
+    "x": 2110.5,
+    "y": 403.6,
+    "confidence": 42
+  },
+  "millibelle-location-1.webp": {
+    "x": 797.5,
+    "y": 786.5,
+    "confidence": 66
+  },
+  "millibelle-location-2.webp": {
+    "x": 1859.2,
+    "y": 774.4,
+    "confidence": 113
+  },
+  "cornifer-location-1.webp": {
+    "x": 1555.4,
+    "y": 320.0,
+    "confidence": 393
+  },
+  "white-palace-location-1.webp": {
+    "x": 1748.3,
+    "y": 1267.0,
+    "confidence": 88
+  },
+  "lemm-location-1.webp": {
+    "x": 1557.6,
+    "y": 954.5,
+    "confidence": 119
+  },
+  "jinn-location-1.webp": {
+    "x": 1250.7,
+    "y": 356.8,
+    "confidence": 24
+  },
+  "delicate-flower-location-1.webp": {
+    "x": 471.1,
+    "y": 745.8,
+    "confidence": 129
+  },
+  "delicate-flower-location-3.webp": {
+    "x": 2441.6,
+    "y": 1043.6,
+    "confidence": 92
+  },
+  "delicate-flower-location-4.webp": {
+    "x": 1192.7,
+    "y": 1121.5,
+    "confidence": 88
+  },
+  "delicate-flower-location-5.webp": {
+    "x": 1866.7,
+    "y": 977.9,
+    "confidence": 98
+  },
+  "delicate-flower-location-6.webp": {
+    "x": 311.8,
+    "y": 646.2,
+    "confidence": 107
+  },
+  "delicate-flower-location-7.webp": {
+    "x": 2084.0,
+    "y": 537.8,
+    "confidence": 94
+  },
+  "delicate-flower-location-8.webp": {
+    "x": 471.1,
+    "y": 745.8,
+    "confidence": 131
+  }
+}

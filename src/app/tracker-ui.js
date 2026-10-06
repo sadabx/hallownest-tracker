@@ -1,4 +1,4 @@
-import { HK, flattenEntries, statValue, summary } from "./tracker-model.js";
+import { HK, flattenEntries, statValue, stripMarkup, summary } from "./tracker-model.js";
 import { clearPreferences, loadPreferences, savePreferences, state } from "./tracker-state.js";
 import { initBackToTop } from "../components/back-to-top.js";
 import { initEntryModal, showEntryModal } from "../components/entry-modal.js";
@@ -19,15 +19,36 @@ function renderSidebarStats(entries) {
   document.querySelector(".save-indicator").classList.toggle("is-loaded", HK.saveAnalyzed);
 }
 
-function selectEntryOnMap(entryId) {
-  state.selectedEntry = entryId;
-  state.mapQuery = "";
-  state.mapCategory = "all";
-  changeTab("map");
+function openEntryDetails(item) {
+  showEntryModal(item);
 }
 
-function openEntryDetails(item) {
-  showEntryModal(item, selectEntryOnMap);
+function initSectionDescriptionModal() {
+  const overlay = document.querySelector("#section-description-overlay");
+  const closeButton = document.querySelector("#close-section-description");
+  const close = () => overlay.classList.add("hidden");
+
+  document.addEventListener("click", event => {
+    const button = event.target.closest("[data-section-info]");
+    if (!button) return;
+    const section = HK.sections[button.dataset.sectionInfo];
+    if (!section) return;
+    const text = stripMarkup(String(section.description || "").replace(/<br\s*\/?\s*>/gi, "\n"))
+      .replace(/[ \t]*\n[ \t]*/g, "\n")
+      .replace(/\n{3,}/g, "\n\n");
+    document.querySelector("#section-description-title").textContent = stripMarkup(section.h2);
+    document.querySelector("#section-description-text").textContent = text;
+    overlay.classList.remove("hidden");
+    closeButton.focus();
+  });
+
+  closeButton.onclick = close;
+  overlay.addEventListener("click", event => {
+    if (event.target === overlay) close();
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") close();
+  });
 }
 
 function render() {
@@ -94,12 +115,6 @@ function bindDynamicEvents() {
       document.querySelector(`#${link.dataset.tocTarget}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
     };
   });
-  document.querySelectorAll("[data-map-entry]").forEach(button => { button.onclick = () => {
-    state.selectedEntry = button.dataset.mapEntry;
-    state.mapQuery = "";
-    state.mapCategory = "all";
-    changeTab("map");
-  }; });
   const copyRaw = document.querySelector("#copy-raw");
   if (copyRaw) copyRaw.onclick = async () => {
     if (state.save) await navigator.clipboard.writeText(JSON.stringify(state.save, null, 2));
@@ -121,6 +136,7 @@ function init() {
   initSidebarItems(changeTab);
   initUploadSave();
   initEntryModal();
+  initSectionDescriptionModal();
   initBackToTop();
   document.querySelector("#global-reset").addEventListener("click", () => {
     clearPreferences();

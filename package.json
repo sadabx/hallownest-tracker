@@ -7,6 +7,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "sync:icons": "node scripts/sync-item-icons.mjs",
+    "sync:wiki-map-icons": "node scripts/sync-wiki-map-icons.mjs",
     "test": "npm run build",
     "start": "vite dev"
   },

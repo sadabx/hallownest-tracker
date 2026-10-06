@@ -14,6 +14,21 @@ An independent, privacy-first Hollow Knight companion built in the style of Silk
 - Provides decoded JSON inspection, clipboard copy, and download.
 - Works as a static GitHub Pages application with no backend or analytics.
 
+## Loading a save
+
+Choose **Upload save** and select a `user*.dat` file, or drag it into the upload dialog. The tracker reads the file locally in your browser; it is not sent to a server.
+
+The upload dialog can copy the save folder path for each platform:
+
+| Platform | Save folder |
+| --- | --- |
+| Windows | `%USERPROFILE%\AppData\LocalLow\Team Cherry\Hollow Knight` |
+| macOS | `~/Library/Application Support/unity.Team Cherry.Hollow Knight` |
+| Linux | `~/.config/unity3d/Team Cherry/Hollow Knight` |
+| Android port | `/storage/emulated/0/Android/data/com.TeamCherry.HollowKnight/files` |
+
+On Android, choose a `user*.dat` file from that folder. Android 11 and later restrict access to `Android/data` in many file managers and system pickers; copying the save to a readable folder with a compatible file manager or over USB may be necessary. See [Android's storage access restrictions](https://developer.android.com/about/versions/11/privacy/storage#document-access-restrictions).
+
 ## Development
 
 ```bash
@@ -47,7 +62,7 @@ docs/          Architecture and project documentation only
 dist/          Generated GitHub Pages artifact; never committed
 ```
 
-GitHub Actions builds `main` with Vite and deploys `dist/` to GitHub Pages. The application source never lives in `docs/`.
+GitHub Actions builds `main` with Vite and deploys `dist/` to GitHub Pages. The application source lives in `src/`; `docs/` contains project documentation.
 
 ## License and attribution
 

@@ -1,6 +1,37 @@
-import { GROUPS, HK, REGIONS, WIKI_ROOT, escapeHTML, statValue, stripMarkup } from "../app/tracker-model.js";
+import { GROUPS, HK, escapeHTML, statValue, stripMarkup } from "../app/tracker-model.js";
 import { state } from "../app/tracker-state.js";
 import { itemIconFor } from "../data/item-icons.js";
+
+const LONG_DESCRIPTION_LIMIT = 130;
+const SECTION_SUMMARIES = {
+  bosses: "Bosses that count toward game completion.",
+  charms: "Collect Charms for game completion.",
+  warriorDreams: "Defeat Warrior Dreams and collect their Essence.",
+  colosseum: "Complete the Colosseum Trials for game completion.",
+  grimmTroupe: "Checks from the Grimm Troupe content pack.",
+  lifeblood: "Lifeblood content pack checks, including one completion boss.",
+  godmaster: "Godmaster checks add up to 5% completion.",
+  essentialsStagStations: "Open the Stag Stations and discover the Stag Nest.",
+  essentialsWorldInteractions: "World and NPC interactions required for 112% completion.",
+  achievementsWorldInteractions: "World interactions tied to achievements.",
+  huntersJournal: "Journal entries counted toward Hunter’s Mark and journal achievements.",
+  huntersJournalOptional: "Additional Journal entries outside the Hunter’s Mark total.",
+  charmNotches: "Find notches to equip more Charms.",
+  grubs: "Rescue Grubs to earn rewards from the Grubfather.",
+  whisperingRoots: "Collect Essence from Whispering Roots.",
+  relicsWanderersJournal: "Find Wanderer’s Journals and sell them to Lemm.",
+  relicsHallownestSeal: "Find Hallownest Seals and sell them to Lemm.",
+  relicsKingsIdol: "Find King’s Idols and sell them to Lemm.",
+  relicsArcaneEgg: "Find Arcane Eggs and sell them to Lemm.",
+  rancidEggs: "Find Rancid Eggs throughout Hallownest.",
+  items: "Miscellaneous items, map pins, and collectibles.",
+  geoChests: "Open Geo Chests to collect their contents.",
+  geoRocks: "Fully break Geo Rocks to collect their Geo.",
+  worldInteractions: "Track optional interactions and world events.",
+  corniferNotes: "Find Cornifer’s note in each area after he leaves.",
+  statistics: "Save-file stats and tracked game totals.",
+  hallOfGods: "Track boss unlocks and victories across all three difficulties."
+};
 
 function matchesProgress(item) {
   if (state.group !== "all" && item.group !== state.group) return false;
@@ -11,18 +42,19 @@ function matchesProgress(item) {
 }
 
 function renderEntryCard(item) {
-  const location = item.description || (item.region ? REGIONS[item.region].label : "Location not catalogued");
-  const wiki = item.wiki ? `<a class="icon-link" href="${WIKI_ROOT}${encodeURI(item.wiki)}" target="_blank" rel="noreferrer" aria-label="Open wiki">Wiki</a>` : "";
-  const map = item.region && REGIONS[item.region].atlas !== false ? `<button class="icon-link" data-map-entry="${item.id}">Map</button>` : "";
   const icon = itemIconFor(item);
-  const artwork = icon ? `<img src="${icon}" alt="" loading="lazy">` : `<span class="locked-art">?</span>`;
+  const hideIcon = !state.spoilers && ["unknown", "missing"].includes(item.status);
+  const spoilerLocked = hideIcon && icon;
+  const revealOnHover = state.spoilers && icon && ["unknown", "missing"].includes(item.status);
+  const artwork = !icon
+    ? `<span class="locked-art" aria-hidden="true">?</span>`
+    : `${hideIcon ? `<span class="locked-art spoiler-placeholder" aria-hidden="true">?</span>` : ""}<img class="item-art" src="${icon}" alt="" loading="lazy">`;
   const displayName = item.name.replace(/^#\d+\s+/, "");
   const badge = ["grimmTroupe", "lifeblood", "godmaster"].includes(item.sectionKey) ? "DLC" : "Base";
-  return `<article class="check-card status-${item.status}" data-entry-details="${item.id}" tabindex="0">
+  return `<article class="check-card status-${item.status}${spoilerLocked ? " spoiler-card-locked" : ""}" data-entry-details="${item.id}" tabindex="0">
     <span class="check-section">${badge}</span>
-    <div class="check-art" aria-hidden="true">${artwork}</div>
-    <div class="check-copy"><h3>${escapeHTML(displayName)}</h3><p class="spoiler-copy ${state.spoilers ? "revealed" : ""}">${state.spoilers ? escapeHTML(location) : ""}</p></div>
-    <div class="card-actions">${map}${wiki}</div>
+    <div class="check-art${spoilerLocked ? " spoiler-locked" : revealOnHover ? " spoiler-reveal-on-hover" : ""}" aria-hidden="true">${artwork}</div>
+    <div class="check-copy"><h3>${escapeHTML(displayName)}</h3></div>
   </article>`;
 }
 
@@ -37,7 +69,13 @@ function renderProgress(entries) {
       const section = HK.sections[sectionKey];
       const done = items.filter(item => item.status === "complete").length;
       const cards = items.map(renderEntryCard).join("");
-      return `<section class="progress-section" id="section-${sectionKey}"><div class="progress-section-heading"><h2>${escapeHTML(stripMarkup(section.h2))} <span>${done}/${items.length}</span></h2><p>${escapeHTML(stripMarkup(section.description))}</p></div><div class="check-grid">${cards}</div></section>`;
+      const description = stripMarkup(section.description);
+      const hasLongDescription = description.length > LONG_DESCRIPTION_LIMIT;
+      const infoButton = hasLongDescription
+        ? `<button type="button" class="section-info-toggle" data-section-info="${sectionKey}" aria-label="Read full ${escapeHTML(stripMarkup(section.h2))} description">i</button>`
+        : "";
+      const summary = hasLongDescription ? SECTION_SUMMARIES[sectionKey] || `${stripMarkup(section.h2)} details.` : description;
+      return `<section class="progress-section" id="section-${sectionKey}"><div class="progress-section-heading"><h2>${escapeHTML(stripMarkup(section.h2))} <span>${done}/${items.length}</span>${infoButton}</h2><p>${escapeHTML(summary)}</p></div><div class="check-grid">${cards}</div></section>`;
     }).join("");
     return `<section class="progress-group" data-group-key="${groupKey}" data-group-name="${escapeHTML(group.label)}"><h2 class="progress-group-banner">${escapeHTML(group.label)}</h2>${sectionBody}</section>`;
   }).join("");

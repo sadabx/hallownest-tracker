@@ -203,6 +203,8 @@
           id="mobile-menu"
           class="mobile-menu"
           aria-label="Toggle navigation"
+          aria-controls="app-sidebar"
+          aria-expanded="false"
         >
           <span></span><span></span><span></span>
         </button>
@@ -299,9 +301,7 @@
             <button type="button" data-save-platform="mac">Mac</button>
             <button type="button" data-save-platform="windows">Windows</button>
             <button type="button" data-save-platform="linux">Linux</button>
-            <button type="button" data-save-platform="steam">
-              Steam Cloud
-            </button>
+            <button type="button" data-save-platform="android">Android</button>
           </div>
         </div>
         <p>Your save is decrypted and analyzed entirely inside this browser.</p>
@@ -316,6 +316,21 @@
       aria-labelledby="entry-modal-title"
     >
       <div id="entry-modal" class="modal-card entry-modal"></div>
+    </div>
+
+    <div
+      id="section-description-overlay"
+      class="modal-overlay hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="section-description-title"
+    >
+      <div class="modal-card section-description-modal">
+        <button id="close-section-description" class="modal-close" aria-label="Close description">×</button>
+        <span class="overline">Section details</span>
+        <h2 id="section-description-title"></h2>
+        <p id="section-description-text"></p>
+      </div>
     </div>
 
     <div class="save-input" aria-hidden="true">
